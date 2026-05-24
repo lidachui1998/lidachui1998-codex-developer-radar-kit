@@ -1,0 +1,12 @@
+node_modules/
+__pycache__/
+*.pyc
+renders/
+.thumbnails/
+assets/voice-segments/
+assets/narration.mp3
+data/hot-topics.raw.json
+site/dist/
+site/public/assets/thumbnails/*.png
+*.log
+.env
