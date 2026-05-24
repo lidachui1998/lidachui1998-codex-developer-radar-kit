@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex Developer Radar</title>
+    <meta name="description" content="每日开发者热门项目、视频与来源链接" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Codex Developer Radar">
+        <span class="brand-mark">CR</span>
+        <span>
+          <strong>Codex Developer Radar</strong>
+          <em>每日热门项目</em>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="#daily">日报</a>
+        <a href="#archive">历史</a>
+        <a href="#tutorial">教程</a>
+        <a href="#workflow">流程</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Daily developer signal</p>
+          <h1 id="hero-title">每天 7 个值得看的开发者热门项目</h1>
+          <p class="lede">自动整理 GitHub Trending、技术社区和产品热点，沉淀成可检索的项目日报，并关联到对应抖音视频。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#daily">看今日项目</a>
+            <a class="button" href="#archive">浏览历史</a>
+          </div>
+        </div>
+        <aside class="latest-panel" aria-label="最新视频封面">
+          <div class="panel-header">
+            <span>Latest video</span>
+            <strong id="latest-date">--</strong>
+          </div>
+          <div class="poster-wrap">
+            <img id="latest-poster" src="" alt="" />
+            <div id="poster-fallback">等待生成封面</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="daily" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Today</p>
+          <h2>今日项目</h2>
+        </div>
+        <div id="today" class="daily-grid"></div>
+      </section>
+
+      <section id="archive" class="section">
+        <div class="section-head">
+          <p class="eyebrow">Archive</p>
+          <h2>历史日报</h2>
+        </div>
+        <div id="archive-list" class="archive-list"></div>
+      </section>
+
+      <section id="workflow" class="section workflow">
+        <div class="section-head">
+          <p class="eyebrow">Workflow</p>
+          <h2>自动化链路</h2>
+        </div>
+        <div class="workflow-grid">
+          <div><strong>抓取</strong><span>热门项目和技术社区候选</span></div>
+          <div><strong>去重</strong><span>避开最近 7 天已播项目</span></div>
+          <div><strong>生成</strong><span>写中文口播并用 Yunxi 配音</span></div>
+          <div><strong>发布</strong><span>同步网站数据和视频链接</span></div>
+        </div>
+      </section>
+
+      <section id="tutorial" class="section tutorial">
+        <div class="section-head">
+          <p class="eyebrow">Playbook</p>
+          <h2>生成教程</h2>
+        </div>
+        <div class="tutorial-grid">
+          <article class="tutorial-card">
+            <strong>1. 抓取和选题</strong>
+            <p>从 GitHub Trending、Hacker News、Product Hunt 和扩展技术源抓取候选，默认选择 7 个适合开发者理解的热点。</p>
+            <code>node scripts/fetch-hot-topics.mjs</code>
+          </article>
+          <article class="tutorial-card">
+            <strong>2. 历史去重</strong>
+            <p>渲染前读取最近 7 天历史，避开已经播过的项目；如果 GitHub 不够新，就用其他技术源补齐。</p>
+            <code>node scripts/topic-history.mjs check --days 7</code>
+          </article>
+          <article class="tutorial-card">
+            <strong>3. 中文口播</strong>
+            <p>把项目价值改写成短视频口吻，使用 Yunxi 神经声音分段配音，并按真实音频时长重建画面节奏。</p>
+            <code>python scripts/generate-aligned-voiceover.py --voice zh-CN-YunxiNeural --rate=-8%</code>
+          </article>
+          <article class="tutorial-card">
+            <strong>4. 渲染视频</strong>
+            <p>HyperFrames 生成竖屏视频，最终用 FFmpeg 合成 AAC 音轨，避免画面和口播错位。</p>
+            <code>npm run render:voiceover</code>
+          </article>
+          <article class="tutorial-card">
+            <strong>5. 写入网站</strong>
+            <p>成功渲染后导出缩略图和日报数据，新的项目会进入今日列表，历史项目进入可展开归档。</p>
+            <code>node scripts/export-site-data.mjs --video &lt;mp4&gt; --thumbnail &lt;png&gt;</code>
+          </article>
+          <article class="tutorial-card">
+            <strong>6. 发布链接和部署</strong>
+            <p>抖音发布后补视频链接，再部署到 Cloudflare Worker 站点和 radar.bjca.xyz。</p>
+            <code>npm run site:set-douyin -- YYYY-MM-DD &lt;douyin-url&gt;</code>
+            <code>npm run site:deploy</code>
+          </article>
+        </div>
+
+        <div class="script-panel">
+          <div>
+            <p class="eyebrow">Repository</p>
+            <h3>公开脚本仓库</h3>
+            <p>脚本、Codex skill、自动化模板和 Cloudflare Worker 网站模板都会放在 GitHub，教程只引用公开仓库，不展示本机路径。</p>
+            <a class="resource-link" href="https://github.com/lidachui1998/lidachui1998-codex-developer-radar-kit" target="_blank" rel="noreferrer">打开 codex-developer-radar-kit</a>
+          </div>
+          <div>
+            <p class="eyebrow">Skill & Automation</p>
+            <h3>每天 22:30 自动生成</h3>
+            <p>自动化会生成当天视频，把新项目写入网站数据，并按公开模板维护 skill、自动化脚本和站点部署流程。</p>
+            <a class="resource-link" href="https://github.com/lidachui1998/lidachui1998-codex-developer-radar-kit/tree/main/skills/github-trending-douyin-video" target="_blank" rel="noreferrer">查看 skill 模板</a>
+            <a class="resource-link" href="https://github.com/lidachui1998/lidachui1998-codex-developer-radar-kit/blob/main/automations/daily-github-hot-project-video.template.toml" target="_blank" rel="noreferrer">查看自动化模板</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Codex Developer Radar</span>
+      <span id="updated-at">更新中</span>
+    </footer>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
