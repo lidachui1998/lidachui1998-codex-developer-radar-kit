@@ -1,0 +1,33 @@
+{
+  "updatedAt": "2026-05-24T00:00:00.000Z",
+  "title": "Codex Developer Radar",
+  "description": "每日开发者热门项目、视频与来源链接",
+  "days": [
+    {
+      "date": "2026-05-24",
+      "displayDate": "2026.05.24",
+      "title": "今日热门项目",
+      "subtitle": "7 个新项目：AI 工具、开源框架和开发者基础设施",
+      "source": "Developer Radar",
+      "sourceUrl": "https://github.com/trending?since=daily",
+      "douyinUrl": "",
+      "thumbnail": "",
+      "topics": [
+        {
+          "rank": 1,
+          "title": "example-project",
+          "repo": "owner/example-project",
+          "category": "开源项目",
+          "source": "GitHub",
+          "language": "TypeScript",
+          "metricLabel": "今日新增 Star",
+          "metric": "+123",
+          "secondaryLabel": "总 Star",
+          "secondaryMetric": "4,567",
+          "angle": "用一句话解释这个项目为什么值得开发者关注。",
+          "url": "https://github.com/owner/example-project"
+        }
+      ]
+    }
+  ]
+}
