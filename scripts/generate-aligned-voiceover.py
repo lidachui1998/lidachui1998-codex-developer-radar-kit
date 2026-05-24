@@ -1,0 +1,184 @@
+import argparse
+import asyncio
+import json
+import math
+import os
+import subprocess
+import shutil
+from pathlib import Path
+
+import edge_tts
+
+
+def run(command: list[str]) -> str:
+    result = subprocess.run(command, check=True, capture_output=True, text=True)
+    return result.stdout.strip()
+
+
+def duration_seconds(ffprobe: Path, media: Path) -> float:
+    value = run([
+        str(ffprobe),
+        "-v",
+        "error",
+        "-show_entries",
+        "format=duration",
+        "-of",
+        "default=nk=1:nw=1",
+        str(media),
+    ])
+    return float(value)
+
+
+def executable_from_env(name: str, fallback: Path, command: str) -> Path:
+    value = os.environ.get(name)
+    if value:
+        return Path(value)
+    if fallback.exists():
+        return fallback
+    found = shutil.which(command)
+    if found:
+        return Path(found)
+    return fallback
+
+
+async def tts(text: str, output: Path, voice: str, rate: str) -> None:
+    communicate = edge_tts.Communicate(text.strip(), voice, rate=rate)
+    await communicate.save(str(output))
+
+
+def write_concat_list(path: Path, files: list[Path]) -> None:
+    lines = []
+    for file in files:
+        normalized = file.resolve().as_posix()
+        lines.append(f"file '{normalized}'")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+async def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data", type=Path, default=Path("data/hot-topics.json"))
+    parser.add_argument("--output", type=Path, default=Path("assets/narration.mp3"))
+    parser.add_argument("--timings", type=Path, default=Path("data/timings.json"))
+    parser.add_argument("--voice", default="zh-CN-YunxiNeural")
+    parser.add_argument("--rate", default="-8%")
+    parser.add_argument("--pause", type=float, default=0.35)
+    args = parser.parse_args()
+
+    root = Path.cwd()
+    ffmpeg = executable_from_env(
+        "FFMPEG_BIN",
+        root / "node_modules" / "@ffmpeg-installer" / "win32-x64" / "ffmpeg.exe",
+        "ffmpeg",
+    )
+    ffprobe = executable_from_env(
+        "FFPROBE_BIN",
+        root / "node_modules" / "@ffprobe-installer" / "win32-x64" / "ffprobe.exe",
+        "ffprobe",
+    )
+    data = json.loads(args.data.read_text(encoding="utf-8"))
+    items = data["items"][:7]
+
+    hook_text = data.get("hookVoiceover") or (
+        "这条热点视频，是我用 Codex 自动生成的。"
+        "它负责抓项目，写口播，再渲染成竖屏视频。"
+        f"今天先看{len(items)}个开发者热点。"
+    )
+    outro_text = data.get("cta") or "想要这套 Codex 视频模板？评论 Codex，我把流程拆给你。"
+
+    segments = [{"id": "hook", "label": "hook", "text": hook_text}]
+    for item in items:
+        segments.append({
+            "id": f"topic-{item['rank']}",
+            "rank": item["rank"],
+            "label": item["title"],
+            "text": item.get("voiceover") or item.get("angle") or item["title"],
+        })
+    segments.append({"id": "outro", "label": "outro", "text": outro_text})
+
+    segment_dir = root / "assets" / "voice-segments"
+    segment_dir.mkdir(parents=True, exist_ok=True)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.timings.parent.mkdir(parents=True, exist_ok=True)
+
+    rendered_files: list[Path] = []
+    timeline = []
+    cursor = 0.0
+
+    silence = segment_dir / "silence.mp3"
+    run([
+        str(ffmpeg),
+        "-y",
+        "-f",
+        "lavfi",
+        "-t",
+        f"{args.pause:.3f}",
+        "-i",
+        "anullsrc=channel_layout=mono:sample_rate=24000",
+        "-acodec",
+        "libmp3lame",
+        "-b:a",
+        "48k",
+        str(silence),
+    ])
+
+    for index, segment in enumerate(segments):
+        out = segment_dir / f"{index:02d}-{segment['id']}.mp3"
+        await tts(segment["text"], out, args.voice, args.rate)
+        dur = duration_seconds(ffprobe, out)
+        visual_duration = max(3.2, dur + args.pause)
+        entry = {
+            **segment,
+            "start": round(cursor, 3),
+            "duration": round(visual_duration, 3),
+            "audioDuration": round(dur, 3),
+        }
+        timeline.append(entry)
+        rendered_files.append(out)
+        if index != len(segments) - 1:
+            rendered_files.append(silence)
+        cursor += visual_duration
+
+    concat_list = segment_dir / "concat.txt"
+    write_concat_list(concat_list, rendered_files)
+    run([
+        str(ffmpeg),
+        "-y",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        str(concat_list),
+        "-ar",
+        "24000",
+        "-ac",
+        "1",
+        "-c:a",
+        "libmp3lame",
+        "-b:a",
+        "48k",
+        str(args.output),
+    ])
+
+    audio_duration = duration_seconds(ffprobe, args.output)
+    total_duration = max(math.ceil(audio_duration + 0.8), math.ceil(cursor + 0.5))
+    timings = {
+        "audio": args.output.as_posix(),
+        "voice": args.voice,
+        "rate": args.rate,
+        "pause": args.pause,
+        "audioDuration": round(audio_duration, 3),
+        "totalDuration": total_duration,
+        "hook": timeline[0],
+        "items": timeline[1 : 1 + len(items)],
+        "outro": timeline[-1],
+    }
+    args.timings.write_text(json.dumps(timings, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {args.output}")
+    print(f"Wrote {args.timings}")
+    print(f"Voice: {args.voice} at {args.rate}")
+    print(f"Audio duration: {audio_duration:.2f}s; video duration: {total_duration}s")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
