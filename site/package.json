@@ -1,0 +1,11 @@
+{
+  "name": "codex-developer-radar-site",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public --port 8788",
+    "build:worker": "node scripts/build-worker.mjs",
+    "deploy": "npm run build:worker && wrangler deploy --config wrangler.worker.jsonc",
+    "serve": "node scripts/serve.mjs"
+  },
+  "devDependencies": {}
+}
