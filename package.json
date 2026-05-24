@@ -1,0 +1,28 @@
+{
+  "name": "codex-developer-radar-kit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-github-trending.mjs",
+    "fetch:topics": "node scripts/fetch-hot-topics.mjs",
+    "narration": "node scripts/write-narration.mjs",
+    "build": "node scripts/build-video.mjs",
+    "daily": "npm run fetch:topics && npm run narration && npm run build && npm run check",
+    "voiceover:neural": "python scripts/generate-edge-voiceover.py assets/narration.txt assets/narration.mp3 --voice zh-CN-YunxiNeural --rate=-8%",
+    "history:check": "node scripts/topic-history.mjs check --days 7",
+    "history:record": "node scripts/topic-history.mjs record",
+    "site:export": "node scripts/export-site-data.mjs",
+    "site:set-douyin": "node scripts/set-douyin-link.mjs",
+    "site:serve": "npm --prefix site run serve",
+    "site:deploy": "npm --prefix site run deploy",
+    "render:voiceover": "powershell -ExecutionPolicy Bypass -File scripts/render-with-voiceover.ps1",
+    "dev": "npx --yes hyperframes@0.6.34 preview",
+    "check": "npx --yes hyperframes@0.6.34 lint && npx --yes hyperframes@0.6.34 inspect",
+    "render": "npx --yes hyperframes@0.6.34 render",
+    "publish": "npx --yes hyperframes@0.6.34 publish"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^2.1.2"
+  }
+}
