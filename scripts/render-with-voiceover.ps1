@@ -5,6 +5,13 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+function Assert-LastExitCode {
+  param([string]$Step)
+  if ($LASTEXITCODE -ne 0) {
+    throw "$Step failed with exit code $LASTEXITCODE"
+  }
+}
+
 $Root = Split-Path -Parent $PSScriptRoot
 $Node = if ($env:NODE_EXE) { $env:NODE_EXE } else { "node" }
 $Python = if ($env:PYTHON_EXE) { $env:PYTHON_EXE } else { "python" }
@@ -28,12 +35,17 @@ if ($Chrome) {
 }
 
 & $Node "scripts\topic-history.mjs" check --days 7
+Assert-LastExitCode "Topic history check"
 & $Python -c "import edge_tts; print(edge_tts.__file__)"
+Assert-LastExitCode "Edge TTS dependency check"
 & $Python "scripts\generate-aligned-voiceover.py" --voice "zh-CN-YunxiNeural" --rate=-8%
+Assert-LastExitCode "Edge Neural TTS generation"
 $NarrationForMux = $Narration
 
 & $Node "scripts\build-video.mjs"
+Assert-LastExitCode "HyperFrames composition build"
 & $Npx --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+Assert-LastExitCode "HyperFrames render"
 
 $Duration = 70
 if (Test-Path $Timings) {
@@ -55,8 +67,12 @@ New-Item -ItemType Directory -Force -Path (Split-Path -Parent $Final) | Out-Null
   -b:a 160k `
   -movflags +faststart `
   $Final
+Assert-LastExitCode "FFmpeg audio mux"
 
 Write-Host "Wrote $Final"
 & $Node "scripts\topic-history.mjs" record --video $Final
+Assert-LastExitCode "Topic history record"
 & $Ffmpeg -y -ss 2 -i $Final -frames:v 1 $SiteThumb
+Assert-LastExitCode "Thumbnail extraction"
 & $Node "scripts\export-site-data.mjs" --video $Final --thumbnail $SiteThumb
+Assert-LastExitCode "Website data export"
