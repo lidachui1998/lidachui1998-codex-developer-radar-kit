@@ -1,6 +1,7 @@
 param(
   [string]$Output = "renders\developer-radar-$(Get-Date -Format yyyy-MM-dd)-voiceover-final.mp4",
-  [string]$Quality = "draft"
+  [string]$Quality = "draft",
+  [string]$VoiceRate = "-4%"
 )
 
 $ErrorActionPreference = "Stop"
@@ -38,7 +39,7 @@ if ($Chrome) {
 Assert-LastExitCode "Topic history check"
 & $Python -c "import edge_tts; print(edge_tts.__file__)"
 Assert-LastExitCode "Edge TTS dependency check"
-& $Python "scripts\generate-aligned-voiceover.py" --voice "zh-CN-YunxiNeural" --rate=-8%
+& $Python "scripts\generate-aligned-voiceover.py" --voice "zh-CN-YunxiNeural" --rate=$VoiceRate
 Assert-LastExitCode "Edge Neural TTS generation"
 $NarrationForMux = $Narration
 

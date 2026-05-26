@@ -34,7 +34,7 @@ npm install --save-dev @ffmpeg-installer/ffmpeg @ffprobe-installer/ffprobe
 3. Compare selected items against `data/topic-history.json` and avoid any project or URL used in the last 7 days.
 4. Rewrite `angle`, `voiceover`, and `narration` into concise Chinese short-video copy.
 5. Open with a topic-first hook such as "今日热门项目" or "今日 AI 开发者热点". Codex-generated-video copy belongs in a smaller secondary badge or later voiceover line, not as the main first-frame headline.
-6. Generate voiceover with `zh-CN-YunxiNeural` at about `-8%` rate using `scripts/generate-aligned-voiceover.py`.
+6. Generate voiceover with `zh-CN-YunxiNeural` at about `-4%` rate using `scripts/generate-aligned-voiceover.py`.
 7. Render with HyperFrames and mux the final MP4 with an AAC audio stream.
 8. Record successful topics back into `data/topic-history.json`.
 9. Export website data into `site/public/data/days.json`.
@@ -46,7 +46,7 @@ npm install --save-dev @ffmpeg-installer/ffmpeg @ffprobe-installer/ffprobe
 Use Edge Neural TTS:
 
 ```powershell
-python scripts/generate-aligned-voiceover.py --voice zh-CN-YunxiNeural --rate=-8%
+python scripts/generate-aligned-voiceover.py --voice zh-CN-YunxiNeural --rate=-4%
 ```
 
 Do not use Windows SAPI voices for automated drafts. If `zh-CN-YunxiNeural` cannot be generated, fail the run and report the dependency or network problem instead of rendering a wrong-voice video.

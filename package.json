@@ -8,7 +8,7 @@
     "narration": "node scripts/write-narration.mjs",
     "build": "node scripts/build-video.mjs",
     "daily": "npm run fetch:topics && npm run narration && npm run build && npm run check",
-    "voiceover:neural": "python scripts/generate-edge-voiceover.py assets/narration.txt assets/narration.mp3 --voice zh-CN-YunxiNeural --rate=-8%",
+    "voiceover:neural": "python scripts/generate-edge-voiceover.py assets/narration.txt assets/narration.mp3 --voice zh-CN-YunxiNeural --rate=-4%",
     "history:check": "node scripts/topic-history.mjs check --days 7",
     "history:record": "node scripts/topic-history.mjs record",
     "site:export": "node scripts/export-site-data.mjs",
