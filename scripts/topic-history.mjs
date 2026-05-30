@@ -44,7 +44,8 @@ function itemKey(item) {
 
 async function readJson(file, fallback) {
   try {
-    return JSON.parse(await readFile(file, "utf8"));
+    const text = await readFile(file, "utf8");
+    return JSON.parse(text.replace(/^\uFEFF/, ""));
   } catch {
     return fallback;
   }
