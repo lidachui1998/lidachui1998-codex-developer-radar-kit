@@ -18,7 +18,7 @@ Use environment variables instead of hardcoded machine paths:
 ```powershell
 $env:NODE_EXE = "node"
 $env:PYTHON_EXE = "python"
-$env:HYPERFRAMES_BROWSER_PATH = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$env:HYPERFRAMES_BROWSER_PATH = "$env:ProgramFiles\Google\Chrome\Application\chrome.exe"
 ```
 
 Install local FFmpeg binaries if system FFmpeg is missing:
@@ -38,8 +38,10 @@ npm install --save-dev @ffmpeg-installer/ffmpeg @ffprobe-installer/ffprobe
 7. Render with HyperFrames and mux the final MP4 with an AAC audio stream.
 8. Record successful topics back into `data/topic-history.json`.
 9. Export website data into `site/public/data/days.json`.
-10. Keep the public website tutorial linked to the GitHub repository, skill template, and automation template. Do not expose local Windows paths on the public website.
-11. Deploy the Cloudflare Worker website when credentials are available.
+10. Generate the daily WeChat public-account article draft with `npm run wechat:generate -- YYYY-MM-DD`, or backfill all current days with `npm run wechat:generate:all`.
+11. Use `npm run wechat:manager` to open the local publishing manager, copy the generated article into the WeChat public-account editor, and record the published article URL.
+12. Keep the public website tutorial linked to the GitHub repository, skill template, automation template, and WeChat publishing manager. Do not expose local Windows paths on the public website.
+13. Deploy the Cloudflare Worker website when credentials are available.
 
 ## Voiceover
 
@@ -62,9 +64,10 @@ Ask Codex to:
 - write Chinese Douyin copy
 - render with `scripts/render-with-voiceover.ps1`
 - update `site/public/data/days.json`
+- generate the WeChat public-account article draft with `npm run wechat:generate -- YYYY-MM-DD`
 - keep `site/data/douyin-links.json` as the source of Douyin links
 - keep the public tutorial linked to `<YOUR_REPO_URL>`
 - deploy the Cloudflare Worker site
-- report source URLs, selected topics, output MP4 path, audio verification, website data path, deployed URL, and warnings
+- report source URLs, selected topics, output MP4 path, audio verification, website data path, WeChat draft path, deployed URL, and warnings
 
 Do not publish to Douyin automatically unless the user explicitly asks and the uploader/account flow is available.

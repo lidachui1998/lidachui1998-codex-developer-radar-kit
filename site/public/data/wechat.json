@@ -1,0 +1,88 @@
+{
+  "updatedAt": "2026-05-31T05:54:16.119Z",
+  "accountName": "待填写公众号名称",
+  "replyKeyword": "Codex",
+  "siteUrl": "https://radar.bjca.xyz/",
+  "articles": [
+    {
+      "date": "2026-05-30",
+      "displayDate": "2026.05.30",
+      "title": "2026.05.30 开发者热点：Ghostty、vaultwarden、Pi-hole",
+      "digest": "今日整理 7 个开发者热点：Ghostty、vaultwarden、Pi-hole、OSV-Scanner。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7645705619495865634/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-30#archive"
+    },
+    {
+      "date": "2026-05-29",
+      "displayDate": "2026.05.29",
+      "title": "2026.05.29 开发者热点：CodexPlusPlus、dograh、DeepSeek-Reasonix",
+      "digest": "今日整理 7 个开发者热点：CodexPlusPlus、dograh、DeepSeek-Reasonix、cc-switch。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7645505546258819749/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-29#archive"
+    },
+    {
+      "date": "2026-05-28",
+      "displayDate": "2026.05.28",
+      "title": "2026.05.28 开发者热点：claude-code-harness、MoneyPrinterTurbo、Agent Explorative Policy Optimization",
+      "digest": "今日整理 7 个开发者热点：claude-code-harness、MoneyPrinterTurbo、Agent Explorative Policy Optimization、Anthropic and OpenAI product-market fit。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7644938241225081253/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-28#archive"
+    },
+    {
+      "date": "2026-05-27",
+      "displayDate": "2026.05.27",
+      "title": "2026.05.27 开发者热点：Claude Code as Daily Driver、MobileGym、Calling Skills for AI Agents",
+      "digest": "今日整理 7 个开发者热点：Claude Code as Daily Driver、MobileGym、Calling Skills for AI Agents、Powabase。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7644571263147911589/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-27#archive"
+    },
+    {
+      "date": "2026-05-26",
+      "displayDate": "2026.05.26",
+      "title": "2026.05.26 开发者热点：FreeDomain、stop-slop、DynIP",
+      "digest": "今日整理 7 个开发者热点：FreeDomain、stop-slop、DynIP、Using AI to write better code more slowly。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7644241340439602789/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-26#archive"
+    },
+    {
+      "date": "2026-05-25",
+      "displayDate": "2026.05.25",
+      "title": "2026.05.25 开发者热点：ECC、knowledge-work-plugins、SkillOpt",
+      "digest": "今日整理 7 个开发者热点：ECC、knowledge-work-plugins、SkillOpt、Pi Coding Agent。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7643853345254231525/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-25#archive"
+    },
+    {
+      "date": "2026-05-24",
+      "displayDate": "2026.05.24",
+      "title": "2026.05.24 开发者热点：skills、FinceptTerminal、Anthropic-Cybersecurity-Skills",
+      "digest": "今日整理 7 个开发者热点：skills、FinceptTerminal、Anthropic-Cybersecurity-Skills、andrej-karpathy-skills。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.douyin.com/video/7643297646098107322",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-24#archive"
+    },
+    {
+      "date": "2026-05-23",
+      "displayDate": "2026.05.23",
+      "title": "2026.05.23 开发者热点：claude-plugins-official、chrome-devtools-mcp、codegraph",
+      "digest": "今日整理 8 个开发者热点：claude-plugins-official、chrome-devtools-mcp、codegraph、Deno 2.8。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.douyin.com/video/7643059967364584549",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-05-23#archive"
+    }
+  ]
+}

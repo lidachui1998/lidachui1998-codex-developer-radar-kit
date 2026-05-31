@@ -1,4 +1,5 @@
 const dataUrl = "./data/days.json";
+const wechatUrl = "./data/wechat.json";
 
 function text(value, fallback = "") {
   return value == null || value === "" ? fallback : String(value);
@@ -20,6 +21,17 @@ function videoButton(day) {
     return a;
   }
   return el("span", "video-link pending", "抖音链接待补");
+}
+
+function articleButton(article) {
+  if (article.articleUrl) {
+    const a = el("a", "video-link wechat-link", "打开公众号文章");
+    a.href = article.articleUrl;
+    a.target = "_blank";
+    a.rel = "noreferrer";
+    return a;
+  }
+  return el("span", "video-link pending", "公众号链接待补");
 }
 
 function openTopic(topic) {
@@ -119,6 +131,51 @@ function renderArchive(days) {
   });
 }
 
+function renderWechat(payload) {
+  const account = document.querySelector("#wechat-account");
+  const reply = document.querySelector("#wechat-reply");
+  const site = document.querySelector("#wechat-site-link");
+  const list = document.querySelector("#wechat-list");
+  if (!payload?.articles?.length) {
+    list.textContent = "公众号文章待生成";
+    return;
+  }
+  account.textContent = `公众号：${payload.accountName || "待填写"}`;
+  reply.textContent = `公众号回复「${payload.replyKeyword || "Codex"}」获取脚本和项目链接`;
+  if (payload.siteUrl) site.href = payload.siteUrl;
+  list.replaceChildren();
+  payload.articles.forEach((article) => {
+    const card = el("article", "wechat-card");
+    const meta = el("div", "wechat-meta");
+    meta.append(el("span", "date", article.displayDate || article.date));
+    meta.append(el("span", article.articleUrl ? "wechat-status published" : "wechat-status", article.articleUrl ? "已发布" : "待发布"));
+    card.append(meta);
+
+    const body = el("div", "wechat-body");
+    body.append(el("strong", "", article.title));
+    body.append(el("p", "", article.digest || ""));
+    const actions = el("div", "wechat-actions");
+    actions.append(articleButton(article));
+    if (article.douyinUrl) {
+      const douyin = el("a", "resource-link", "抖音视频");
+      douyin.href = article.douyinUrl;
+      douyin.target = "_blank";
+      douyin.rel = "noreferrer";
+      actions.append(douyin);
+    }
+    if (article.siteUrl) {
+      const siteLink = el("a", "resource-link", "项目归档");
+      siteLink.href = article.siteUrl;
+      siteLink.target = "_blank";
+      siteLink.rel = "noreferrer";
+      actions.append(siteLink);
+    }
+    body.append(actions);
+    card.append(body);
+    list.append(card);
+  });
+}
+
 function renderHero(day) {
   document.querySelector("#latest-date").textContent = day.displayDate;
   const poster = document.querySelector("#latest-poster");
@@ -144,6 +201,10 @@ async function main() {
   renderHero(days[0]);
   renderToday(days[0]);
   renderArchive(days);
+  fetch(wechatUrl, { cache: "no-store" })
+    .then((response) => (response.ok ? response.json() : null))
+    .then(renderWechat)
+    .catch(() => renderWechat(null));
   document.querySelector("#updated-at").textContent = `Updated ${new Date(data.updatedAt).toLocaleString("zh-CN")}`;
 }
 

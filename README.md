@@ -9,6 +9,7 @@ This kit contains:
 - Chinese narration and Edge Neural TTS voiceover scripts
 - HyperFrames rendering scripts for vertical videos
 - a Cloudflare Worker static website template
+- WeChat public-account article draft generation and local publishing manager
 - a Codex skill and an automation template for daily 22:30 generation
 
 Production site example: https://radar.bjca.xyz/
@@ -26,7 +27,7 @@ Optional environment variables:
 ```powershell
 $env:PYTHON_EXE = "python"
 $env:NODE_EXE = "node"
-$env:HYPERFRAMES_BROWSER_PATH = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$env:HYPERFRAMES_BROWSER_PATH = "$env:ProgramFiles\Google\Chrome\Application\chrome.exe"
 $env:CLOUDFLARE_API_TOKEN = "<your-cloudflare-api-token>"
 ```
 
@@ -37,6 +38,7 @@ npm run fetch:topics
 node scripts/topic-history.mjs check --days 7
 npm run render:voiceover
 npm run site:export
+npm run wechat:generate -- YYYY-MM-DD
 npm --prefix site run build:worker
 npm run site:deploy
 ```
@@ -47,6 +49,28 @@ After publishing the Douyin video, add the real video URL:
 npm run site:set-douyin -- YYYY-MM-DD https://www.douyin.com/video/...
 npm run site:export
 npm run site:deploy
+```
+
+## WeChat Publishing Manager
+
+Generate daily article drafts:
+
+```powershell
+npm run wechat:generate -- YYYY-MM-DD
+npm run wechat:generate:all
+```
+
+Open the local manager, copy Markdown or HTML into the WeChat editor, then paste the published article URL back into the manager:
+
+```powershell
+npm run wechat:manager
+```
+
+The manager updates:
+
+```text
+wechat/articles.json
+site/public/data/wechat.json
 ```
 
 ## Codex Skill

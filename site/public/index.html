@@ -19,6 +19,7 @@
       <nav class="nav">
         <a href="#daily">日报</a>
         <a href="#archive">历史</a>
+        <a href="#wechat">公众号</a>
         <a href="#tutorial">教程</a>
         <a href="#workflow">流程</a>
       </nav>
@@ -29,7 +30,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Daily developer signal</p>
           <h1 id="hero-title">每天 7 个值得看的开发者热门项目</h1>
-          <p class="lede">自动整理 GitHub Trending、技术社区和产品热点，沉淀成可检索的项目日报，并关联到对应抖音视频。</p>
+          <p class="lede">自动整理 GitHub Trending、技术社区和产品热点，沉淀成可检索的项目日报，并关联到对应抖音视频和公众号文章。</p>
           <div class="hero-actions">
             <a class="button primary" href="#daily">看今日项目</a>
             <a class="button" href="#archive">浏览历史</a>
@@ -61,6 +62,27 @@
           <h2>历史日报</h2>
         </div>
         <div id="archive-list" class="archive-list"></div>
+      </section>
+
+      <section id="wechat" class="section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">WeChat</p>
+            <h2>公众号资料库</h2>
+          </div>
+          <p id="wechat-account" class="section-note">公众号配置中</p>
+        </div>
+        <div class="wechat-panel">
+          <div>
+            <strong>抖音看视频，公众号拿资料，网站看归档</strong>
+            <p>每天的视频项目清单会同步生成公众号文章。发布后，文章链接会回填到这里，形成可检索的内容闭环。</p>
+          </div>
+          <div>
+            <span id="wechat-reply">回复 Codex 获取脚本和项目链接</span>
+            <a id="wechat-site-link" class="resource-link" href="https://radar.bjca.xyz/" target="_blank" rel="noreferrer">打开网站归档</a>
+          </div>
+        </div>
+        <div id="wechat-list" class="wechat-list"></div>
       </section>
 
       <section id="workflow" class="section workflow">
@@ -108,7 +130,13 @@
             <code>node scripts/export-site-data.mjs --video &lt;mp4&gt; --thumbnail &lt;png&gt;</code>
           </article>
           <article class="tutorial-card">
-            <strong>6. 发布链接和部署</strong>
+            <strong>6. 生成公众号草稿</strong>
+            <p>按当天项目清单生成 Markdown 和 HTML 文章，发布到公众号后把文章链接回填到网站。</p>
+            <code>npm run wechat:generate -- YYYY-MM-DD</code>
+            <code>npm run wechat:manager</code>
+          </article>
+          <article class="tutorial-card">
+            <strong>7. 发布链接和部署</strong>
             <p>抖音发布后补视频链接，再部署到 Cloudflare Worker 站点和 radar.bjca.xyz。</p>
             <code>npm run site:set-douyin -- YYYY-MM-DD &lt;douyin-url&gt;</code>
             <code>npm run site:deploy</code>
