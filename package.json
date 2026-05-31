@@ -20,6 +20,7 @@
     "wechat:list": "node scripts/wechat-articles.mjs list",
     "wechat:set-url": "node scripts/wechat-articles.mjs set-url",
     "wechat:manager": "node scripts/wechat-manager.mjs",
+    "wechat:publish": "node scripts/wechat-publish.mjs",
     "render:voiceover": "powershell -ExecutionPolicy Bypass -File scripts/render-with-voiceover.ps1",
     "dev": "npx --yes hyperframes@0.6.34 preview",
     "check": "npx --yes hyperframes@0.6.34 lint && npx --yes hyperframes@0.6.34 inspect",

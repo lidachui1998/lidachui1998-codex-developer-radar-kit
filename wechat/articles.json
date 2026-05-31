@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-31T05:54:16.118Z",
+  "updatedAt": "2026-05-31T06:58:00.210Z",
   "articles": [
     {
       "date": "2026-05-30",
@@ -16,7 +16,9 @@
         "html": "wechat/articles/2026-05-30.html",
         "payload": "wechat/articles/2026-05-30.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.052Z"
+      "generatedAt": "2026-05-31T06:58:00.194Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-29",
@@ -32,7 +34,9 @@
         "html": "wechat/articles/2026-05-29.html",
         "payload": "wechat/articles/2026-05-29.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.080Z"
+      "generatedAt": "2026-05-31T06:58:00.204Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-28",
@@ -48,7 +52,9 @@
         "html": "wechat/articles/2026-05-28.html",
         "payload": "wechat/articles/2026-05-28.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.096Z"
+      "generatedAt": "2026-05-31T06:58:00.205Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-27",
@@ -64,7 +70,9 @@
         "html": "wechat/articles/2026-05-27.html",
         "payload": "wechat/articles/2026-05-27.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.099Z"
+      "generatedAt": "2026-05-31T06:58:00.206Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-26",
@@ -80,7 +88,9 @@
         "html": "wechat/articles/2026-05-26.html",
         "payload": "wechat/articles/2026-05-26.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.100Z"
+      "generatedAt": "2026-05-31T06:58:00.208Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-25",
@@ -96,7 +106,9 @@
         "html": "wechat/articles/2026-05-25.html",
         "payload": "wechat/articles/2026-05-25.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.110Z"
+      "generatedAt": "2026-05-31T06:58:00.209Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-24",
@@ -112,7 +124,9 @@
         "html": "wechat/articles/2026-05-24.html",
         "payload": "wechat/articles/2026-05-24.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.114Z"
+      "generatedAt": "2026-05-31T06:58:00.209Z",
+      "wechatMediaId": "",
+      "publishId": ""
     },
     {
       "date": "2026-05-23",
@@ -128,7 +142,9 @@
         "html": "wechat/articles/2026-05-23.html",
         "payload": "wechat/articles/2026-05-23.payload.json"
       },
-      "generatedAt": "2026-05-31T05:54:16.118Z"
+      "generatedAt": "2026-05-31T06:58:00.210Z",
+      "wechatMediaId": "",
+      "publishId": ""
     }
   ]
 }

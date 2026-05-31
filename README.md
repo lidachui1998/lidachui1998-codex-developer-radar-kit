@@ -29,6 +29,9 @@ $env:PYTHON_EXE = "python"
 $env:NODE_EXE = "node"
 $env:HYPERFRAMES_BROWSER_PATH = "$env:ProgramFiles\Google\Chrome\Application\chrome.exe"
 $env:CLOUDFLARE_API_TOKEN = "<your-cloudflare-api-token>"
+$env:WECHAT_APP_ID = "<optional-wechat-app-id>"
+$env:WECHAT_APP_SECRET = "<optional-wechat-app-secret>"
+$env:WECHAT_THUMB_MEDIA_ID = "<optional-wechat-cover-thumb-media-id>"
 ```
 
 ## Daily Workflow
@@ -60,11 +63,20 @@ npm run wechat:generate -- YYYY-MM-DD
 npm run wechat:generate:all
 ```
 
-Open the local manager, copy Markdown or HTML into the WeChat editor, then paste the published article URL back into the manager:
+Open the local manager, copy rich text into the WeChat editor, then paste the published article URL back into the manager:
 
 ```powershell
 npm run wechat:manager
 ```
+
+If your account has API permissions, you can create a WeChat draft or submit publishing through the API:
+
+```powershell
+npm run wechat:publish -- --date YYYY-MM-DD --mode draft
+npm run wechat:publish -- --date YYYY-MM-DD --mode publish
+```
+
+API publishing requires AppID, AppSecret, IP whitelist access, and a cover `thumb_media_id`. Personal subscription accounts may not have all required publishing permissions.
 
 The manager updates:
 

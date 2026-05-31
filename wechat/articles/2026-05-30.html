@@ -5,85 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>2026.05.30 开发者热点：Ghostty、vaultwarden、Pi-hole</title>
   </head>
-  <body style="margin:0;background:#f5f7fb;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
-    <main style="max-width:720px;margin:0 auto;padding:24px 18px 42px;">
-      <p style="margin:0 0 10px;color:#10b981;font-size:14px;font-weight:700;">待填写公众号名称 · Developer Radar</p>
-      <h1 style="margin:0;color:#111827;font-size:28px;line-height:1.25;">2026.05.30 开发者热点：Ghostty、vaultwarden、Pi-hole</h1>
-      <p style="margin:12px 0 0;color:#4b5563;font-size:16px;line-height:1.75;">今日整理 7 个开发者热点：Ghostty、vaultwarden、Pi-hole、OSV-Scanner。</p>
-      <section style="margin:18px 0;padding:16px;border-radius:8px;background:#ecfdf5;">
-        <p style="margin:0;color:#065f46;font-size:15px;line-height:1.7;">今天这期适合快速扫一眼：哪些项目值得收藏，哪些方向值得后续深挖。</p>
-        <p style="margin:10px 0 0;color:#065f46;font-size:15px;line-height:1.7;">项目归档：<a href="https://radar.bjca.xyz/?date=2026-05-30#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-05-30#archive</a></p>
-        <p style="margin:8px 0 0;color:#065f46;font-size:15px;line-height:1.7;">抖音视频：<a href="https://www.iesdouyin.com/share/video/7645705619495865634/" style="color:#047857;">打开视频</a></p>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+    
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">2026.05.30 开发者热点：Ghostty、vaultwarden、Pi-hole</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">今天这期不是简单堆链接，而是帮你从热点里筛出最值得先看的几个方向：Ghostty、vaultwarden、Pi-hole。适合先收藏，再按自己的场景深入研究。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先说结论</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">今天的重点方向：现代终端、自建密码库、家庭网络、供应链安全。如果你做开发工具、自动化、个人效率或自建服务，这期会比较有参考价值。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今日清单</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. Ghostty  /  2. vaultwarden  /  3. Pi-hole  /  4. OSV-Scanner  /  5. Pyrefly  /  6. Medusa  /  7. ShareX</p>
+    <p style="margin:12px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">视频回看：<a href="https://www.iesdouyin.com/share/video/7645705619495865634/" style="color:#047857;">打开抖音视频</a></p>
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-05-30#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-05-30#archive</a></p>
+  </section>
+
+  
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜Ghostty</h2>
       </section>
-      
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#1 · GitHub / 现代终端</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">Ghostty</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">ghostty-org/ghostty</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">55,584</strong> · 语言：Zig</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">Ghostty 是一个原生 UI 加 GPU 加速的现代终端，卖点不是炫技，而是每天写代码都能立刻感到顺手。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/ghostty-org/ghostty" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#2 · GitHub / 自建密码库</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">vaultwarden</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">dani-garcia/vaultwarden</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">61,569</strong> · 语言：Rust</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">vaultwarden 用 Rust 做了一个轻量 Bitwarden 兼容服务，适合想把密码库掌握在自己服务器上的人。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/dani-garcia/vaultwarden" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#3 · GitHub / 家庭网络</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">Pi-hole</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">pi-hole/pi-hole</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">59,030</strong> · 语言：Shell</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">Pi-hole 把广告和追踪拦截放到 DNS 层，一台小机器就能给全家设备做网络清理。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/pi-hole/pi-hole" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#4 · GitHub / 供应链安全</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">OSV-Scanner</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">google/osv-scanner</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">10,383</strong> · 语言：Go</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">OSV-Scanner 直接扫依赖漏洞和锁文件，适合放进 CI，把供应链风险提前拦下来。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/google/osv-scanner" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#5 · GitHub / Python 工具链</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">Pyrefly</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">facebook/pyrefly</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">6,555</strong> · 语言：Rust</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">Pyrefly 是 Meta 做的 Python 类型检查器和语言服务，重点是快，适合大型 Python 仓库关注。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/facebook/pyrefly" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#6 · GitHub / 开源电商</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">Medusa</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">medusajs/medusa</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">34,055</strong> · 语言：TypeScript</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">Medusa 是开源电商后端，适合想自己掌控商品、订单、支付和扩展能力的团队。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/medusajs/medusa" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-
-    <section style="margin:18px 0;padding:16px;border:1px solid #e5e7eb;border-radius:8px;background:#ffffff;">
-      <p style="margin:0 0 8px;color:#10b981;font-size:14px;font-weight:700;">#7 · GitHub / 录屏截图</p>
-      <h2 style="margin:0;color:#111827;font-size:22px;line-height:1.25;">ShareX</h2>
-      <p style="margin:8px 0 0;color:#6b7280;font-size:14px;">ShareX/ShareX</p>
-      <p style="margin:8px 0 0;color:#8a8f98;font-size:14px;">GitHub Star：<strong style="color:#111827;">37,827</strong> · 语言：C#</p>
-      <p style="margin:12px 0 0;color:#1f2937;font-size:16px;line-height:1.75;">ShareX 是免费开源截图录屏工具，开发者写文档、报 bug、发教程都会用得上。</p>
-      <p style="margin:10px 0 0;"><a href="https://github.com/ShareX/ShareX" style="color:#2563eb;text-decoration:none;">打开项目 / 原文</a></p>
-    </section>
-      <section style="margin:22px 0 0;padding:16px;border-radius:8px;background:#111827;">
-        <p style="margin:0;color:#f9fafb;font-size:17px;font-weight:700;">想要脚本和自动化流程？</p>
-        <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.7;">公众号回复「Codex」获取脚本、提示词和自动化流程。</p>
-        <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.7;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-05-30#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-05-30#archive</a></p>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 现代终端</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Zig</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 55,584 · 语言 Zig</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>Ghostty 是一个原生 UI 加 GPU 加速的现代终端，卖点不是炫技，而是每天写代码都能立刻感到顺手。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合每天写代码、想提升工具链效率的人先看。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：ghostty-org/ghostty</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/ghostty-org/ghostty" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
       </section>
-      <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.7;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
-    </main>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜vaultwarden</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 自建密码库</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Rust</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 61,569 · 语言 Rust</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>vaultwarden 用 Rust 做了一个轻量 Bitwarden 兼容服务，适合想把密码库掌握在自己服务器上的人。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合有自建服务、家庭网络或隐私控制需求的人收藏。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：dani-garcia/vaultwarden</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/dani-garcia/vaultwarden" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜Pi-hole</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 家庭网络</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Shell</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 59,030 · 语言 Shell</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>Pi-hole 把广告和追踪拦截放到 DNS 层，一台小机器就能给全家设备做网络清理。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合有自建服务、家庭网络或隐私控制需求的人收藏。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：pi-hole/pi-hole</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/pi-hole/pi-hole" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜OSV-Scanner</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 供应链安全</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Go</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 10,383 · 语言 Go</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>OSV-Scanner 直接扫依赖漏洞和锁文件，适合放进 CI，把供应链风险提前拦下来。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合做 CI、依赖治理、企业内部安全基线的人重点关注。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：google/osv-scanner</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/google/osv-scanner" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜Pyrefly</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / Python 工具链</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Rust</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 6,555 · 语言 Rust</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>Pyrefly 是 Meta 做的 Python 类型检查器和语言服务，重点是快，适合大型 Python 仓库关注。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合每天写代码、想提升工具链效率的人先看。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：facebook/pyrefly</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/facebook/pyrefly" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜Medusa</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 开源电商</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">TypeScript</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 34,055 · 语言 TypeScript</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>Medusa 是开源电商后端，适合想自己掌控商品、订单、支付和扩展能力的团队。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合正在做业务系统、后端架构或可扩展平台的人参考。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：medusajs/medusa</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/medusajs/medusa" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜ShareX</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 录屏截图</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">C#</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Star 37,827 · 语言 C#</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>ShareX 是免费开源截图录屏工具，开发者写文档、报 bug、发教程都会用得上。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合经常写文档、录教程、提 issue 或做技术分享的人使用。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：ShareX/ShareX</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/ShareX/ShareX" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「Codex」获取项目链接、脚本、提示词和自动化流程。</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-05-30#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-05-30#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
   </body>
 </html>
