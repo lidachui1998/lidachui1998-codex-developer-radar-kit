@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T14:31:54.092Z",
+  "updatedAt": "2026-05-31T14:52:42.624Z",
   "title": "Codex Developer Radar",
   "description": "每日开发者热门项目、视频与来源链接",
   "days": [
@@ -10,8 +10,8 @@
       "subtitle": "7 个值得开发者收藏的工具、Agent 工作流和多媒体项目",
       "source": "Developer Radar",
       "sourceUrl": "https://github.com/trending?since=daily",
-      "douyinUrl": "",
-      "thumbnail": "assets/thumbnails/2026-05-31.png",
+      "douyinUrl": "https://www.douyin.com/video/7646067972426960128",
+      "thumbnail": "",
       "topics": [
         {
           "rank": 1,
