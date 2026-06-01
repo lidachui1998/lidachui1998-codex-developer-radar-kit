@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-01T15:00:58.379Z",
+  "updatedAt": "2026-06-01T15:35:13.539Z",
   "title": "Codex Developer Radar",
   "description": "每日开发者热门项目、视频与来源链接",
   "days": [
@@ -10,7 +10,7 @@
       "subtitle": "7 个适合开发者收藏的学习、文档、调试、数据库和 Agent 热点",
       "source": "Developer Radar",
       "sourceUrl": "https://github.com/trending?since=daily",
-      "douyinUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7646450379051339048/?region=&mid=7646450397498739466&u_code=13km5idfe&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=K7T2Ma7zJ.LgJALEZr9EVgs5IjhekGFYtMvUF2Fd3.I-&share_version=380000&ts=1780328062&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
       "thumbnail": "assets/thumbnails/2026-06-01.png",
       "topics": [
         {
