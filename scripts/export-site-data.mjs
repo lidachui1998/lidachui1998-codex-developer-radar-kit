@@ -23,6 +23,15 @@ function displayDate(value = "") {
   return normalizeDate(value).replaceAll("-", ".");
 }
 
+function relativePublicPath(file) {
+  if (!file) return "";
+  const absolute = path.resolve(file);
+  const publicAbsolute = path.resolve(publicRoot);
+  const relative = path.relative(publicAbsolute, absolute);
+  if (relative.startsWith("..")) return "";
+  return relative.split(path.sep).join("/");
+}
+
 async function readJson(file, fallback) {
   try {
     const text = await readFile(file, "utf8");
@@ -66,6 +75,7 @@ function groupHistoryByDate(history) {
 }
 
 function dayFromHistory(date, entries, links) {
+  const first = entries[0] || {};
   return {
     date,
     displayDate: displayDate(date),
@@ -92,6 +102,7 @@ function dayFromHistory(date, entries, links) {
 }
 
 async function main() {
+  const videoPath = argValue("--video");
   const thumbnailPath = argValue("--thumbnail");
   const full = await readJson(topicsPath, null);
   const history = await readJson(historyPath, { version: 1, items: [] });
