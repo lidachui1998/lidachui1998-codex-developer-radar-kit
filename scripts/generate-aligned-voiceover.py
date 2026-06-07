@@ -41,8 +41,8 @@ def executable_from_env(name: str, fallback: Path, command: str) -> Path:
     return fallback
 
 
-async def tts(text: str, output: Path, voice: str, rate: str) -> None:
-    communicate = edge_tts.Communicate(text.strip(), voice, rate=rate)
+async def tts(text: str, output: Path, voice: str, rate: str, proxy: str | None) -> None:
+    communicate = edge_tts.Communicate(text.strip(), voice, rate=rate, proxy=proxy)
     await communicate.save(str(output))
 
 
@@ -62,6 +62,7 @@ async def main() -> None:
     parser.add_argument("--voice", default="zh-CN-YunxiNeural")
     parser.add_argument("--rate", default="-8%")
     parser.add_argument("--pause", type=float, default=0.35)
+    parser.add_argument("--proxy", default="")
     args = parser.parse_args()
 
     root = Path.cwd()
@@ -76,6 +77,13 @@ async def main() -> None:
         "ffprobe",
     )
     data = json.loads(args.data.read_text(encoding="utf-8"))
+    proxy = (
+        args.proxy
+        or os.environ.get("EDGE_TTS_PROXY")
+        or os.environ.get("HTTPS_PROXY")
+        or os.environ.get("HTTP_PROXY")
+        or None
+    )
     item_count = int(data.get("videoItemCount") or data.get("itemCount") or 7)
     items = data["items"][:item_count]
 
@@ -124,7 +132,7 @@ async def main() -> None:
 
     for index, segment in enumerate(segments):
         out = segment_dir / f"{index:02d}-{segment['id']}.mp3"
-        await tts(segment["text"], out, args.voice, args.rate)
+        await tts(segment["text"], out, args.voice, args.rate, proxy)
         dur = duration_seconds(ffprobe, out)
         visual_duration = max(3.2, dur + args.pause)
         entry = {

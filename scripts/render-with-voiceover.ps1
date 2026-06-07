@@ -48,6 +48,8 @@ if (!$Chrome) {
 $FfmpegDir = Join-Path $Root "node_modules\@ffmpeg-installer\win32-x64"
 $FfprobeDir = Join-Path $Root "node_modules\@ffprobe-installer\win32-x64"
 $Ffmpeg = Join-Path $FfmpegDir "ffmpeg.exe"
+$LocalPythonPackages = Join-Path $Root ".python-packages"
+$NpmCache = Join-Path $Root ".npm-cache"
 $Narration = Join-Path $Root "assets\narration.mp3"
 $Timings = Join-Path $Root "data\timings.json"
 $VideoOnly = Join-Path $Root "renders\developer-radar-video-only.mp4"
@@ -58,6 +60,12 @@ Set-Location $Root
 $env:PATH = "$FfmpegDir;$FfprobeDir;$env:PATH"
 if ($Chrome) {
   $env:HYPERFRAMES_BROWSER_PATH = $Chrome
+}
+New-Item -ItemType Directory -Force -Path $NpmCache | Out-Null
+$env:npm_config_cache = $NpmCache
+$env:NPM_CONFIG_CACHE = $NpmCache
+if (Test-Path $LocalPythonPackages) {
+  $env:PYTHONPATH = "$LocalPythonPackages;$env:PYTHONPATH"
 }
 
 if (!(Test-Path $Python)) {
