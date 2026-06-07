@@ -33,6 +33,11 @@ function fallbackTimings(count) {
   };
 }
 
+function videoItemCount(data) {
+  const configured = Number(data.videoItemCount || data.itemCount || 7);
+  return Math.max(1, Math.min(data.items?.length || configured, configured));
+}
+
 function sceneTrack(index) {
   return index % 2 === 0 ? 3 : 1;
 }
@@ -84,7 +89,7 @@ function recapItem(item) {
 }
 
 function buildHtml(data) {
-  const items = data.items.slice(0, 7);
+  const items = data.items.slice(0, videoItemCount(data));
   const timings = data.timings || fallbackTimings(items.length);
   const maxMetric = Math.max(...items.map((item) => metricNumber(item.metric)), 1);
   const topicScenes = items

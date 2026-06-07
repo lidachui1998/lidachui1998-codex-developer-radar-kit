@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-07T06:16:37.382Z",
+  "updatedAt": "2026-06-07T06:39:56.571Z",
   "articles": [
     {
       "date": "2026-06-07",
       "displayDate": "2026.06.07",
-      "title": "2026.06.07 开发者热点：CopilotKit、Agent-Reach、MemPalace",
-      "digest": "今日整理 7 个开发者热点：CopilotKit、Agent-Reach、MemPalace、last30days-skill。",
+      "title": "2026.06.07 开发者热点：CopilotKit、Svelte、NGINX",
+      "digest": "今日整理 12 个开发者热点：CopilotKit、Svelte、NGINX、Agent-Reach。",
       "status": "draft",
       "articleUrl": "",
       "douyinUrl": "",
@@ -16,7 +16,7 @@
         "html": "wechat/articles/2026-06-07.html",
         "payload": "wechat/articles/2026-06-07.payload.json"
       },
-      "generatedAt": "2026-06-07T06:16:37.381Z",
+      "generatedAt": "2026-06-07T06:39:56.571Z",
       "wechatMediaId": "",
       "publishId": ""
     },

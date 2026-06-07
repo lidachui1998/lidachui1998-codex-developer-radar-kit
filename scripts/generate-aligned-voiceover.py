@@ -76,7 +76,8 @@ async def main() -> None:
         "ffprobe",
     )
     data = json.loads(args.data.read_text(encoding="utf-8"))
-    items = data["items"][:7]
+    item_count = int(data.get("videoItemCount") or data.get("itemCount") or 7)
+    items = data["items"][:item_count]
 
     hook_text = data.get("hookVoiceover") or (
         "这条热点视频，是我用 Codex 自动生成的。"

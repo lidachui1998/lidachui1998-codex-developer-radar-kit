@@ -64,6 +64,11 @@ function topicFromFullItem(item) {
   };
 }
 
+function videoItemCount(data) {
+  const configured = Number(data.videoItemCount || data.itemCount || 7);
+  return Math.max(1, Math.min(data.items?.length || configured, configured));
+}
+
 function groupHistoryByDate(history) {
   const groups = new Map();
   for (const item of history.items || []) {
@@ -130,7 +135,7 @@ async function main() {
       sourceUrl: full.sourceUrl || "https://github.com/trending?since=daily",
       douyinUrl: links[date] || "",
       thumbnail,
-      topics: full.items.slice(0, 7).map(topicFromFullItem),
+      topics: full.items.slice(0, videoItemCount(full)).map(topicFromFullItem),
     });
 
     historyGroups.delete(date);

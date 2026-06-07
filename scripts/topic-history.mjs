@@ -59,7 +59,8 @@ function cutoffDate(date, days) {
 
 function currentEntries(data, videoPath = "") {
   const date = dateFromData(data);
-  return data.items.slice(0, 7).map((item) => ({
+  const count = Math.max(1, Number(data.videoItemCount || data.itemCount || 7));
+  return data.items.slice(0, count).map((item) => ({
     date,
     key: itemKey(item),
     title: item.title,
