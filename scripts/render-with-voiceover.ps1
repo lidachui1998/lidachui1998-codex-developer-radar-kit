@@ -13,11 +13,38 @@ function Assert-LastExitCode {
   }
 }
 
+function Resolve-Tool {
+  param(
+    [string]$EnvName,
+    [string[]]$Commands
+  )
+  $fromEnv = [Environment]::GetEnvironmentVariable($EnvName)
+  if ($fromEnv) {
+    if (!(Test-Path $fromEnv)) {
+      throw "$EnvName points to a missing file: $fromEnv"
+    }
+    return $fromEnv
+  }
+  foreach ($command in $Commands) {
+    $resolved = Get-Command $command -ErrorAction SilentlyContinue
+    if ($resolved) {
+      return $resolved.Source
+    }
+  }
+  throw "Required tool not found. Set $EnvName or add one of these commands to PATH: $($Commands -join ', ')"
+}
+
 $Root = Split-Path -Parent $PSScriptRoot
-$Node = if ($env:NODE_EXE) { $env:NODE_EXE } else { "node" }
-$Python = if ($env:PYTHON_EXE) { $env:PYTHON_EXE } else { "python" }
-$Npx = if ($env:NPX_EXE) { $env:NPX_EXE } else { "npx" }
+$Node = Resolve-Tool "NODE_EXE" @("node.exe", "node")
+$Python = Resolve-Tool "PYTHON_EXE" @("python.exe", "python", "py.exe", "py")
+$Npx = Resolve-Tool "NPX_EXE" @("npx.cmd", "npx.exe", "npx")
 $Chrome = $env:HYPERFRAMES_BROWSER_PATH
+if (!$Chrome) {
+  $candidateChrome = Join-Path $env:ProgramFiles "Google\Chrome\Application\chrome.exe"
+  if (Test-Path $candidateChrome) {
+    $Chrome = $candidateChrome
+  }
+}
 $FfmpegDir = Join-Path $Root "node_modules\@ffmpeg-installer\win32-x64"
 $FfprobeDir = Join-Path $Root "node_modules\@ffprobe-installer\win32-x64"
 $Ffmpeg = Join-Path $FfmpegDir "ffmpeg.exe"
@@ -28,13 +55,14 @@ $Final = Join-Path $Root $Output
 $SiteThumb = Join-Path $Root "renders\site-latest-thumbnail.png"
 
 Set-Location $Root
-if (Test-Path $FfmpegDir) {
-  $env:PATH = "$FfmpegDir;$FfprobeDir;$env:PATH"
-}
+$env:PATH = "$FfmpegDir;$FfprobeDir;$env:PATH"
 if ($Chrome) {
   $env:HYPERFRAMES_BROWSER_PATH = $Chrome
 }
 
+if (!(Test-Path $Python)) {
+  throw "Required Python not found: $Python"
+}
 & $Node "scripts\topic-history.mjs" check --days 7
 Assert-LastExitCode "Topic history check"
 & $Python -c "import edge_tts; print(edge_tts.__file__)"
