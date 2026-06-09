@@ -32,6 +32,16 @@ function relativePublicPath(file) {
   return relative.split(path.sep).join("/");
 }
 
+async function existingThumbnailPath(date) {
+  const thumbnail = `assets/thumbnails/${date}.png`;
+  try {
+    await readFile(path.join(publicRoot, thumbnail));
+    return thumbnail;
+  } catch {
+    return "";
+  }
+}
+
 async function readJson(file, fallback) {
   try {
     const text = await readFile(file, "utf8");
@@ -143,6 +153,10 @@ async function main() {
 
   for (const [date, entries] of historyGroups) {
     days.push(dayFromHistory(date, entries, links));
+  }
+
+  for (const day of days) {
+    if (!day.thumbnail) day.thumbnail = await existingThumbnailPath(day.date);
   }
 
   days.sort((a, b) => b.date.localeCompare(a.date));

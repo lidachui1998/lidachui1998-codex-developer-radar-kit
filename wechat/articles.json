@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-08T16:37:44.529Z",
+  "updatedAt": "2026-06-09T11:33:49.984Z",
   "articles": [
+    {
+      "date": "2026-06-09",
+      "displayDate": "2026.06.09",
+      "title": "2026.06.09 开发者热点：GentleOS、Thi.ng、Limelight",
+      "digest": "今日整理 7 个开发者热点：GentleOS、Thi.ng、Limelight、agentcad。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.douyin.com/video/7649356267575676198",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-06-09#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-06-09.md",
+        "html": "wechat/articles/2026-06-09.html",
+        "payload": "wechat/articles/2026-06-09.payload.json"
+      },
+      "generatedAt": "2026-06-09T11:33:49.984Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-06-08",
       "displayDate": "2026.06.08",
@@ -9,14 +27,14 @@
       "digest": "今日整理 7 个开发者热点：tolaria、Performative-UI、Zig by Example、Sigma File Manager。",
       "status": "draft",
       "articleUrl": "",
-      "douyinUrl": "",
+      "douyinUrl": "https://www.douyin.com/video/7649354691855387914",
       "siteUrl": "https://radar.bjca.xyz/?date=2026-06-08#archive",
       "paths": {
         "markdown": "wechat/articles/2026-06-08.md",
         "html": "wechat/articles/2026-06-08.html",
         "payload": "wechat/articles/2026-06-08.payload.json"
       },
-      "generatedAt": "2026-06-08T16:37:44.528Z",
+      "generatedAt": "2026-06-09T11:33:35.758Z",
       "wechatMediaId": "",
       "publishId": ""
     },
