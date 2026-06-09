@@ -122,6 +122,8 @@ async function main() {
   const full = await readJson(topicsPath, null);
   const history = await readJson(historyPath, { version: 1, items: [] });
   const links = await readJson(linksPath, {});
+  const existing = await readJson(outputPath, { days: [] });
+  const existingDays = new Map((existing.days || []).map((day) => [normalizeDate(day.date), day]));
   const historyGroups = groupHistoryByDate(history);
   const days = [];
 
@@ -152,7 +154,15 @@ async function main() {
   }
 
   for (const [date, entries] of historyGroups) {
-    days.push(dayFromHistory(date, entries, links));
+    const existingDay = existingDays.get(date);
+    if (existingDay) {
+      days.push({
+        ...existingDay,
+        douyinUrl: links[date] || existingDay.douyinUrl || "",
+      });
+    } else {
+      days.push(dayFromHistory(date, entries, links));
+    }
   }
 
   for (const day of days) {

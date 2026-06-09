@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-09T11:33:49.984Z",
+  "updatedAt": "2026-06-09T13:48:14.483Z",
   "articles": [
     {
       "date": "2026-06-09",
@@ -16,7 +16,7 @@
         "html": "wechat/articles/2026-06-09.html",
         "payload": "wechat/articles/2026-06-09.payload.json"
       },
-      "generatedAt": "2026-06-09T11:33:49.984Z",
+      "generatedAt": "2026-06-09T13:48:14.482Z",
       "wechatMediaId": "",
       "publishId": ""
     },
