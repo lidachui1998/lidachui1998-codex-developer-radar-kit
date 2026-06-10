@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-10T15:46:21.104Z",
+  "updatedAt": "2026-06-10T15:59:30.063Z",
   "title": "Codex Developer Radar",
   "description": "每日开发者热门项目、视频与来源链接",
   "days": [
@@ -10,7 +10,7 @@
       "subtitle": "Mac 容器、Agent 技能、社媒 API、Agent 训练、npm 供应链、Git 重写和视觉库升级。",
       "source": "Developer Radar",
       "sourceUrl": "https://github.com/trending?since=daily",
-      "douyinUrl": "",
+      "douyinUrl": "https://www.douyin.com/video/7649794982433262898",
       "thumbnail": "assets/thumbnails/2026-06-10.jpg",
       "topics": [
         {
