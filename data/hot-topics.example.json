@@ -11,7 +11,7 @@
   "leadLabel": "先看第一个热点",
   "codexLine": "由 Codex 辅助抓取热点、改写口播并渲染成片",
   "hookVoiceover": "今天这七个点，适合开发者先收藏：有 Mac 容器、AI Agent 工具、供应链变化，也有视觉库升级。",
-  "cta": "资料在公众号，回复 Codex 获取项目链接、脚本和自动化流程。",
+  "cta": "今天先到这里，七个方向按需收藏，明天继续。",
   "sources": [
     {
       "name": "GitHub Trending",
@@ -144,5 +144,5 @@
       "voiceover": "第七，OpenCV 5，老牌视觉库一次大升级。"
     }
   ],
-  "narration": "今天这七个点，适合开发者先收藏：有 Mac 容器、AI Agent 工具、供应链变化，也有视觉库升级。第一，Apple container，把 Mac 上的 Linux 环境做得更轻。第二，agent-skills，把工程流程封装给 AI 编码代理。第三，Publora，让 Agent 用一个 API 发十个平台。第四，RHO，让 Agent 从失败轨迹里自己改工具链。第五，npm v12，默认关安装脚本，供应链更硬。第六，Grit，用 Rust 和 Agent 重新拆 Git。第七，OpenCV 5，老牌视觉库一次大升级。资料在公众号，回复 Codex 获取项目链接、脚本和自动化流程。"
+  "narration": "今天这七个点，适合开发者先收藏：有 Mac 容器、AI Agent 工具、供应链变化，也有视觉库升级。第一，Apple container，把 Mac 上的 Linux 环境做得更轻。第二，agent-skills，把工程流程封装给 AI 编码代理。第三，Publora，让 Agent 用一个 API 发十个平台。第四，RHO，让 Agent 从失败轨迹里自己改工具链。第五，npm v12，默认关安装脚本，供应链更硬。第六，Grit，用 Rust 和 Agent 重新拆 Git。第七，OpenCV 5，老牌视觉库一次大升级。今天先到这里，七个方向按需收藏，明天继续。"
 }

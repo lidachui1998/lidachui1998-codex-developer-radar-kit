@@ -46,6 +46,38 @@ async def tts(text: str, output: Path, voice: str, rate: str, proxy: str | None)
     await communicate.save(str(output))
 
 
+async def tts_with_retry(
+    text: str,
+    output: Path,
+    voice: str,
+    rate: str,
+    proxy: str | None,
+    attempts: int,
+    retry_base_seconds: float,
+) -> None:
+    last_error: Exception | None = None
+    for attempt in range(1, max(1, attempts) + 1):
+        if output.exists():
+            output.unlink()
+        try:
+            await tts(text, output, voice, rate, proxy)
+            if not output.exists() or output.stat().st_size <= 0:
+                raise RuntimeError("Edge TTS wrote an empty audio file")
+            return
+        except Exception as error:
+            last_error = error
+            if attempt >= attempts:
+                break
+            wait_seconds = retry_base_seconds * attempt
+            print(
+                f"Edge TTS attempt {attempt}/{attempts} failed for {output.name}: {error}. "
+                f"Retrying in {wait_seconds:.0f}s.",
+                flush=True,
+            )
+            await asyncio.sleep(wait_seconds)
+    raise last_error or RuntimeError("Edge TTS generation failed")
+
+
 def write_concat_list(path: Path, files: list[Path]) -> None:
     lines = []
     for file in files:
@@ -63,6 +95,17 @@ async def main() -> None:
     parser.add_argument("--rate", default="-8%")
     parser.add_argument("--pause", type=float, default=0.35)
     parser.add_argument("--proxy", default="")
+    parser.add_argument("--retries", type=int, default=int(os.environ.get("EDGE_TTS_RETRIES", "4")))
+    parser.add_argument(
+        "--retry-base-seconds",
+        type=float,
+        default=float(os.environ.get("EDGE_TTS_RETRY_BASE_SECONDS", "30")),
+    )
+    parser.add_argument(
+        "--segment-delay",
+        type=float,
+        default=float(os.environ.get("EDGE_TTS_SEGMENT_DELAY", "8")),
+    )
     args = parser.parse_args()
 
     root = Path.cwd()
@@ -132,7 +175,15 @@ async def main() -> None:
 
     for index, segment in enumerate(segments):
         out = segment_dir / f"{index:02d}-{segment['id']}.mp3"
-        await tts(segment["text"], out, args.voice, args.rate, proxy)
+        await tts_with_retry(
+            segment["text"],
+            out,
+            args.voice,
+            args.rate,
+            proxy,
+            args.retries,
+            args.retry_base_seconds,
+        )
         dur = duration_seconds(ffprobe, out)
         visual_duration = max(3.2, dur + args.pause)
         entry = {
@@ -145,6 +196,8 @@ async def main() -> None:
         rendered_files.append(out)
         if index != len(segments) - 1:
             rendered_files.append(silence)
+            if args.segment_delay > 0:
+                await asyncio.sleep(args.segment_delay)
         cursor += visual_duration
 
     concat_list = segment_dir / "concat.txt"

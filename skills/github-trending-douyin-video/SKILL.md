@@ -7,7 +7,7 @@ description: Generate and publish vertical Douyin-ready short videos from daily 
 
 ## Purpose
 
-Turn daily developer and AI trend sources into a 9:16 short video: a fast hook, seven ranked topics, readable Chinese takeaways, synchronized voiceover/subtitle copy, trend metrics, a closing CTA, and a matching WeChat public-account article.
+Turn daily developer and AI trend sources into a 9:16 short video: a fast hook, seven ranked topics, readable Chinese takeaways, synchronized voiceover/subtitle copy, trend metrics, a neutral recap outro, and a matching WeChat public-account article.
 
 Use HyperFrames as the default renderer.
 
@@ -39,7 +39,7 @@ npm install --save-dev @ffmpeg-installer/ffmpeg @ffprobe-installer/ffprobe
 8. Record successful topics back into `data/topic-history.json`.
 9. Export website data into `site/public/data/days.json`.
 10. Publish the validated final MP4 to Douyin by default when an authenticated uploader/account flow is available. If login, CAPTCHA, account selection, or another manual gate appears, pause for the user to complete it, then continue from that session.
-11. Use concise Chinese title/description copy, keep the public `回复 Codex` resource CTA, and choose a few relevant Douyin hot-topic tags when the UI offers them. Prefer matching popular topics over generic traffic tags.
+11. Use concise Chinese title/description copy with no external-channel guidance, and choose a few relevant Douyin hot-topic tags when the UI offers them. Prefer matching popular topics over generic traffic tags. If a resource note is still useful after publish, add one Douyin-native comment with project names only.
 12. Verify the Creator Center or Works Management status after publishing. If the work is `审核中`, report it as submitted for review and do not invent a public URL. If a public Douyin URL is visible, record it with `node scripts/set-douyin-link.mjs YYYY-MM-DD <douyin-url>` and rerun `node scripts/export-site-data.mjs`.
 13. Generate the daily WeChat public-account article draft with `npm run wechat:generate -- YYYY-MM-DD`, or backfill all current days with `npm run wechat:generate:all`. Regenerate it after recording a Douyin URL so article/site metadata stays current.
 14. Keep WeChat articles publishable, not just data lists: include a hook, conclusion, per-project "why it matters", "who it is for", source links, and a final resource CTA.

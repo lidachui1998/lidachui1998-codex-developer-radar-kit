@@ -500,9 +500,9 @@ ${topicScenes}
 
       <section id="recap" class="clip scene recap" data-start="${timings.outro.start.toFixed(3)}" data-duration="${timings.outro.duration.toFixed(3)}" data-track-index="1">
         <div class="scene-content">
-          <div class="eyebrow">资料已经整理好</div>
-          <h2>项目链接和脚本放在公众号</h2>
-          <p class="cta">${escapeHtml(data.cta || "资料在公众号，回复 Codex 获取项目链接、脚本和自动化流程。")}</p>
+          <div class="eyebrow">今日小结</div>
+          <h2>七个方向先按需收藏</h2>
+          <p class="cta">${escapeHtml(data.cta || "今天先到这里，明天继续看开发者热点。")}</p>
         </div>
       </section>
     </div>
