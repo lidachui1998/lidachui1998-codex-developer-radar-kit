@@ -1,4 +1,4 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const siteRoot = path.resolve(import.meta.dirname, "..");
@@ -8,6 +8,8 @@ const outputPath = path.join(siteRoot, "dist", "worker.mjs");
 const contentTypes = new Map([
   [".css", "text/css; charset=utf-8"],
   [".html", "text/html; charset=utf-8"],
+  [".jpeg", "image/jpeg"],
+  [".jpg", "image/jpeg"],
   [".js", "application/javascript; charset=utf-8"],
   [".json", "application/json; charset=utf-8"],
   [".png", "image/png"],
@@ -36,8 +38,22 @@ function contentType(file) {
   return contentTypes.get(path.extname(file).toLowerCase()) || "application/octet-stream";
 }
 
+async function shouldSkipFile(file) {
+  const relative = publicPath(file);
+  if (!relative.startsWith("/assets/thumbnails/") || path.extname(file).toLowerCase() !== ".png") {
+    return false;
+  }
+  try {
+    await access(file.replace(/\.png$/i, ".jpg"));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 const files = {};
 for (const file of await collectFiles(publicRoot)) {
+  if (await shouldSkipFile(file)) continue;
   files[publicPath(file)] = {
     contentType: contentType(file),
     base64: (await readFile(file)).toString("base64"),

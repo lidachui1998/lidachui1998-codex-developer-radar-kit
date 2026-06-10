@@ -33,13 +33,16 @@ function relativePublicPath(file) {
 }
 
 async function existingThumbnailPath(date) {
-  const thumbnail = `assets/thumbnails/${date}.png`;
-  try {
-    await readFile(path.join(publicRoot, thumbnail));
-    return thumbnail;
-  } catch {
-    return "";
+  for (const extension of ["jpg", "png"]) {
+    const thumbnail = `assets/thumbnails/${date}.${extension}`;
+    try {
+      await readFile(path.join(publicRoot, thumbnail));
+      return thumbnail;
+    } catch {
+      // Try the next supported image format.
+    }
   }
+  return "";
 }
 
 async function readJson(file, fallback) {
@@ -166,7 +169,8 @@ async function main() {
   }
 
   for (const day of days) {
-    if (!day.thumbnail) day.thumbnail = await existingThumbnailPath(day.date);
+    const thumbnail = await existingThumbnailPath(day.date);
+    if (thumbnail) day.thumbnail = thumbnail;
   }
 
   days.sort((a, b) => b.date.localeCompare(a.date));
