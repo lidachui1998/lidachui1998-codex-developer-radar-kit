@@ -10,7 +10,7 @@ This kit contains:
 - HyperFrames rendering scripts for vertical videos
 - a Cloudflare Worker static website template
 - WeChat public-account article draft generation and local publishing manager
-- a Codex skill and an automation template for daily 22:30 generation
+- a Codex skill and an automation template for daily 22:30 generation, Douyin publishing, and site deployment
 
 Production site example: https://radar.bjca.xyz/
 
@@ -46,7 +46,9 @@ npm --prefix site run build:worker
 npm run site:deploy
 ```
 
-After publishing the Douyin video, add the real video URL:
+The Codex automation should publish the validated final MP4 through the authenticated Douyin Creator Center flow when available, fill title/description copy, and choose relevant hot-topic tags if the UI offers them. If login, CAPTCHA, or account selection is required, let the user complete it and then continue from that browser session.
+
+When a public Douyin URL is visible, record the real video URL and redeploy. If the work is still under review, leave the site button pending instead of inventing a URL:
 
 ```powershell
 npm run site:set-douyin -- YYYY-MM-DD https://www.douyin.com/video/...

@@ -1,6 +1,6 @@
 ---
 name: github-trending-douyin-video
-description: Generate vertical Douyin-ready short videos from daily developer and AI hot topics using HyperFrames. Use when Codex needs to pull GitHub Trending, Hacker News, Product Hunt, Hugging Face, arXiv, RSS, or other trend sources; select topics; write Chinese short-video narration; generate voiceover; update a Cloudflare Worker website; prepare WeChat public-account articles; or prepare a recurring developer hot-topic video workflow for Douyin, TikTok, or Shorts.
+description: Generate and publish vertical Douyin-ready short videos from daily developer and AI hot topics using HyperFrames. Use when Codex needs to pull GitHub Trending, Hacker News, Product Hunt, Hugging Face, arXiv, RSS, or other trend sources; select topics; write Chinese short-video narration; generate voiceover; publish through Douyin Creator Center when an authenticated flow is available; update a Cloudflare Worker website; prepare WeChat public-account articles; or prepare a recurring developer hot-topic video workflow for Douyin, TikTok, or Shorts.
 ---
 
 # GitHub Trending Douyin Video
@@ -38,12 +38,15 @@ npm install --save-dev @ffmpeg-installer/ffmpeg @ffprobe-installer/ffprobe
 7. Render with HyperFrames and mux the final MP4 with an AAC audio stream.
 8. Record successful topics back into `data/topic-history.json`.
 9. Export website data into `site/public/data/days.json`.
-10. Generate the daily WeChat public-account article draft with `npm run wechat:generate -- YYYY-MM-DD`, or backfill all current days with `npm run wechat:generate:all`.
-11. Keep WeChat articles publishable, not just data lists: include a hook, conclusion, per-project "why it matters", "who it is for", source links, and a final resource CTA.
-12. Use `npm run wechat:manager` to open the local publishing manager. Prefer "copy rich text" for manual WeChat editor publishing, then record the published article URL.
-13. If the account has API publishing permissions, configure `WECHAT_APP_ID`, `WECHAT_APP_SECRET`, and `WECHAT_THUMB_MEDIA_ID`, or the matching fields in `wechat/config.json`, then use `npm run wechat:publish -- --date YYYY-MM-DD --mode draft` or `--mode publish`. If credentials, IP whitelist, media ID, or account permissions are missing, report the blocker instead of claiming publication.
-14. Keep the public website tutorial linked to the GitHub repository, skill template, automation template, and WeChat publishing manager. Do not expose local Windows paths on the public website.
-15. Deploy the Cloudflare Worker website when credentials are available.
+10. Publish the validated final MP4 to Douyin by default when an authenticated uploader/account flow is available. If login, CAPTCHA, account selection, or another manual gate appears, pause for the user to complete it, then continue from that session.
+11. Use concise Chinese title/description copy, keep the public `回复 Codex` resource CTA, and choose a few relevant Douyin hot-topic tags when the UI offers them. Prefer matching popular topics over generic traffic tags.
+12. Verify the Creator Center or Works Management status after publishing. If the work is `审核中`, report it as submitted for review and do not invent a public URL. If a public Douyin URL is visible, record it with `node scripts/set-douyin-link.mjs YYYY-MM-DD <douyin-url>` and rerun `node scripts/export-site-data.mjs`.
+13. Generate the daily WeChat public-account article draft with `npm run wechat:generate -- YYYY-MM-DD`, or backfill all current days with `npm run wechat:generate:all`. Regenerate it after recording a Douyin URL so article/site metadata stays current.
+14. Keep WeChat articles publishable, not just data lists: include a hook, conclusion, per-project "why it matters", "who it is for", source links, and a final resource CTA.
+15. Use `npm run wechat:manager` to open the local publishing manager. Prefer "copy rich text" for manual WeChat editor publishing, then record the published article URL.
+16. If the account has API publishing permissions, configure `WECHAT_APP_ID`, `WECHAT_APP_SECRET`, and `WECHAT_THUMB_MEDIA_ID`, or the matching fields in `wechat/config.json`, then use `npm run wechat:publish -- --date YYYY-MM-DD --mode draft` or `--mode publish`. If credentials, IP whitelist, media ID, or account permissions are missing, report the blocker instead of claiming publication.
+17. Keep the public website tutorial linked to the GitHub repository, skill template, automation template, and WeChat publishing manager. Do not expose local Windows paths on the public website.
+18. Attempt Cloudflare Worker deployment with `npm run site:deploy` after every successful website data update. Deploy when credentials are available; if authentication is blocked, report the blocker and include the local website data path or preview URL.
 
 ## Voiceover
 
@@ -66,11 +69,14 @@ Ask Codex to:
 - write Chinese Douyin copy
 - render with `scripts/render-with-voiceover.ps1`
 - update `site/public/data/days.json`
+- publish the validated MP4 to Douyin automatically when the authenticated Creator Center flow is available
+- choose a few relevant Douyin hot-topic tags during publishing when the UI offers them
+- record the public Douyin URL in `site/data/douyin-links.json` when visible, or leave the site button pending while the work is under review
 - generate the WeChat public-account article draft with `npm run wechat:generate -- YYYY-MM-DD`
 - keep WeChat articles rich enough for publication, with conclusion, project value, suitable audience, links, and resource CTA
 - keep `site/data/douyin-links.json` as the source of Douyin links
 - keep the public tutorial linked to `<YOUR_REPO_URL>`
-- deploy the Cloudflare Worker site
+- attempt Cloudflare Worker deployment after every successful website data update
 - report source URLs, selected topics, output MP4 path, audio verification, website data path, WeChat draft path, publish status, deployed URL, and warnings
 
-Do not publish to Douyin automatically unless the user explicitly asks and the uploader/account flow is available.
+Publish to Douyin automatically for this recurring daily workflow when the uploader/account flow is available. Do not publish to WeChat automatically unless the user explicitly asks and the relevant account/API flow is available.
