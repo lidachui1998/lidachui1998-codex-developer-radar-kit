@@ -1,8 +1,148 @@
 {
   "source": "Developer Radar",
-  "generatedAt": "2026-05-24T00:00:00.000Z",
-  "dateLabel": "2026.05.24",
-  "title": "今日热门项目",
-  "subtitle": "7 个新项目",
-  "items": []
+  "sourceUrl": "https://github.com/trending?since=daily",
+  "generatedAt": "2026-06-10T21:36:00+08:00",
+  "dateLabel": "2026.06.10",
+  "videoItemCount": 7,
+  "title": "今日 AI 开发者热点",
+  "subtitle": "Mac 容器、Agent 技能、社媒 API、Agent 训练、npm 供应链、Git 重写和视觉库升级。",
+  "hookTitle": "今日 AI 开发者热点",
+  "hookSubtitle": "七个适合开发者今天先收藏的项目和技术信号。",
+  "leadLabel": "先看第一个热点",
+  "codexLine": "由 Codex 辅助抓取热点、改写口播并渲染成片",
+  "hookVoiceover": "今天这七个点，适合开发者先收藏：有 Mac 容器、AI Agent 工具、供应链变化，也有视觉库升级。",
+  "cta": "资料在公众号，回复 Codex 获取项目链接、脚本和自动化流程。",
+  "sources": [
+    {
+      "name": "GitHub Trending",
+      "url": "https://github.com/trending?since=daily"
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "name": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "name": "Hugging Face Papers",
+      "url": "https://huggingface.co/papers"
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "source": "Hacker News",
+      "category": "容器工具",
+      "title": "Apple container",
+      "subtitle": "apple/container",
+      "url": "https://github.com/apple/container",
+      "language": "Swift",
+      "metricLabel": "HN 热度",
+      "metric": "915 points",
+      "secondaryLabel": "评论",
+      "secondaryMetric": "330",
+      "description": "Tool for creating and running Linux containers using lightweight virtual machines on a Mac.",
+      "angle": "Apple container 把 Mac 上跑 Linux 容器这件事做得更原生，适合需要本地隔离环境、又不想被重型虚拟机拖慢的开发者。",
+      "voiceover": "第一，Apple container，把 Mac 上的 Linux 环境做得更轻。"
+    },
+    {
+      "rank": 2,
+      "source": "GitHub",
+      "category": "Agent 工程",
+      "title": "agent-skills",
+      "subtitle": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "language": "Markdown",
+      "metricLabel": "今日新增 Star",
+      "metric": "+443",
+      "secondaryLabel": "总星标",
+      "secondaryMetric": "50,186",
+      "description": "Skills to make AI agents useful in real-world software engineering.",
+      "angle": "agent-skills 把代码审查、测试、性能和前端工程这些流程拆成可复用技能，适合给 AI 编码代理补一套工程纪律。",
+      "voiceover": "第二，agent-skills，把工程流程封装给 AI 编码代理。"
+    },
+    {
+      "rank": 3,
+      "source": "Product Hunt",
+      "category": "社媒 API",
+      "title": "Publora",
+      "subtitle": "Product Hunt",
+      "url": "https://www.producthunt.com/products/publora",
+      "language": "API",
+      "metricLabel": "PH 热度",
+      "metric": "564 upvotes",
+      "secondaryLabel": "类型",
+      "secondaryMetric": "AI API",
+      "description": "The AI-first social media management API.",
+      "angle": "Publora 把多平台发帖做成面向 AI 的 API，做增长工具、内容 Agent 或自动化运营面板的人可以重点看看。",
+      "voiceover": "第三，Publora，让 Agent 用一个 API 发十个平台。"
+    },
+    {
+      "rank": 4,
+      "source": "Hugging Face",
+      "category": "Agent 训练",
+      "title": "Retrospective Harness Optimization",
+      "subtitle": "Hugging Face Papers",
+      "url": "https://huggingface.co/papers/2606.04625",
+      "language": "Paper",
+      "metricLabel": "HF 热度",
+      "metric": "43 votes",
+      "secondaryLabel": "方向",
+      "secondaryMetric": "Agent",
+      "description": "Retrospective Harness Optimization uses self-preference over trajectory rollouts to improve agent harnesses.",
+      "angle": "RHO 的重点不是换更大的模型，而是让 Agent 回看自己跑过的轨迹，自动修正工具链和提示，让复杂任务更稳。",
+      "voiceover": "第四，RHO，让 Agent 从失败轨迹里自己改工具链。"
+    },
+    {
+      "rank": 5,
+      "source": "Hacker News",
+      "category": "包管理",
+      "title": "npm v12 breaking changes",
+      "subtitle": "github.blog",
+      "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-in-npm-v12/",
+      "language": "JavaScript",
+      "metricLabel": "HN 热度",
+      "metric": "229 points",
+      "secondaryLabel": "评论",
+      "secondaryMetric": "348",
+      "description": "Upcoming breaking changes in npm v12 include install script and package query behavior changes.",
+      "angle": "npm v12 的变化会影响装包默认行为和供应链安全策略，维护 Node 项目的人最好提前看一眼 CI 和发布脚本。",
+      "voiceover": "第五，npm v12，默认关安装脚本，供应链更硬。"
+    },
+    {
+      "rank": 6,
+      "source": "Hacker News",
+      "category": "开发工具",
+      "title": "Grit",
+      "subtitle": "gitbutler.com",
+      "url": "https://blog.gitbutler.com/grit-rewriting-git-in-rust-with-agents/",
+      "language": "Rust",
+      "metricLabel": "HN 热度",
+      "metric": "159 points",
+      "secondaryLabel": "评论",
+      "secondaryMetric": "249",
+      "description": "Grit explores rewriting Git in Rust with agents.",
+      "angle": "Grit 把重写 Git、Rust 工具链和 AI Agent 协作放在一起，适合关注下一代开发工具底层形态的人。",
+      "voiceover": "第六，Grit，用 Rust 和 Agent 重新拆 Git。"
+    },
+    {
+      "rank": 7,
+      "source": "Hacker News",
+      "category": "计算机视觉",
+      "title": "OpenCV 5",
+      "subtitle": "opencv.org",
+      "url": "https://opencv.org/blog/opencv-5-is-here/",
+      "language": "C++",
+      "metricLabel": "HN 热度",
+      "metric": "786 points",
+      "secondaryLabel": "评论",
+      "secondaryMetric": "183",
+      "description": "OpenCV 5 is a major release for the long-running computer vision library.",
+      "angle": "OpenCV 5 是老牌视觉库的一次大版本升级，做边缘视觉、视频分析和传统 CV 工具的人都值得跟进。",
+      "voiceover": "第七，OpenCV 5，老牌视觉库一次大升级。"
+    }
+  ],
+  "narration": "今天这七个点，适合开发者先收藏：有 Mac 容器、AI Agent 工具、供应链变化，也有视觉库升级。第一，Apple container，把 Mac 上的 Linux 环境做得更轻。第二，agent-skills，把工程流程封装给 AI 编码代理。第三，Publora，让 Agent 用一个 API 发十个平台。第四，RHO，让 Agent 从失败轨迹里自己改工具链。第五，npm v12，默认关安装脚本，供应链更硬。第六，Grit，用 Rust 和 Agent 重新拆 Git。第七，OpenCV 5，老牌视觉库一次大升级。资料在公众号，回复 Codex 获取项目链接、脚本和自动化流程。"
 }

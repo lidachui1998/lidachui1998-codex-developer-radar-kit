@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-09T13:48:14.483Z",
+  "updatedAt": "2026-06-10T13:46:34.741Z",
   "articles": [
+    {
+      "date": "2026-06-10",
+      "displayDate": "2026.06.10",
+      "title": "2026.06.10 开发者热点：Apple container、agent-skills、Publora",
+      "digest": "今日整理 7 个开发者热点：Apple container、agent-skills、Publora、Retrospective Harness Optimization。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-06-10#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-06-10.md",
+        "html": "wechat/articles/2026-06-10.html",
+        "payload": "wechat/articles/2026-06-10.payload.json"
+      },
+      "generatedAt": "2026-06-10T13:46:34.741Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-06-09",
       "displayDate": "2026.06.09",

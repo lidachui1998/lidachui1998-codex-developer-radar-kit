@@ -1,4 +1,965 @@
 {
   "version": 1,
-  "items": []
+  "items": [
+    {
+      "date": "2026-05-23",
+      "key": "anthropics/claude-plugins-official",
+      "title": "claude-plugins-official",
+      "source": "GitHub",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "video": "renders/developer-radar-2026-05-23-codex-daily-yunxi-fixed.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "chrome-devtools/chrome-devtools-mcp",
+      "title": "chrome-devtools-mcp",
+      "source": "GitHub",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "video": "renders/developer-radar-2026-05-23-codex-daily-yunxi-fixed.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "colbymchenry/codegraph",
+      "title": "codegraph",
+      "source": "GitHub",
+      "url": "https://github.com/colbymchenry/codegraph",
+      "video": "renders/developer-radar-2026-05-23-codex-daily-yunxi-fixed.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "https://deno.com/blog/v2.8",
+      "title": "Deno 2.8",
+      "source": "Hacker News",
+      "url": "https://deno.com/blog/v2.8",
+      "video": "renders/developer-radar-2026-05-23-codex-daily-yunxi-fixed.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "https://huggingface.co/papers/2511.11814",
+      "title": "Spreadsheet-RL",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2511.11814",
+      "video": "renders/developer-radar-2026-05-23-codex-daily-yunxi-fixed.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "lum1104/understand-anything",
+      "title": "Understand-Anything",
+      "source": "GitHub",
+      "url": "https://github.com/Lum1104/Understand-Anything",
+      "video": "renders/developer-radar-2026-05-23-codex-daily-yunxi-fixed.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "rohitg00/ai-engineering-from-scratch",
+      "title": "ai-engineering-from-scratch",
+      "source": "GitHub",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "video": "renders/developer-radar-2026-05-23-codex-7topics-final-aligned.mp4"
+    },
+    {
+      "date": "2026-05-23",
+      "key": "ruvnet/ruview",
+      "title": "RuView",
+      "source": "GitHub",
+      "url": "https://github.com/ruvnet/RuView",
+      "video": "renders/developer-radar-2026-05-23-codex-7topics-final-aligned.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "dotnet/skills",
+      "title": "skills",
+      "source": "GitHub",
+      "url": "https://github.com/dotnet/skills",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "fincept-corporation/finceptterminal",
+      "title": "FinceptTerminal",
+      "source": "GitHub",
+      "url": "https://github.com/Fincept-Corporation/FinceptTerminal",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "mukul975/anthropic-cybersecurity-skills",
+      "title": "Anthropic-Cybersecurity-Skills",
+      "source": "GitHub",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "multica-ai/andrej-karpathy-skills",
+      "title": "andrej-karpathy-skills",
+      "source": "GitHub",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "multica-ai/multica",
+      "title": "multica",
+      "source": "GitHub",
+      "url": "https://github.com/multica-ai/multica",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "presenton/presenton",
+      "title": "presenton",
+      "source": "GitHub",
+      "url": "https://github.com/presenton/presenton",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-24",
+      "key": "trimstray/the-book-of-secret-knowledge",
+      "title": "the-book-of-secret-knowledge",
+      "source": "GitHub",
+      "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-24-daily-hot-projects-no-repeat-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "affaan-m/ecc",
+      "title": "ECC",
+      "source": "GitHub",
+      "url": "https://github.com/affaan-m/ECC",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "anthropics/knowledge-work-plugins",
+      "title": "knowledge-work-plugins",
+      "source": "GitHub",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "https://huggingface.co/papers/2605.23904",
+      "title": "SkillOpt",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2605.23904",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "https://www.producthunt.com/products/pi-coding-agent-3",
+      "title": "Pi Coding Agent",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/pi-coding-agent-3",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "https://www.producthunt.com/products/unabyss",
+      "title": "Unabyss",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/unabyss",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "manaflow-ai/cmux",
+      "title": "cmux",
+      "source": "GitHub",
+      "url": "https://github.com/manaflow-ai/cmux",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-25",
+      "key": "shiyu-coder/kronos",
+      "title": "Kronos",
+      "source": "GitHub",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "digitalplatdev/freedomain",
+      "title": "FreeDomain",
+      "source": "GitHub",
+      "url": "https://github.com/DigitalPlatDev/FreeDomain",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "hardikpandya/stop-slop",
+      "title": "stop-slop",
+      "source": "GitHub",
+      "url": "https://github.com/hardikpandya/stop-slop",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "https://dynip.dev",
+      "title": "DynIP",
+      "source": "Hacker News",
+      "url": "https://dynip.dev/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly",
+      "title": "Using AI to write better code more slowly",
+      "source": "Hacker News",
+      "url": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "https://www.githubstatus.com",
+      "title": "GitHub Actions down again today",
+      "source": "Hacker News",
+      "url": "https://www.githubstatus.com/?today",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "https://www.producthunt.com/products/portia-ai",
+      "title": "Rezonant",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/portia-ai",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-26",
+      "key": "leonxlnx/taste-skill",
+      "title": "taste-skill",
+      "source": "GitHub",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-26-developer-hotspots-yunxi-fast.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "https://arps18.github.io/posts/claude-code-mastery",
+      "title": "Claude Code as Daily Driver",
+      "source": "Hacker News",
+      "url": "https://arps18.github.io/posts/claude-code-mastery/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "https://huggingface.co/papers/2605.26114",
+      "title": "MobileGym",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2605.26114",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "https://www.producthunt.com/products/calling-skills-for-ai-agents",
+      "title": "Calling Skills for AI Agents",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/calling-skills-for-ai-agents",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "https://www.producthunt.com/products/powabase",
+      "title": "Powabase",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/powabase",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "open-dev-society/openstock",
+      "title": "OpenStock",
+      "source": "GitHub",
+      "url": "https://github.com/Open-Dev-Society/OpenStock",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "thedotmack/claude-mem",
+      "title": "claude-mem",
+      "source": "GitHub",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-27",
+      "key": "twentyhq/twenty",
+      "title": "Twenty",
+      "source": "GitHub",
+      "url": "https://github.com/twentyhq/twenty",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-27-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "chachamaru127/claude-code-harness",
+      "title": "claude-code-harness",
+      "source": "GitHub",
+      "url": "https://github.com/Chachamaru127/claude-code-harness",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "harry0703/moneyprinterturbo",
+      "title": "MoneyPrinterTurbo",
+      "source": "GitHub",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "https://huggingface.co/papers/2605.28774",
+      "title": "Agent Explorative Policy Optimization",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2605.28774",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "https://simonwillison.net/2026/may/27/product-market-fit",
+      "title": "Anthropic and OpenAI product-market fit",
+      "source": "Hacker News",
+      "url": "https://simonwillison.net/2026/May/27/product-market-fit/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "https://www.producthunt.com/products/memori-labs",
+      "title": "Memori",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/memori-labs",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "iii-hq/iii",
+      "title": "iii",
+      "source": "GitHub",
+      "url": "https://github.com/iii-hq/iii",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-28",
+      "key": "obra/superpowers",
+      "title": "superpowers",
+      "source": "GitHub",
+      "url": "https://github.com/obra/superpowers",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-28-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "bigpizzav3/codexplusplus",
+      "title": "CodexPlusPlus",
+      "source": "GitHub",
+      "url": "https://github.com/BigPizzaV3/CodexPlusPlus",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "dograh-hq/dograh",
+      "title": "dograh",
+      "source": "GitHub",
+      "url": "https://github.com/dograh-hq/dograh",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "esengine/deepseek-reasonix",
+      "title": "DeepSeek-Reasonix",
+      "source": "GitHub",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "farion1231/cc-switch",
+      "title": "cc-switch",
+      "source": "GitHub",
+      "url": "https://github.com/farion1231/cc-switch",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request",
+      "title": "Real-time LLM Inference",
+      "source": "Hacker News",
+      "url": "https://blog.kog.ai/real-time-llm-inference-on-standard-gpus-3-000-tokens-s-per-request/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
+      "title": "Claude Code Config",
+      "source": "Hacker News",
+      "url": "https://buildingbetter.tech/p/i-read-the-claude-code-source-code",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-29",
+      "key": "microsoft/webwright",
+      "title": "Webwright",
+      "source": "GitHub",
+      "url": "https://github.com/microsoft/Webwright",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-29-ai-dev-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "dani-garcia/vaultwarden",
+      "title": "vaultwarden",
+      "source": "GitHub",
+      "url": "https://github.com/dani-garcia/vaultwarden",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "facebook/pyrefly",
+      "title": "Pyrefly",
+      "source": "GitHub",
+      "url": "https://github.com/facebook/pyrefly",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "ghostty-org/ghostty",
+      "title": "Ghostty",
+      "source": "GitHub",
+      "url": "https://github.com/ghostty-org/ghostty",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "google/osv-scanner",
+      "title": "OSV-Scanner",
+      "source": "GitHub",
+      "url": "https://github.com/google/osv-scanner",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "medusajs/medusa",
+      "title": "Medusa",
+      "source": "GitHub",
+      "url": "https://github.com/medusajs/medusa",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "pi-hole/pi-hole",
+      "title": "Pi-hole",
+      "source": "GitHub",
+      "url": "https://github.com/pi-hole/pi-hole",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-30",
+      "key": "sharex/sharex",
+      "title": "ShareX",
+      "source": "GitHub",
+      "url": "https://github.com/ShareX/ShareX",
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "d4vinci/scrapling",
+      "title": "Scrapling",
+      "source": "GitHub",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "everyinc/compound-engineering-plugin",
+      "title": "compound-engineering-plugin",
+      "source": "GitHub",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "https://jbkempf.com/blog/2026/dav2d",
+      "title": "Dav2d",
+      "source": "Hacker News",
+      "url": "https://jbkempf.com/blog/2026/dav2d/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "https://www.producthunt.com/products/second-brain-cloudflare",
+      "title": "Second Brain for AI",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/second-brain-cloudflare",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "microsoft/markitdown",
+      "title": "markitdown",
+      "source": "GitHub",
+      "url": "https://github.com/microsoft/markitdown",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "openbmb/voxcpm",
+      "title": "VoxCPM",
+      "source": "GitHub",
+      "url": "https://github.com/OpenBMB/VoxCPM",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-05-31",
+      "key": "revfactory/harness",
+      "title": "harness",
+      "source": "GitHub",
+      "url": "https://github.com/revfactory/harness",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-05-31-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "codecrafters-io/build-your-own-x",
+      "title": "build-your-own-x",
+      "source": "GitHub",
+      "url": "https://github.com/codecrafters-io/build-your-own-x",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "github/docs",
+      "title": "docs",
+      "source": "GitHub",
+      "url": "https://github.com/github/docs",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "https://blainsmith.com/articles/httptrace-with-go",
+      "title": "Go httptrace",
+      "source": "Hacker News",
+      "url": "https://blainsmith.com/articles/httptrace-with-go/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "https://huggingface.co/papers/2605.29307",
+      "title": "GrepSeek",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2605.29307",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "https://surrealdb.com/blog/benchmarking-surrealdb-3-vs-postgres-mongo-neo4j-and-redis-with-fsync",
+      "title": "SurrealDB benchmark",
+      "source": "Hacker News",
+      "url": "https://surrealdb.com/blog/benchmarking-surrealdb-3-vs-postgres-mongo-neo4j-and-redis-with-fsync",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "https://www.producthunt.com/products/networkspy",
+      "title": "NetworkSpy",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/networkspy",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-01",
+      "key": "nesquena/hermes-webui",
+      "title": "hermes-webui",
+      "source": "GitHub",
+      "url": "https://github.com/nesquena/hermes-webui",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-01-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "bluenviron/mediamtx",
+      "title": "MediaMTX",
+      "source": "GitHub",
+      "url": "https://github.com/bluenviron/mediamtx",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "godotengine/godot",
+      "title": "Godot",
+      "source": "GitHub",
+      "url": "https://github.com/godotengine/godot",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "google-gemini/gemini-cli",
+      "title": "Gemini CLI",
+      "source": "GitHub",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "https://frontendmasters.com/blog/css-native-parallax",
+      "title": "CSS Native Parallax",
+      "source": "Hacker News",
+      "url": "https://frontendmasters.com/blog/css-native-parallax/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "https://huggingface.co/papers/2606.00294",
+      "title": "SkillAdaptor",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.00294",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "https://www.producthunt.com/products/moxie-docs",
+      "title": "Moxie Docs",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/moxie-docs",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-02",
+      "key": "superseriousbusiness/gotosocial",
+      "title": "GoToSocial",
+      "source": "GitHub",
+      "url": "https://github.com/superseriousbusiness/gotosocial",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-02-developer-hotspots-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "aquasecurity/trivy",
+      "title": "Trivy",
+      "source": "GitHub",
+      "url": "https://github.com/aquasecurity/trivy",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "copilotkit/copilotkit",
+      "title": "CopilotKit",
+      "source": "GitHub",
+      "url": "https://github.com/CopilotKit/CopilotKit",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "danielmiessler/personal_ai_infrastructure",
+      "title": "Personal AI Infrastructure",
+      "source": "GitHub",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "github.com/valvesoftware",
+      "title": "Valve P2P networking",
+      "source": "Hacker News",
+      "url": "https://github.com/ValveSoftware/GameNetworkingSockets/issues/398",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://arxiv.org/abs/2601.14470",
+      "title": "Tokenomics",
+      "source": "Hacker News / arXiv",
+      "url": "https://arxiv.org/abs/2601.14470",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://arxiv.org/abs/2606.03538",
+      "title": "Code2LoRA",
+      "source": "Hugging Face / arXiv",
+      "url": "https://arxiv.org/abs/2606.03538",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://huggingface.co/papers/2606.02997",
+      "title": "COLLEAGUE.SKILL",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.02997",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-ai-dev-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://ntsc.rs",
+      "title": "ntsc-rs",
+      "source": "Hacker News",
+      "url": "https://ntsc.rs/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://openai.com/index/harness-engineering",
+      "title": "Harness Engineering",
+      "source": "Hacker News",
+      "url": "https://openai.com/index/harness-engineering/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-ai-dev-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://pdimagearchive.org",
+      "title": "Public Domain Image Archive",
+      "source": "Hacker News",
+      "url": "https://pdimagearchive.org/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://www.producthunt.com/products/fox-issue-tracker-4",
+      "title": "Fox Issue Tracker 4",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/fox-issue-tracker-4",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://www.producthunt.com/products/manus-shopify-connector",
+      "title": "Manus Shopify Connector",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/manus-shopify-connector",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "https://www.producthunt.com/products/navi-menu-builder",
+      "title": "Navi+ Menu Builder",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/navi-menu-builder",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "keithnoguchi/kyushu",
+      "title": "Kyushu",
+      "source": "Hacker News",
+      "url": "https://github.com/keithnoguchi/kyushu",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "lfnovo/open-notebook",
+      "title": "Open Notebook",
+      "source": "GitHub",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "mempalace/mempalace",
+      "title": "MemPalace",
+      "source": "GitHub",
+      "url": "https://github.com/MemPalace/mempalace",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "mvanhorn/last30days-skill",
+      "title": "last30days-skill",
+      "source": "GitHub",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "nginx/nginx",
+      "title": "NGINX",
+      "source": "GitHub",
+      "url": "https://github.com/nginx/nginx",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "paddlepaddle/paddleocr",
+      "title": "PaddleOCR",
+      "source": "GitHub",
+      "url": "https://github.com/PaddlePaddle/PaddleOCR",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-developer-hotspots-yunxi-fresh.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "panniantong/agent-reach",
+      "title": "Agent-Reach",
+      "source": "GitHub",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-07",
+      "key": "sveltejs/svelte",
+      "title": "Svelte",
+      "source": "GitHub",
+      "url": "https://github.com/sveltejs/svelte",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-07-mixed-roundup-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "boringcollege/zig-by-example",
+      "title": "Zig by Example",
+      "source": "Hacker News",
+      "url": "https://github.com/boringcollege/zig-by-example",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "https://intunedhq.com",
+      "title": "Intuned",
+      "source": "Hacker News",
+      "url": "https://intunedhq.com",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "https://performance.dev/how-is-linear-so-fast-a-technical-breakdown",
+      "title": "How's Linear so fast?",
+      "source": "Hacker News",
+      "url": "https://performance.dev/how-is-linear-so-fast-a-technical-breakdown",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "https://vorpus.github.io/performativeui",
+      "title": "Performative-UI",
+      "source": "Hacker News",
+      "url": "https://vorpus.github.io/performativeUI/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "https://www.producthunt.com/products/sigma-file-manager",
+      "title": "Sigma File Manager",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/sigma-file-manager",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "https://www.troyhunt.com/1000-data-breaches-later-the-disclosure-lag-is-worse-than-ever",
+      "title": "1k Data Breaches Later",
+      "source": "Hacker News",
+      "url": "https://www.troyhunt.com/1000-data-breaches-later-the-disclosure-lag-is-worse-than-ever/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-08",
+      "key": "refactoringhq/tolaria",
+      "title": "tolaria",
+      "source": "GitHub",
+      "url": "https://github.com/refactoringhq/tolaria",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-08-engineering-mix-yunxi.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "andyyyy64/whichllm",
+      "title": "whichllm",
+      "source": "GitHub",
+      "url": "https://github.com/Andyyyy64/whichllm",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers",
+      "title": "AI 开发者工具被攻击",
+      "source": "Hacker News",
+      "url": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "https://thi.ng",
+      "title": "Thi.ng",
+      "source": "Hacker News",
+      "url": "https://thi.ng",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "https://www.producthunt.com/products/agentcad",
+      "title": "agentcad",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/agentcad",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "https://www.producthunt.com/products/limelight-4",
+      "title": "Limelight",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/limelight-4",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "luke8086/gentleos32",
+      "title": "GentleOS",
+      "source": "Hacker News",
+      "url": "https://github.com/luke8086/gentleos32",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-09",
+      "key": "roboflow/supervision",
+      "title": "supervision",
+      "source": "GitHub",
+      "url": "https://github.com/roboflow/supervision",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "addyosmani/agent-skills",
+      "title": "agent-skills",
+      "source": "GitHub",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "apple/container",
+      "title": "Apple container",
+      "source": "Hacker News",
+      "url": "https://github.com/apple/container",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "https://blog.gitbutler.com/grit-rewriting-git-in-rust-with-agents",
+      "title": "Grit",
+      "source": "Hacker News",
+      "url": "https://blog.gitbutler.com/grit-rewriting-git-in-rust-with-agents/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-in-npm-v12",
+      "title": "npm v12 breaking changes",
+      "source": "Hacker News",
+      "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-in-npm-v12/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "https://huggingface.co/papers/2606.04625",
+      "title": "Retrospective Harness Optimization",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.04625",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "https://opencv.org/blog/opencv-5-is-here",
+      "title": "OpenCV 5",
+      "source": "Hacker News",
+      "url": "https://opencv.org/blog/opencv-5-is-here/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-10",
+      "key": "https://www.producthunt.com/products/publora",
+      "title": "Publora",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/publora",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+    }
+  ]
 }
