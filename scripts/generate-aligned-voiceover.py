@@ -4,7 +4,6 @@ import json
 import math
 import os
 import subprocess
-import shutil
 from pathlib import Path
 
 import edge_tts
@@ -27,18 +26,6 @@ def duration_seconds(ffprobe: Path, media: Path) -> float:
         str(media),
     ])
     return float(value)
-
-
-def executable_from_env(name: str, fallback: Path, command: str) -> Path:
-    value = os.environ.get(name)
-    if value:
-        return Path(value)
-    if fallback.exists():
-        return fallback
-    found = shutil.which(command)
-    if found:
-        return Path(found)
-    return fallback
 
 
 async def tts(text: str, output: Path, voice: str, rate: str, proxy: str | None) -> None:
@@ -109,16 +96,8 @@ async def main() -> None:
     args = parser.parse_args()
 
     root = Path.cwd()
-    ffmpeg = executable_from_env(
-        "FFMPEG_BIN",
-        root / "node_modules" / "@ffmpeg-installer" / "win32-x64" / "ffmpeg.exe",
-        "ffmpeg",
-    )
-    ffprobe = executable_from_env(
-        "FFPROBE_BIN",
-        root / "node_modules" / "@ffprobe-installer" / "win32-x64" / "ffprobe.exe",
-        "ffprobe",
-    )
+    ffmpeg = root / "node_modules" / "@ffmpeg-installer" / "win32-x64" / "ffmpeg.exe"
+    ffprobe = root / "node_modules" / "@ffprobe-installer" / "win32-x64" / "ffprobe.exe"
     data = json.loads(args.data.read_text(encoding="utf-8"))
     proxy = (
         args.proxy
@@ -135,7 +114,7 @@ async def main() -> None:
         "它负责抓项目，写口播，再渲染成竖屏视频。"
         f"今天先看{len(items)}个开发者热点。"
     )
-    outro_text = data.get("cta") or "想要这套 Codex 视频模板？评论 Codex，我把流程拆给你。"
+    outro_text = data.get("cta") or "今天先到这里，明天继续看开发者热点。"
 
     segments = [{"id": "hook", "label": "hook", "text": hook_text}]
     for item in items:

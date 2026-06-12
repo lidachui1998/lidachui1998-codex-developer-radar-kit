@@ -911,7 +911,7 @@
       "title": "agent-skills",
       "source": "GitHub",
       "url": "https://github.com/addyosmani/agent-skills",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -919,7 +919,7 @@
       "title": "Apple container",
       "source": "Hacker News",
       "url": "https://github.com/apple/container",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -927,7 +927,7 @@
       "title": "Grit",
       "source": "Hacker News",
       "url": "https://blog.gitbutler.com/grit-rewriting-git-in-rust-with-agents/",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -935,7 +935,7 @@
       "title": "npm v12 breaking changes",
       "source": "Hacker News",
       "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-in-npm-v12/",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -943,7 +943,7 @@
       "title": "Retrospective Harness Optimization",
       "source": "Hugging Face",
       "url": "https://huggingface.co/papers/2606.04625",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -951,7 +951,7 @@
       "title": "OpenCV 5",
       "source": "Hacker News",
       "url": "https://opencv.org/blog/opencv-5-is-here/",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -959,7 +959,119 @@
       "title": "Publora",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/publora",
-      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-10-voiceover-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "extend.ai/ui",
+      "title": "Extend UI",
+      "source": "Hacker News",
+      "url": "https://www.extend.ai/ui",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "google/skills",
+      "title": "google/skills",
+      "source": "GitHub",
+      "url": "https://github.com/google/skills",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "https://burr.apache.org",
+      "title": "Apache Burr",
+      "source": "Hacker News",
+      "url": "https://burr.apache.org/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "https://mohkohn.co.uk/writing/html-first",
+      "title": "HTML-first site",
+      "source": "Hacker News",
+      "url": "https://mohkohn.co.uk/writing/html-first/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "https://pgdog.dev/blog/our-funding-announcement",
+      "title": "PgDog",
+      "source": "Hacker News",
+      "url": "https://pgdog.dev/blog/our-funding-announcement",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "https://www.producthunt.com/products/keywords-ai",
+      "title": "Respan Gateway",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/keywords-ai",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-11",
+      "key": "philipl/pifs",
+      "title": "πFS",
+      "source": "Hacker News",
+      "url": "https://github.com/philipl/pifs",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-11-no-guidance-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "https://brew.sh/2026/06/11/homebrew-6.0.0",
+      "title": "Homebrew 6.0.0",
+      "source": "Hacker News",
+      "url": "https://brew.sh/2026/06/11/homebrew-6.0.0/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian",
+      "title": "AI agent bankrupted operator",
+      "source": "Hacker News",
+      "url": "https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "https://www.producthunt.com/products/qursor",
+      "title": "Qursor",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/qursor",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "huggingface.co/papers",
+      "title": "WeaveBench",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "maziyarpanahi/openmed",
+      "title": "OpenMed",
+      "source": "GitHub",
+      "url": "https://github.com/maziyarpanahi/openmed",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "nvidia/skillspector",
+      "title": "SkillSpector",
+      "source": "GitHub",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-12",
+      "key": "phuryn/pm-skills",
+      "title": "pm-skills",
+      "source": "GitHub",
+      "url": "https://github.com/phuryn/pm-skills",
+      "video": "E:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-06-12-voiceover-final.mp4"
     }
   ]
 }

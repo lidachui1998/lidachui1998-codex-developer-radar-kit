@@ -13,38 +13,11 @@ function Assert-LastExitCode {
   }
 }
 
-function Resolve-Tool {
-  param(
-    [string]$EnvName,
-    [string[]]$Commands
-  )
-  $fromEnv = [Environment]::GetEnvironmentVariable($EnvName)
-  if ($fromEnv) {
-    if (!(Test-Path $fromEnv)) {
-      throw "$EnvName points to a missing file: $fromEnv"
-    }
-    return $fromEnv
-  }
-  foreach ($command in $Commands) {
-    $resolved = Get-Command $command -ErrorAction SilentlyContinue
-    if ($resolved) {
-      return $resolved.Source
-    }
-  }
-  throw "Required tool not found. Set $EnvName or add one of these commands to PATH: $($Commands -join ', ')"
-}
-
 $Root = Split-Path -Parent $PSScriptRoot
-$Node = Resolve-Tool "NODE_EXE" @("node.exe", "node")
-$Python = Resolve-Tool "PYTHON_EXE" @("python.exe", "python", "py.exe", "py")
-$Npx = Resolve-Tool "NPX_EXE" @("npx.cmd", "npx.exe", "npx")
-$Chrome = $env:HYPERFRAMES_BROWSER_PATH
-if (!$Chrome) {
-  $candidateChrome = Join-Path $env:ProgramFiles "Google\Chrome\Application\chrome.exe"
-  if (Test-Path $candidateChrome) {
-    $Chrome = $candidateChrome
-  }
-}
+$Node = "C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
+$Python = "D:\software_lhj\python\python.exe"
+$NpxCli = "D:\software_lhj\nodejs\node_modules\npm\bin\npx-cli.js"
+$Chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $FfmpegDir = Join-Path $Root "node_modules\@ffmpeg-installer\win32-x64"
 $FfprobeDir = Join-Path $Root "node_modules\@ffprobe-installer\win32-x64"
 $Ffmpeg = Join-Path $FfmpegDir "ffmpeg.exe"
@@ -57,10 +30,8 @@ $Final = Join-Path $Root $Output
 $SiteThumb = Join-Path $Root "renders\site-latest-thumbnail.png"
 
 Set-Location $Root
-$env:PATH = "$FfmpegDir;$FfprobeDir;$env:PATH"
-if ($Chrome) {
-  $env:HYPERFRAMES_BROWSER_PATH = $Chrome
-}
+$env:PATH = "C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin;$FfmpegDir;$FfprobeDir;$env:PATH"
+$env:HYPERFRAMES_BROWSER_PATH = $Chrome
 New-Item -ItemType Directory -Force -Path $NpmCache | Out-Null
 $env:npm_config_cache = $NpmCache
 $env:NPM_CONFIG_CACHE = $NpmCache
@@ -81,7 +52,7 @@ $NarrationForMux = $Narration
 
 & $Node "scripts\build-video.mjs"
 Assert-LastExitCode "HyperFrames composition build"
-& $Npx --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+& $Node $NpxCli --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
 Assert-LastExitCode "HyperFrames render"
 
 $Duration = 70
