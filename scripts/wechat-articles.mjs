@@ -15,6 +15,9 @@ const defaultConfig = {
   replyKeyword: "Codex",
   siteUrl: "https://radar.bjca.xyz/",
   articleFooter: "资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。",
+  appId: "",
+  appSecret: "",
+  thumbMediaId: "",
 };
 
 function argValue(name, fallback = "") {
@@ -78,16 +81,18 @@ function articleDigest(day) {
 
 function introText(day) {
   const names = topicNames(day, 3);
-  if (!names.length) return "今天这期帮你快速筛出值得收藏的开发者项目，适合先收藏，后面按需深挖。";
-  return `今天这期不是简单堆链接，而是帮你从热点里筛出最值得先看的几个方向：${names.join("、")}。适合先收藏，再按自己的场景深入研究。`;
+  if (!names.length) {
+    return "今天这期帮你快速筛出值得收藏的开发者项目，适合先扫一遍，再按自己的场景深入研究。";
+  }
+  return `今天这期不是简单堆链接，而是从热点里筛出几个值得先看的方向：${names.join("、")}。适合先收藏，再按自己的工作场景深入研究。`;
 }
 
 function takeawayText(day) {
-  const topics = day.topics || [];
-  const categories = [...new Set(topics.map((topic) => topic.category || topic.source).filter(Boolean))].slice(0, 4);
-  return categories.length
-    ? `今天的重点方向：${categories.join("、")}。如果你做开发工具、自动化、个人效率或自建服务，这期会比较有参考价值。`
-    : "今天的重点是快速识别项目价值：能不能直接用、适合什么场景、后续是否值得跟踪。";
+  const categories = [...new Set((day.topics || []).map((topic) => topic.category || topic.source).filter(Boolean))].slice(0, 4);
+  if (!categories.length) {
+    return "今天的重点是快速识别项目价值：能不能直接用、适合什么场景、后续是否值得跟进。";
+  }
+  return `今天的重点方向：${categories.join("、")}。如果你做开发工具、自动化、个人效率或自建服务，这期会比较有参考价值。`;
 }
 
 function metricText(topic) {
@@ -100,11 +105,10 @@ function metricText(topic) {
 function usefulFor(topic) {
   const category = topic.category || "";
   const title = topic.title || "这个项目";
-  if (/终端|工具链|语言服务|Python|开发工具/.test(category)) return `适合每天写代码、想提升工具链效率的人先看。`;
-  if (/安全|供应链|漏洞/.test(category)) return `适合做 CI、依赖治理、企业内部安全基线的人重点关注。`;
-  if (/密码|自建|网络|家庭/.test(category)) return `适合有自建服务、家庭网络或隐私控制需求的人收藏。`;
-  if (/电商|后端|数据库|服务/.test(category)) return `适合正在做业务系统、后端架构或可扩展平台的人参考。`;
-  if (/截图|录屏|效率|文档/.test(category)) return `适合经常写文档、录教程、提 issue 或做技术分享的人使用。`;
+  if (/Agent|纠错|观测|协作/.test(category)) return "适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。";
+  if (/LLM|推理|代码模型/.test(category)) return "适合关注模型服务、推理成本、代码生成质量和长上下文工程化的开发者。";
+  if (/数据|采集/.test(category)) return "适合需要把公开网页、业务页面或非结构化内容转成数据流的团队。";
+  if (/项目|管理|协作/.test(category)) return "适合正在优化需求流转、任务拆解和人机协同的产品与工程团队。";
   return `适合想快速判断 ${title} 是否值得跟进的人先扫一遍。`;
 }
 
@@ -136,7 +140,7 @@ function renderMarkdown(day, config) {
     lines.push(
       `### ${String(topic.rank || "").padStart(2, "0")}｜${topic.title}`,
       "",
-      `**一句话看点：** ${topic.angle || `${topic.title} 是今天值得跟踪的开发者项目。`}`,
+      `**一句话看点：** ${topic.angle || `${topic.title} 是今天值得跟进的开发者项目。`}`,
       "",
       `**适合谁：** ${usefulFor(topic)}`,
       "",
@@ -153,9 +157,9 @@ function renderMarkdown(day, config) {
   lines.push(
     "## 怎么拿资料",
     "",
-    `我把项目链接、生成脚本、提示词和自动化流程都整理到网站：${siteUrl}`,
+    `项目链接、生成脚本、提示词和自动化流程会整理到网站：${siteUrl}`,
     "",
-    `公众号回复「${config.replyKeyword}」获取脚本、提示词和自动化流程。`,
+    `公众号可回复「${config.replyKeyword}」获取脚本、提示词和自动化流程。`,
     "",
     config.articleFooter,
     "",
@@ -181,7 +185,7 @@ function topicHtml(topic) {
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;">${tag(source)}${topic.secondaryMetric ? tag(topic.secondaryMetric, "#92400e", "#fef3c7") : ""}${metric ? tag(metric, "#1d4ed8", "#dbeafe") : ""}</p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>${escapeHtml(topic.angle || `${topic.title} 是今天值得跟踪的开发者项目。`)}</p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>${escapeHtml(topic.angle || `${topic.title} 是今天值得跟进的开发者项目。`)}</p>
         <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>${escapeHtml(usefulFor(topic))}</p>
         ${topic.repo ? `<p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：${escapeHtml(topic.repo)}</p>` : ""}
         ${topic.url ? `<p style="margin:14px 0 0;"><a href="${escapeHtml(topic.url)}" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>` : ""}
