@@ -1128,6 +1128,62 @@
       "source": "Hugging Face",
       "url": "https://github.com/YujunZhou/tellonce",
       "video": "renders/developer-radar-2026-06-13-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "https://blog.pyodide.org/posts/314-release",
+      "title": "Pyodide 314.0",
+      "source": "Hacker News",
+      "url": "https://blog.pyodide.org/posts/314-release/",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "https://sqltoerdiagram.com",
+      "title": "SQL to ER Diagram",
+      "source": "Hacker News",
+      "url": "https://sqltoerdiagram.com/",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "https://www.producthunt.com/products/conan",
+      "title": "Conan",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/conan",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "introduction-to-autonomous-robots/introduction-to-autonomous-robots",
+      "title": "Intro to Autonomous Robots",
+      "source": "GitHub",
+      "url": "https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "jayoohwang1/webchallenger",
+      "title": "WebChallenger",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.10423",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "sap/toolsense",
+      "title": "ToolSense",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.12451",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-14",
+      "key": "swc-project/swc",
+      "title": "swc",
+      "source": "GitHub",
+      "url": "https://github.com/swc-project/swc",
+      "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
     }
   ]
 }
