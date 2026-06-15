@@ -127,7 +127,7 @@
       "title": "ECC",
       "source": "GitHub",
       "url": "https://github.com/affaan-m/ECC",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -135,7 +135,7 @@
       "title": "knowledge-work-plugins",
       "source": "GitHub",
       "url": "https://github.com/anthropics/knowledge-work-plugins",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -143,7 +143,7 @@
       "title": "SkillOpt",
       "source": "Hugging Face",
       "url": "https://huggingface.co/papers/2605.23904",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -151,7 +151,7 @@
       "title": "Pi Coding Agent",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/pi-coding-agent-3",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -159,7 +159,7 @@
       "title": "Unabyss",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/unabyss",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -167,7 +167,7 @@
       "title": "cmux",
       "source": "GitHub",
       "url": "https://github.com/manaflow-ai/cmux",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -175,7 +175,7 @@
       "title": "Kronos",
       "source": "GitHub",
       "url": "https://github.com/shiyu-coder/Kronos",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-26",
@@ -407,7 +407,7 @@
       "title": "vaultwarden",
       "source": "GitHub",
       "url": "https://github.com/dani-garcia/vaultwarden",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -415,7 +415,7 @@
       "title": "Pyrefly",
       "source": "GitHub",
       "url": "https://github.com/facebook/pyrefly",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -423,7 +423,7 @@
       "title": "Ghostty",
       "source": "GitHub",
       "url": "https://github.com/ghostty-org/ghostty",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -431,7 +431,7 @@
       "title": "OSV-Scanner",
       "source": "GitHub",
       "url": "https://github.com/google/osv-scanner",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -439,7 +439,7 @@
       "title": "Medusa",
       "source": "GitHub",
       "url": "https://github.com/medusajs/medusa",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -447,7 +447,7 @@
       "title": "Pi-hole",
       "source": "GitHub",
       "url": "https://github.com/pi-hole/pi-hole",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -455,7 +455,7 @@
       "title": "ShareX",
       "source": "GitHub",
       "url": "https://github.com/ShareX/ShareX",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-31",
@@ -911,7 +911,7 @@
       "title": "agent-skills",
       "source": "GitHub",
       "url": "https://github.com/addyosmani/agent-skills",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -919,7 +919,7 @@
       "title": "Apple container",
       "source": "Hacker News",
       "url": "https://github.com/apple/container",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -927,7 +927,7 @@
       "title": "Grit",
       "source": "Hacker News",
       "url": "https://blog.gitbutler.com/grit-rewriting-git-in-rust-with-agents/",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -935,7 +935,7 @@
       "title": "npm v12 breaking changes",
       "source": "Hacker News",
       "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-in-npm-v12/",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -943,7 +943,7 @@
       "title": "Retrospective Harness Optimization",
       "source": "Hugging Face",
       "url": "https://huggingface.co/papers/2606.04625",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -951,7 +951,7 @@
       "title": "OpenCV 5",
       "source": "Hacker News",
       "url": "https://opencv.org/blog/opencv-5-is-here/",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -959,7 +959,7 @@
       "title": "Publora",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/publora",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-11",
@@ -1184,6 +1184,62 @@
       "source": "GitHub",
       "url": "https://github.com/swc-project/swc",
       "video": "renders/developer-radar-2026-06-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "https://arxiv.org/abs/2606.11152",
+      "title": "P3D-Bench",
+      "source": "Hugging Face / arXiv",
+      "url": "https://arxiv.org/abs/2606.11152",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "https://huggingface.co/papers/2606.14061",
+      "title": "LLM Agents Can See Code Repositories",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.14061",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "https://openrouter.ai/openrouter/fusion",
+      "title": "OpenRouter Fusion API",
+      "source": "Hacker News",
+      "url": "https://openrouter.ai/openrouter/fusion",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
+      "title": "Apple Foundation Models",
+      "source": "Hacker News",
+      "url": "https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "https://www.producthunt.com/products/kickbacks-ai",
+      "title": "Kickbacks.ai",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/kickbacks-ai",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "panniantong/agent-reach",
+      "title": "Agent-Reach",
+      "source": "GitHub",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-15",
+      "key": "trycua/cua",
+      "title": "cua",
+      "source": "GitHub",
+      "url": "https://github.com/trycua/cua",
+      "video": "renders/developer-radar-2026-06-15-voiceover-final.mp4"
     }
   ]
 }

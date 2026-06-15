@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-14T12:10:54.680Z",
+  "updatedAt": "2026-06-15T12:26:40.392Z",
   "articles": [
+    {
+      "date": "2026-06-15",
+      "displayDate": "2026.06.15",
+      "title": "2026.06.15 开发者热点：Agent-Reach、cua、Apple Foundation Models",
+      "digest": "今日整理 7 个开发者热点：Agent-Reach、cua、Apple Foundation Models、OpenRouter Fusion API。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-06-15#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-06-15.md",
+        "html": "wechat/articles/2026-06-15.html",
+        "payload": "wechat/articles/2026-06-15.payload.json"
+      },
+      "generatedAt": "2026-06-15T12:26:40.391Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-06-14",
       "displayDate": "2026.06.14",
