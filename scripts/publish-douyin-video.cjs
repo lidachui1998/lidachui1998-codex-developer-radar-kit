@@ -2,11 +2,78 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = path.resolve(__dirname, "..");
+let metadataCache;
 
-function argValue(name, fallback = "") {
+function rawArgValue(name, fallback = "") {
   const index = process.argv.indexOf(name);
   if (index === -1 || index + 1 >= process.argv.length) return fallback;
   return process.argv[index + 1];
+}
+
+function loadMetadata() {
+  if (metadataCache !== undefined) return metadataCache;
+  const metadataPath = rawArgValue("--metadata", "");
+  metadataCache = readJson(metadataPath, {});
+  return metadataCache;
+}
+
+function metadataArgValue(name) {
+  const keyMap = {
+    "--date": ["date"],
+    "--video": ["video", "videoPath"],
+    "--title": ["title"],
+    "--desc": ["desc", "description"],
+    "--profile": ["profile"],
+    "--duration": ["duration"],
+    "--proxy": ["proxy"],
+    "--manual-timeout-ms": ["manualTimeoutMs"],
+  };
+  const keys = keyMap[name];
+  if (!keys) return undefined;
+  const value = metadataValue(loadMetadata(), keys, undefined);
+  return value === undefined ? undefined : String(value);
+}
+
+function argValue(name, fallback = "") {
+  if (name === "--metadata") return rawArgValue(name, fallback);
+  const metadataValue = metadataArgValue(name);
+  if (metadataValue !== undefined) return metadataValue;
+  return rawArgValue(name, fallback);
+}
+
+function readJson(file, fallback = {}) {
+  if (!file) return fallback;
+  const jsonPath = path.isAbsolute(file) ? file : path.resolve(root, file);
+  try {
+    return JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+  } catch (error) {
+    throw new Error(`Failed to read JSON metadata ${jsonPath}: ${error.message}`);
+  }
+}
+
+function textLooksCorrupt(text) {
+  const value = String(text || "");
+  const compact = value.replace(/\s/g, "");
+  const questionMarks = (compact.match(/\?/g) || []).length;
+  return /�/.test(value) || /\?{2,}/.test(value) || (compact.length > 0 && questionMarks >= 3 && questionMarks / compact.length > 0.2);
+}
+
+function validatePublishText(label, value) {
+  if (!String(value || "").trim()) {
+    throw new Error(`${label} is required.`);
+  }
+  if (textLooksCorrupt(value)) {
+    throw new Error(`${label} looks corrupt; write Chinese publish copy to UTF-8 JSON and pass it with --metadata.`);
+  }
+}
+
+function metadataValue(metadata, keys, fallback) {
+  for (const key of keys) {
+    if (Object.prototype.hasOwnProperty.call(metadata, key) && metadata[key] !== undefined && metadata[key] !== null && metadata[key] !== "") {
+      return metadata[key];
+    }
+  }
+  return fallback;
 }
 
 function sleep(ms) {
@@ -150,7 +217,15 @@ async function main() {
   const publishedDuration = argValue("--duration", "00:58");
   const proxyServer = argValue("--proxy", process.env.DOUYIN_PROXY || "");
   const manualTimeoutMs = Number(argValue("--manual-timeout-ms", String(15 * 60 * 1000)));
-  const dryRun = process.argv.includes("--dry-run");
+  const dryRun = process.argv.includes("--dry-run") || loadMetadata().dryRun === true;
+
+  validatePublishText("title", title);
+  validatePublishText("description", desc);
+
+  if (process.argv.includes("--validate-only")) {
+    console.log(JSON.stringify({ date, videoPath, title, desc, duration: publishedDuration, profile, proxy: proxyServer }, null, 2));
+    return;
+  }
 
   if (!fs.existsSync(videoPath)) throw new Error(`Video not found: ${videoPath}`);
   const { chromium } = requirePlaywright();
