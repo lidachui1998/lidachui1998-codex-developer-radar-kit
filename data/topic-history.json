@@ -1352,6 +1352,62 @@
       "source": "GitHub",
       "url": "https://github.com/withastro/flue",
       "video": "renders/developer-radar-2026-06-18-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "builderio/agent-native",
+      "title": "agent-native",
+      "source": "GitHub",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "calesthio/openmontage",
+      "title": "OpenMontage",
+      "source": "GitHub",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "chopratejas/headroom",
+      "title": "headroom",
+      "source": "GitHub",
+      "url": "https://github.com/chopratejas/headroom",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "https://arxiv.org/abs/2606.20529",
+      "title": "LedgerAgent",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.20529",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "https://orchidfiles.com/github-repositories-distributing-malware",
+      "title": "10k Trojan GitHub repos",
+      "source": "Hacker News",
+      "url": "https://orchidfiles.com/github-repositories-distributing-malware/",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "https://www.producthunt.com/products/claude-redesigned",
+      "title": "Claude Code Artifacts",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/claude-redesigned",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-19",
+      "key": "palmier-io/palmier-pro",
+      "title": "palmier-pro",
+      "source": "GitHub",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "video": "renders/developer-radar-2026-06-19-voiceover-final.mp4"
     }
   ]
 }
