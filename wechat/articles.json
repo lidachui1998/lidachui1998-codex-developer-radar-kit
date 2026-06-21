@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-20T12:15:29.844Z",
+  "updatedAt": "2026-06-21T13:00:30.311Z",
   "articles": [
+    {
+      "date": "2026-06-21",
+      "displayDate": "2026.06.21",
+      "title": "2026.06.21 开发者热点：deer-flow、Loupe、avoxelgame",
+      "digest": "今日整理 7 个开发者热点：deer-flow、Loupe、avoxelgame、Cloudback MCP Server。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7653830352653307171/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-06-21#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-06-21.md",
+        "html": "wechat/articles/2026-06-21.html",
+        "payload": "wechat/articles/2026-06-21.payload.json"
+      },
+      "generatedAt": "2026-06-21T13:00:30.310Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-06-20",
       "displayDate": "2026.06.20",

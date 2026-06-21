@@ -127,7 +127,7 @@
       "title": "ECC",
       "source": "GitHub",
       "url": "https://github.com/affaan-m/ECC",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -135,7 +135,7 @@
       "title": "knowledge-work-plugins",
       "source": "GitHub",
       "url": "https://github.com/anthropics/knowledge-work-plugins",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -143,7 +143,7 @@
       "title": "SkillOpt",
       "source": "Hugging Face",
       "url": "https://huggingface.co/papers/2605.23904",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -151,7 +151,7 @@
       "title": "Pi Coding Agent",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/pi-coding-agent-3",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -159,7 +159,7 @@
       "title": "Unabyss",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/unabyss",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -167,7 +167,7 @@
       "title": "cmux",
       "source": "GitHub",
       "url": "https://github.com/manaflow-ai/cmux",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-25",
@@ -175,7 +175,7 @@
       "title": "Kronos",
       "source": "GitHub",
       "url": "https://github.com/shiyu-coder/Kronos",
-      "video": "renders/developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-25-ai-dev-hotspots-yunxi.mp4"
     },
     {
       "date": "2026-05-26",
@@ -407,7 +407,7 @@
       "title": "vaultwarden",
       "source": "GitHub",
       "url": "https://github.com/dani-garcia/vaultwarden",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -415,7 +415,7 @@
       "title": "Pyrefly",
       "source": "GitHub",
       "url": "https://github.com/facebook/pyrefly",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -423,7 +423,7 @@
       "title": "Ghostty",
       "source": "GitHub",
       "url": "https://github.com/ghostty-org/ghostty",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -431,7 +431,7 @@
       "title": "OSV-Scanner",
       "source": "GitHub",
       "url": "https://github.com/google/osv-scanner",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -439,7 +439,7 @@
       "title": "Medusa",
       "source": "GitHub",
       "url": "https://github.com/medusajs/medusa",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -447,7 +447,7 @@
       "title": "Pi-hole",
       "source": "GitHub",
       "url": "https://github.com/pi-hole/pi-hole",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-30",
@@ -455,7 +455,7 @@
       "title": "ShareX",
       "source": "GitHub",
       "url": "https://github.com/ShareX/ShareX",
-      "video": "renders/developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
+      "video": "renders\\developer-radar-2026-05-30-open-source-mix-yunxi.mp4"
     },
     {
       "date": "2026-05-31",
@@ -911,7 +911,7 @@
       "title": "agent-skills",
       "source": "GitHub",
       "url": "https://github.com/addyosmani/agent-skills",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -919,7 +919,7 @@
       "title": "Apple container",
       "source": "Hacker News",
       "url": "https://github.com/apple/container",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -927,7 +927,7 @@
       "title": "Grit",
       "source": "Hacker News",
       "url": "https://blog.gitbutler.com/grit-rewriting-git-in-rust-with-agents/",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -935,7 +935,7 @@
       "title": "npm v12 breaking changes",
       "source": "Hacker News",
       "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-in-npm-v12/",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -943,7 +943,7 @@
       "title": "Retrospective Harness Optimization",
       "source": "Hugging Face",
       "url": "https://huggingface.co/papers/2606.04625",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -951,7 +951,7 @@
       "title": "OpenCV 5",
       "source": "Hacker News",
       "url": "https://opencv.org/blog/opencv-5-is-here/",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-10",
@@ -959,7 +959,7 @@
       "title": "Publora",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/publora",
-      "video": "renders/developer-radar-2026-06-10-no-guidance-final.mp4"
+      "video": "renders\\developer-radar-2026-06-10-no-guidance-final.mp4"
     },
     {
       "date": "2026-06-11",
@@ -1464,6 +1464,62 @@
       "source": "GitHub",
       "url": "https://github.com/twentyhq/twenty",
       "video": "renders/developer-radar-2026-06-20-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "bytedance/deer-flow",
+      "title": "deer-flow",
+      "source": "GitHub",
+      "url": "https://github.com/bytedance/deer-flow",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "https://arxiv.org/abs/2606.20537",
+      "title": "Execution-State Capsules",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.20537",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "https://arxiv.org/abs/2606.20560",
+      "title": "DiffusionGemma Transparency",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.20560",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "https://www.producthunt.com/products/cloudback",
+      "title": "Cloudback MCP Server",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/cloudback",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "https://zeux.io/2026/06/17/zigzag-decoding-avx512",
+      "title": "Zigzag Decoding with AVX-512",
+      "source": "Hacker News",
+      "url": "https://zeux.io/2026/06/17/zigzag-decoding-avx512/",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "mysk-research/loupe",
+      "title": "Loupe",
+      "source": "Hacker News",
+      "url": "https://github.com/mysk-research/loupe",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-21",
+      "key": "namgyaaal/avoxelgame",
+      "title": "avoxelgame",
+      "source": "Hacker News",
+      "url": "https://github.com/namgyaaal/avoxelgame",
+      "video": "renders/developer-radar-2026-06-21-voiceover-final.mp4"
     }
   ]
 }
