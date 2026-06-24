@@ -1576,6 +1576,62 @@
       "source": "GitHub",
       "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
       "video": "renders/developer-radar-2026-06-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "apple/container",
+      "title": "container",
+      "source": "GitHub",
+      "url": "https://github.com/apple/container",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "https://arxiv.org/abs/2606.24820",
+      "title": "SHERLOC",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.24820",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "https://swipe.futo.tech",
+      "title": "FUTO Swipe",
+      "source": "Hacker News",
+      "url": "https://swipe.futo.tech/",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "https://www.producthunt.com/products/tencent-edgeone-2",
+      "title": "Tencent EdgeOne Makers",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/tencent-edgeone-2",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "jcodesmore/ai-website-cloner-template",
+      "title": "ai-website-cloner-template",
+      "source": "GitHub",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "revfactory/harness",
+      "title": "harness",
+      "source": "GitHub",
+      "url": "https://github.com/revfactory/harness",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-24",
+      "key": "zhulinsen/daily_stock_analysis",
+      "title": "daily_stock_analysis",
+      "source": "GitHub",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
     }
   ]
 }
