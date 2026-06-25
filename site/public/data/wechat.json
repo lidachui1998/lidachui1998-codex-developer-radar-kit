@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-06-24T12:15:27.991Z",
+  "updatedAt": "2026-06-25T12:24:53.071Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-06-25",
+      "displayDate": "2026.06.25",
+      "title": "2026.06.25 开发者热点：design.md、gstack、agent-toolkit-for-aws",
+      "digest": "今日整理 7 个开发者热点：design.md、gstack、agent-toolkit-for-aws、Cloudflare OAuth for All。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-06-25#archive"
+    },
     {
       "date": "2026-06-24",
       "displayDate": "2026.06.24",

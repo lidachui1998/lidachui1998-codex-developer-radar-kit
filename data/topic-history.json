@@ -1632,6 +1632,62 @@
       "source": "GitHub",
       "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
       "video": "renders/developer-radar-2026-06-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "aws/agent-toolkit-for-aws",
+      "title": "agent-toolkit-for-aws",
+      "source": "GitHub",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "garrytan/gstack",
+      "title": "gstack",
+      "source": "GitHub",
+      "url": "https://github.com/garrytan/gstack",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "google-labs-code/design.md",
+      "title": "design.md",
+      "source": "GitHub",
+      "url": "https://github.com/google-labs-code/design.md",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "https://blog.cloudflare.com/oauth-for-all",
+      "title": "Cloudflare OAuth for All",
+      "source": "Hacker News",
+      "url": "https://blog.cloudflare.com/oauth-for-all/",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "https://www.producthunt.com/products/browseract",
+      "title": "BrowserAct",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/browseract",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "https://www.producthunt.com/products/grass-claude-code-from-your-phone",
+      "title": "Grass 2.0",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/grass-claude-code-from-your-phone",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-25",
+      "key": "opendatabox/memorydata",
+      "title": "Agent-Native Memory System",
+      "source": "Hugging Face",
+      "url": "https://github.com/OpenDataBox/MemoryData",
+      "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
     }
   ]
 }
