@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026.06.26 开发者热点：MinerU、no-mistakes、Incident CVE-2026-LGTM</title>
+  </head>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+    
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">2026.06.26 开发者热点：MinerU、no-mistakes、Incident CVE-2026-LGTM</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">今天这期不是简单堆链接，而是从热点里筛出几个值得先看的方向：MinerU、no-mistakes、Incident CVE-2026-LGTM。适合先收藏，再按自己的工作场景深入研究。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先说结论</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">今天的重点方向：文档解析 Agent、Git 发布守门、代码评审复盘、人机协作产品。如果你做开发工具、自动化、个人效率或自建服务，这期会比较有参考价值。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今日清单</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. MinerU  /  2. no-mistakes  /  3. Incident CVE-2026-LGTM  /  4. SquidHub  /  5. OPID  /  6. The Verification Horizon  /  7. PEEU GUI Agents</p>
+    <p style="margin:12px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">视频回看：发布后补充</p>
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-06-26#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-06-26#archive</a></p>
+  </section>
+
+  
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜MinerU</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 文档解析 Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">70,194</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +944 · 总星标 70,194</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>MinerU 把 PDF 和 Office 文档转成适合大模型读取的 Markdown 或 JSON，适合做知识库和 Agent 工作流。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：opendatalab/MinerU</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/opendatalab/MinerU" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜no-mistakes</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / Git 发布守门</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">3,232</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +412 · 总星标 3,232</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>no-mistakes 像一个 push 前守门员，把常见提交风险提前挡住，适合给团队流程加一道轻量检查。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合想快速判断 no-mistakes 是否值得跟进的人先扫一遍。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：kunchenguid/no-mistakes</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/kunchenguid/no-mistakes" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜Incident CVE-2026-LGTM</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / 代码评审复盘</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">36</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 216 points · 评论 36</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>这篇 HN 热帖用 CVE-2026-LGTM 复盘盲目 LGTM 的风险，提醒团队别把评审变成流程打卡。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合想快速判断 Incident CVE-2026-LGTM 是否值得跟进的人先扫一遍。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Incident CVE-2026-LGTM</p>
+        <p style="margin:14px 0 0;"><a href="https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜SquidHub</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / 人机协作产品</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">AI 协作</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 类型 AI 协作</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>SquidHub 主打人和 AI 一起进入同一个多人工作空间，适合观察下一代协作工具怎么处理人机分工。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Product Hunt / SquidHub</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/squidhub" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜OPID</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / Agent 强化学习</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">2606.26790</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF 热度 31 upvotes · 论文 2606.26790</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>OPID 从完成轨迹里提取 hindsight 技能监督，想让语言 Agent 的强化学习更稳定、更省样本。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：jinyangwu/OPID</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/jinyangwu/OPID" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜The Verification Horizon</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / Coding Agent 验证</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">2606.26300</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF 热度 24 upvotes · 论文 2606.26300</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>这篇研究强调代码 Agent 的奖励信号没有银弹，测试、评审和人类意图需要随能力一起升级。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：The Verification Horizon</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2606.26300" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜PEEU GUI Agents</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">arXiv / GUI Agent 规划</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">2026-06-25</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">arXiv cs.CL · 提交 2026-06-25</span></p>
+        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>这篇 arXiv 论文让小模型先自主探索网页，再用事后经验合成高层任务数据，提升 GUI Agent 跨站规划。</p>
+        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。</p>
+        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：PEEU GUI Agents</p>
+        <p style="margin:14px 0 0;"><a href="https://arxiv.org/abs/2606.27330" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「Codex」获取项目链接、脚本、提示词和自动化流程。</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-06-26#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-06-26#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
+  </body>
+</html>

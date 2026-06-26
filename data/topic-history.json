@@ -1688,6 +1688,62 @@
       "source": "Hugging Face",
       "url": "https://github.com/OpenDataBox/MemoryData",
       "video": "renders/developer-radar-2026-06-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "https://arxiv.org/abs/2606.27330",
+      "title": "PEEU GUI Agents",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.27330",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "https://huggingface.co/papers/2606.26300",
+      "title": "The Verification Horizon",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2606.26300",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html",
+      "title": "Incident CVE-2026-LGTM",
+      "source": "Hacker News",
+      "url": "https://nesbitt.io/2026/06/26/incident-report-cve-2026-lgtm.html",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "https://www.producthunt.com/products/squidhub",
+      "title": "SquidHub",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/squidhub",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "jinyangwu/opid",
+      "title": "OPID",
+      "source": "Hugging Face",
+      "url": "https://github.com/jinyangwu/OPID",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "kunchenguid/no-mistakes",
+      "title": "no-mistakes",
+      "source": "GitHub",
+      "url": "https://github.com/kunchenguid/no-mistakes",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-06-26",
+      "key": "opendatalab/mineru",
+      "title": "MinerU",
+      "source": "GitHub",
+      "url": "https://github.com/opendatalab/MinerU",
+      "video": "renders/developer-radar-2026-06-26-voiceover-final.mp4"
     }
   ]
 }
