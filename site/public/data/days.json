@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T15:47:41.050Z",
+  "updatedAt": "2026-07-01T16:45:22.255Z",
   "title": "Codex Developer Radar",
   "description": "每日开发者热门项目、视频与来源链接",
   "days": [
@@ -10,7 +10,7 @@
       "subtitle": "安全 Agent、设计系统、AI 网关、文档 OCR、代码验证、模型升级与开源治理",
       "source": "Developer Radar",
       "sourceUrl": "https://github.com/trending?since=daily",
-      "douyinUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7657599765294697737/?region=&mid=7657599723854973742&u_code=13km5idfe&did=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&with_sec_did=1&video_share_track_ver=&titleType=title&share_sign=VSDRWygXgFviZ0ySwQZRAQBg7KBZcU9zNjZMtAKf5T0-&share_version=380000&ts=1782924267&from_aid=1128&from_ssr=1&share_track_info=%7B%22link_description_type%22%3A%22%22%7D",
       "thumbnail": "assets/thumbnails/2026-07-01.png",
       "topics": [
         {
