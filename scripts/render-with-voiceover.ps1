@@ -14,9 +14,10 @@ function Assert-LastExitCode {
 }
 
 $Root = Split-Path -Parent $PSScriptRoot
-$NodeCommand = if ($env:NODE_EXE) { $env:NODE_EXE } else { "node" }
-$PythonCommand = if ($env:PYTHON_EXE) { $env:PYTHON_EXE } else { "python" }
-$NpxCommand = if ($env:NPX_EXE) { $env:NPX_EXE } else { "npx" }
+$Node = "C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
+$Python = "D:\software_lhj\python\python.exe"
+$NpxCli = "D:\software_lhj\nodejs\node_modules\npm\bin\npx-cli.js"
+$Chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 $FfmpegDir = Join-Path $Root "node_modules\@ffmpeg-installer\win32-x64"
 $FfprobeDir = Join-Path $Root "node_modules\@ffprobe-installer\win32-x64"
 $Ffmpeg = Join-Path $FfmpegDir "ffmpeg.exe"
@@ -28,32 +29,9 @@ $VideoOnly = Join-Path $Root "renders\developer-radar-video-only.mp4"
 $Final = Join-Path $Root $Output
 $SiteThumb = Join-Path $Root "renders\site-latest-thumbnail.png"
 
-function Resolve-Executable {
-  param(
-    [string]$Command,
-    [string]$Label
-  )
-  if (Test-Path $Command) {
-    return $Command
-  }
-  $Resolved = Get-Command $Command -ErrorAction SilentlyContinue
-  if ($Resolved) {
-    return $Resolved.Source
-  }
-  throw "Required $Label executable not found. Set $($Label.ToUpperInvariant())_EXE or add it to PATH."
-}
-
 Set-Location $Root
-$Node = Resolve-Executable $NodeCommand "node"
-$Python = Resolve-Executable $PythonCommand "python"
-$Npx = Resolve-Executable $NpxCommand "npx"
-$env:PATH = "$FfmpegDir;$FfprobeDir;$env:PATH"
-if (-not $env:HYPERFRAMES_BROWSER_PATH) {
-  $DefaultChrome = Join-Path $env:ProgramFiles "Google\Chrome\Application\chrome.exe"
-  if (Test-Path $DefaultChrome) {
-    $env:HYPERFRAMES_BROWSER_PATH = $DefaultChrome
-  }
-}
+$env:PATH = "C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin;$FfmpegDir;$FfprobeDir;$env:PATH"
+$env:HYPERFRAMES_BROWSER_PATH = $Chrome
 New-Item -ItemType Directory -Force -Path $NpmCache | Out-Null
 $env:npm_config_cache = $NpmCache
 $env:NPM_CONFIG_CACHE = $NpmCache
@@ -61,6 +39,9 @@ if (Test-Path $LocalPythonPackages) {
   $env:PYTHONPATH = "$LocalPythonPackages;$env:PYTHONPATH"
 }
 
+if (!(Test-Path $Python)) {
+  throw "Required Python not found: $Python"
+}
 & $Node "scripts\topic-history.mjs" check --days 7
 Assert-LastExitCode "Topic history check"
 & $Python -c "import edge_tts; print(edge_tts.__file__)"
@@ -71,7 +52,7 @@ $NarrationForMux = $Narration
 
 & $Node "scripts\build-video.mjs"
 Assert-LastExitCode "HyperFrames composition build"
-& $Npx --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+& $Node $NpxCli --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
 Assert-LastExitCode "HyperFrames render"
 
 $Duration = 70
