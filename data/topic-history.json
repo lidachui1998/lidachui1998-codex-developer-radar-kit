@@ -2080,6 +2080,62 @@
       "source": "GitHub",
       "url": "https://github.com/openai/codex-plugin-cc",
       "video": "developer-radar-2026-07-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "agentskills/agentskills",
+      "title": "agentskills",
+      "source": "GitHub",
+      "url": "https://github.com/agentskills/agentskills",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "harvard-edge/cs249r_book",
+      "title": "cs249r_book",
+      "source": "GitHub",
+      "url": "https://github.com/harvard-edge/cs249r_book",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "https://arxiv.org/abs/2607.01224",
+      "title": "AutoMem",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.01224",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "https://arxiv.org/abs/2607.01874",
+      "title": "SkillCoach",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.01874",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "https://huggingface.co/papers/2607.02255",
+      "title": "AgenticSTS",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.02255",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "ogulcancelik/herdr",
+      "title": "herdr",
+      "source": "GitHub",
+      "url": "https://github.com/ogulcancelik/herdr",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-04",
+      "key": "tencentcloud/cubesandbox",
+      "title": "CubeSandbox",
+      "source": "GitHub",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "video": "developer-radar-2026-07-04-voiceover-final.mp4"
     }
   ]
 }
