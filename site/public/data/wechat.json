@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-07-05T15:45:53.982Z",
+  "updatedAt": "2026-07-06T13:00:18.910Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-07-06",
+      "displayDate": "2026.07.06",
+      "title": "2026.07.06 开发者热点：system_prompts_leaks、agent-skills、last30days-skill",
+      "digest": "今日整理 7 个开发者热点：system_prompts_leaks、agent-skills、last30days-skill、Mozaik。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-06#archive"
+    },
     {
       "date": "2026-07-05",
       "displayDate": "2026.07.05",
