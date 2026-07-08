@@ -6,6 +6,16 @@ const dataPath = path.join(root, "data", "hot-topics.json");
 const timingsPath = path.join(root, "data", "timings.json");
 const outputPath = path.join(root, "index.html");
 
+const accents = [
+  { main: "#5ce1a5", deep: "#102d24", soft: "rgba(92, 225, 165, 0.18)", ink: "#07100f" },
+  { main: "#ffcc33", deep: "#332711", soft: "rgba(255, 204, 51, 0.18)", ink: "#07100f" },
+  { main: "#ff5c7a", deep: "#35141b", soft: "rgba(255, 92, 122, 0.18)", ink: "#07100f" },
+  { main: "#6aa7ff", deep: "#101f37", soft: "rgba(106, 167, 255, 0.18)", ink: "#07100f" },
+  { main: "#d0ff6a", deep: "#243113", soft: "rgba(208, 255, 106, 0.16)", ink: "#07100f" },
+  { main: "#f7f4e8", deep: "#24231d", soft: "rgba(247, 244, 232, 0.14)", ink: "#07100f" },
+  { main: "#7ef2d2", deep: "#12352f", soft: "rgba(126, 242, 210, 0.16)", ink: "#07100f" },
+];
+
 function escapeHtml(value = "") {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -16,6 +26,17 @@ function escapeHtml(value = "") {
 
 function metricNumber(value = "0") {
   return Number(String(value).replace(/[^\d]/g, "")) || 0;
+}
+
+function textLength(value = "") {
+  return Array.from(String(value)).length;
+}
+
+function lengthClass(value = "") {
+  const length = textLength(value);
+  if (length > 28) return " is-xl";
+  if (length > 18) return " is-long";
+  return "";
 }
 
 function fallbackTimings(count) {
@@ -33,6 +54,21 @@ function fallbackTimings(count) {
   };
 }
 
+function normalizeTimings(rawTimings, count) {
+  const fallback = fallbackTimings(count);
+  const timings = rawTimings || fallback;
+  return {
+    ...fallback,
+    ...timings,
+    hook: { ...fallback.hook, ...(timings.hook || {}) },
+    outro: { ...fallback.outro, ...(timings.outro || {}) },
+    items: Array.from({ length: count }, (_, index) => ({
+      ...fallback.items[index],
+      ...((timings.items || [])[index] || {}),
+    })),
+  };
+}
+
 function videoItemCount(data) {
   const configured = Number(data.videoItemCount || data.itemCount || 7);
   return Math.max(1, Math.min(data.items?.length || configured, configured));
@@ -42,32 +78,52 @@ function sceneTrack(index) {
   return index % 2 === 0 ? 3 : 1;
 }
 
+function sourceShort(source = "") {
+  const value = String(source);
+  if (/Hacker News/i.test(value)) return "HN";
+  if (/Product Hunt/i.test(value)) return "PH";
+  if (/Hugging Face/i.test(value)) return "HF";
+  if (/GitHub Blog/i.test(value)) return "GH Blog";
+  if (/GitHub/i.test(value)) return "GitHub";
+  if (/arXiv/i.test(value)) return "arXiv";
+  return value.slice(0, 12) || "Source";
+}
+
+function sourceLine(sources = []) {
+  const names = sources.map((source) => sourceShort(source.name || source.source)).filter(Boolean);
+  return [...new Set(names)].slice(0, 6).join(" / ");
+}
+
 function sceneForItem(item, index, maxMetric, itemTiming) {
-  const start = itemTiming.start;
-  const duration = itemTiming.duration;
+  const start = Number(itemTiming.start || 0);
+  const duration = Number(itemTiming.duration || 7.5);
   const metric = metricNumber(item.metric);
-  const barWidth = Math.max(12, Math.round((metric / maxMetric) * 100));
-  const accent = ["#5ce1a5", "#ffcc33", "#ff5c7a", "#6aa7ff", "#d0ff6a"][index % 5];
+  const barWidth = Math.max(14, Math.round((metric / maxMetric) * 100));
+  const accent = accents[index % accents.length];
+  const titleClass = `topic-title${lengthClass(item.title)}`;
+  const source = sourceShort(item.source);
 
   return `
-      <section id="topic-${item.rank}" class="clip scene topic-scene" data-start="${start.toFixed(3)}" data-duration="${duration.toFixed(3)}" data-track-index="${sceneTrack(index)}" style="--accent: ${accent}; --bar: ${barWidth}%;">
-        <div class="scene-content">
-          <div class="rank-line">
-            <span class="rank">#${item.rank}</span>
-            <span class="lang">${escapeHtml(item.source)} / ${escapeHtml(item.category)}</span>
+      <section id="topic-${item.rank}" class="clip scene topic-scene" data-start="${start.toFixed(3)}" data-duration="${duration.toFixed(3)}" data-track-index="${sceneTrack(index)}" style="--accent: ${accent.main}; --accent-deep: ${accent.deep}; --accent-soft: ${accent.soft}; --accent-ink: ${accent.ink}; --bar: ${barWidth}%;">
+        <div class="topic-band" data-layout-ignore></div>
+        <div class="topic-watermark" data-layout-ignore>${String(item.rank).padStart(2, "0")}</div>
+        <div class="scene-content topic-layout">
+          <div class="topic-topline">
+            <span class="rank-chip">#${item.rank}</span>
+            <span class="source-chip">${escapeHtml(source)} / ${escapeHtml(item.category)}</span>
           </div>
-          <div class="topic-name">
-            <span>${escapeHtml(item.subtitle)}</span>
-            <strong>${escapeHtml(item.title)}</strong>
+          <div class="topic-main">
+            <p class="repo-path">${escapeHtml(item.subtitle)}</p>
+            <h2 class="${titleClass}">${escapeHtml(item.title)}</h2>
           </div>
           <p class="angle">${escapeHtml(item.angle || item.description)}</p>
-          <div class="metric-row">
-            <div>
-              <span class="metric-label">${escapeHtml(item.metricLabel)}</span>
+          <div class="signal-row">
+            <div class="signal-box">
+              <span>${escapeHtml(item.metricLabel)}</span>
               <strong>${escapeHtml(item.metric)}</strong>
             </div>
-            <div>
-              <span class="metric-label">${escapeHtml(item.secondaryLabel)}</span>
+            <div class="signal-box">
+              <span>${escapeHtml(item.secondaryLabel)}</span>
               <strong>${escapeHtml(item.secondaryMetric)}</strong>
             </div>
           </div>
@@ -84,26 +140,28 @@ function recapItem(item) {
             <li>
               <span>#${item.rank}</span>
               <strong>${escapeHtml(item.title)}</strong>
-              <em>${escapeHtml(item.source)}</em>
+              <em>${escapeHtml(sourceShort(item.source))}</em>
             </li>`;
 }
 
 function buildHtml(data) {
   const items = data.items.slice(0, videoItemCount(data));
-  const timings = data.timings || fallbackTimings(items.length);
+  const timings = normalizeTimings(data.timings, items.length);
   const maxMetric = Math.max(...items.map((item) => metricNumber(item.metric)), 1);
   const topicScenes = items
     .map((item, index) => sceneForItem(item, index, maxMetric, timings.items[index]))
     .join("\n");
   const recap = items.map(recapItem).join("\n");
   const lead = items[0];
-  const sourceLine = data.sources.map((source) => source.name.replace(" Trending", "")).join(" / ");
-  const totalDuration = timings.totalDuration;
+  const totalDuration = Number(timings.totalDuration || 70);
   const audioSrc = timings.audio || "assets/narration.mp3";
-  const hookTitle = data.hookTitle || data.title;
-  const hookSubtitle = data.hookSubtitle || data.subtitle;
-  const leadLabel = data.leadLabel || "先看首个热点";
-  const codexLine = data.codexLine || "本条视频由 Codex 自动抓热点、写口播并渲染";
+  const hookTitle = data.hookTitle || data.title || "今日 AI 开发者热点";
+  const hookSubtitle = data.hookSubtitle || data.subtitle || "七个值得开发者快速扫一遍的项目、产品和研究方向。";
+  const leadLabel = data.leadLabel || "第一眼看这个";
+  const codexLine = data.codexLine || "Codex 辅助整理多源热度，并完成 7 天去重。";
+  const sources = sourceLine(data.sources || []);
+  const hookTitleClass = `hero-title${lengthClass(hookTitle)}`;
+  const leadTitleClass = `lead-title${lengthClass(lead.title)}`;
 
   return `<!doctype html>
 <html lang="zh-CN">
@@ -118,43 +176,150 @@ function buildHtml(data) {
           return Array.from(target || []);
         }
 
+        function clamp(value, min, max) {
+          return Math.max(min, Math.min(max, value));
+        }
+
+        function tweenVars(vars = {}) {
+          const copy = { ...vars };
+          delete copy.duration;
+          delete copy.ease;
+          delete copy.stagger;
+          delete copy.repeat;
+          return copy;
+        }
+
         function applyVars(target, vars = {}) {
           elements(target).forEach((element) => {
             if ("opacity" in vars) element.style.opacity = String(vars.opacity);
+            if ("transformOrigin" in vars) element.style.transformOrigin = String(vars.transformOrigin);
             const transforms = [];
-            if ("x" in vars) transforms.push("translateX(" + vars.x + "px)");
-            if ("y" in vars) transforms.push("translateY(" + vars.y + "px)");
-            if ("scale" in vars) transforms.push("scale(" + vars.scale + ")");
-            if ("scaleX" in vars) transforms.push("scaleX(" + vars.scaleX + ")");
+            if ("x" in vars) transforms.push("translateX(" + Number(vars.x || 0).toFixed(2) + "px)");
+            if ("y" in vars) transforms.push("translateY(" + Number(vars.y || 0).toFixed(2) + "px)");
+            if ("scale" in vars) transforms.push("scale(" + Number(vars.scale || 1).toFixed(4) + ")");
+            if ("scaleX" in vars) transforms.push("scaleX(" + Number(vars.scaleX || 1).toFixed(4) + ")");
             if (transforms.length) element.style.transform = transforms.join(" ");
           });
         }
 
+        function resetAnimated(tweens) {
+          const seen = new Set();
+          tweens.forEach((tween) => {
+            elements(tween.target).forEach((element) => {
+              if (seen.has(element)) return;
+              seen.add(element);
+              element.style.opacity = "";
+              element.style.transform = "";
+              element.style.transformOrigin = "";
+            });
+          });
+        }
+
+        function interpolate(vars, progress, type) {
+          const state = {};
+          for (const [key, raw] of Object.entries(vars)) {
+            if (key === "transformOrigin") {
+              state.transformOrigin = raw;
+              continue;
+            }
+            const value = Number(raw);
+            if (!Number.isFinite(value)) continue;
+            const neutral = key === "opacity" || key === "scale" || key === "scaleX" ? 1 : 0;
+            state[key] = type === "from"
+              ? value + (neutral - value) * progress
+              : neutral + (value - neutral) * progress;
+          }
+          return state;
+        }
+
+        function renderScenes(time) {
+          const scenes = Array.from(document.querySelectorAll(".scene"));
+          const boundaries = [];
+          scenes.forEach((scene) => {
+            const start = Number(scene.dataset.start) || 0;
+            const duration = Number(scene.dataset.duration) || 0;
+            const visible = time >= start && time < start + duration;
+            scene.style.opacity = visible ? "1" : "0";
+            scene.style.pointerEvents = visible ? "auto" : "none";
+            if (start > 0) boundaries.push(start);
+          });
+
+          const wipe = document.querySelector(".transition-wipe");
+          if (wipe) {
+            let pulse = 0;
+            boundaries.forEach((start) => {
+              const distance = Math.abs(time - start);
+              if (distance < 0.34) pulse = Math.max(pulse, 1 - distance / 0.34);
+            });
+            wipe.style.opacity = String(Math.min(0.92, pulse));
+            wipe.style.transform = "translateY(" + ((1 - pulse) * -160).toFixed(2) + "px) skewY(-8deg)";
+          }
+        }
+
+        function renderTweens(time, tweens) {
+          resetAnimated(tweens);
+          tweens.forEach((tween) => {
+            const targets = elements(tween.target);
+            targets.forEach((element, index) => {
+              const start = tween.start + index * tween.stagger;
+              const duration = Math.max(0.001, tween.duration);
+              if (tween.type === "to" && time < start) return;
+              let local = time - start;
+              if (tween.repeat > 0 && local >= 0) local = local % duration;
+              const progress = clamp(local / duration, 0, 1);
+              if (tween.type === "from" || time <= start + duration || tween.repeat > 0) {
+                applyVars(element, interpolate(tween.vars, progress, tween.type));
+              }
+            });
+          });
+        }
+
+        function renderTimeline(time, tweens) {
+          renderScenes(time);
+          renderTweens(time, tweens);
+        }
+
         function createTimeline() {
+          const tweens = [];
           return {
-            from() {
+            from(target, vars = {}, position = 0) {
+              tweens.push({
+                type: "from",
+                target,
+                vars: tweenVars(vars),
+                start: Number(position) || 0,
+                duration: Number(vars.duration) || 0.4,
+                stagger: Number(vars.stagger) || 0,
+                repeat: 0,
+              });
               return this;
             },
-            to() {
+            to(target, vars = {}, position = 0) {
+              tweens.push({
+                type: "to",
+                target,
+                vars: tweenVars(vars),
+                start: Number(position) || 0,
+                duration: Number(vars.duration) || 0.4,
+                stagger: Number(vars.stagger) || 0,
+                repeat: Number(vars.repeat) || 0,
+              });
               return this;
             },
-            set() {
+            set(target, vars = {}, position = 0) {
+              tweens.push({
+                type: "to",
+                target,
+                vars: tweenVars({ ...vars, duration: 0.001 }),
+                start: Number(position) || 0,
+                duration: 0.001,
+                stagger: 0,
+                repeat: 0,
+              });
               return this;
             },
             seek(time) {
-              const t = Number(time) || 0;
-              document.querySelectorAll(".scene").forEach((scene) => {
-                const start = Number(scene.dataset.start) || 0;
-                const duration = Number(scene.dataset.duration) || 0;
-                const visible = t >= start && t < start + duration;
-                scene.style.opacity = visible ? "1" : "0";
-                scene.style.transform = "translateY(0)";
-              });
-              const scan = document.querySelector(".scan");
-              if (scan) {
-                const y = ((t % 4.5) / 4.5) * 1920;
-                scan.style.transform = "translateY(" + y.toFixed(2) + "px)";
-              }
+              renderTimeline(Number(time) || 0, tweens);
               return this;
             },
             pause() {
@@ -173,7 +338,7 @@ function buildHtml(data) {
           set: applyVars,
           timeline: createTimeline,
         };
-        window.gsap.version = window.gsap.version || "offline-shim";
+        window.gsap.version = window.gsap.version || "deterministic-shim";
       })();
     </script>
     <style>
@@ -190,7 +355,7 @@ function buildHtml(data) {
         overflow: hidden;
         background: #07100f;
         color: #f7f4e8;
-        font-family: Arial, sans-serif;
+        font-family: Arial, system-ui, sans-serif;
       }
 
       #root {
@@ -198,274 +363,444 @@ function buildHtml(data) {
         width: 1080px;
         height: 1920px;
         overflow: hidden;
+        isolation: isolate;
         background:
-          linear-gradient(180deg, rgba(92, 225, 165, 0.12), rgba(7, 16, 15, 0) 34%),
-          radial-gradient(circle at 18% 18%, rgba(255, 204, 51, 0.18), transparent 24%),
-          radial-gradient(circle at 88% 66%, rgba(106, 167, 255, 0.14), transparent 28%),
-          #07100f;
+          linear-gradient(128deg, #07100f 0%, #07100f 38%, #0d1917 38%, #0d1917 56%, #111018 56%, #111018 100%);
       }
 
-      .grid {
+      .stage-stripes {
         position: absolute;
         inset: 0;
-        opacity: 0.18;
+        opacity: 0.22;
         background-image:
-          linear-gradient(rgba(247, 244, 232, 0.12) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(247, 244, 232, 0.12) 1px, transparent 1px);
-        background-size: 72px 72px;
+          repeating-linear-gradient(115deg, rgba(247, 244, 232, 0.08) 0 2px, rgba(247, 244, 232, 0) 2px 34px),
+          linear-gradient(90deg, rgba(92, 225, 165, 0.16), rgba(255, 92, 122, 0) 38%, rgba(106, 167, 255, 0.15));
       }
 
-      .scan {
+      .stage-rail {
         position: absolute;
-        left: -10%;
-        right: -10%;
         top: 0;
-        height: 220px;
-        background: linear-gradient(180deg, transparent, rgba(92, 225, 165, 0.18), transparent);
-        opacity: 0.75;
+        bottom: 0;
+        left: 42px;
+        width: 3px;
+        background: linear-gradient(180deg, #5ce1a5, #ffcc33 42%, #ff5c7a 74%, #6aa7ff);
       }
 
-      .corner {
+      .stage-rail::before,
+      .stage-rail::after {
+        content: "";
         position: absolute;
-        width: 220px;
-        height: 220px;
-        border-color: rgba(92, 225, 165, 0.55);
-        border-style: solid;
-        opacity: 0.55;
+        left: -10px;
+        width: 23px;
+        height: 23px;
+        border: 3px solid #f7f4e8;
+        background: #07100f;
       }
 
-      .corner.tl {
-        left: 48px;
-        top: 48px;
-        border-width: 3px 0 0 3px;
+      .stage-rail::before {
+        top: 96px;
       }
 
-      .corner.br {
-        right: 48px;
-        bottom: 48px;
-        border-width: 0 3px 3px 0;
+      .stage-rail::after {
+        bottom: 96px;
+      }
+
+      .top-ruler {
+        position: absolute;
+        top: 42px;
+        left: 82px;
+        right: 82px;
+        height: 2px;
+        background: linear-gradient(90deg, #f7f4e8, rgba(247, 244, 232, 0));
+        opacity: 0.58;
+      }
+
+      .transition-wipe {
+        position: absolute;
+        z-index: 40;
+        left: -8%;
+        right: -8%;
+        top: 42%;
+        height: 270px;
+        pointer-events: none;
+        background:
+          linear-gradient(90deg, rgba(7, 16, 15, 0.94), rgba(92, 225, 165, 0.82) 38%, rgba(255, 204, 51, 0.74) 62%, rgba(7, 16, 15, 0.94));
+        opacity: 0;
+      }
+
+      .transition-wipe::after {
+        content: "";
+        position: absolute;
+        inset: 22px 0;
+        background: repeating-linear-gradient(90deg, rgba(7, 16, 15, 0.45) 0 18px, rgba(7, 16, 15, 0) 18px 42px);
       }
 
       .scene {
         position: absolute;
         inset: 0;
+        overflow: hidden;
       }
 
       .scene-content {
         width: 100%;
         height: 100%;
-        padding: 112px 82px 88px;
+        padding: 108px 78px 86px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         gap: 28px;
       }
 
-      .eyebrow {
+      .kicker {
         color: #5ce1a5;
-        font-size: 34px;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 900;
+        font-family: monospace;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .hook .scene-content {
+        justify-content: space-between;
+      }
+
+      .hero-stack {
+        padding-top: 138px;
+      }
+
+      .hero-title {
+        max-width: 930px;
+        margin-top: 28px;
+        font-size: 96px;
+        line-height: 1.02;
+        font-weight: 900;
+      }
+
+      .hero-title.is-long {
+        font-size: 88px;
+      }
+
+      .hero-title.is-xl {
+        font-size: 76px;
+      }
+
+      .hero-subtitle {
+        max-width: 880px;
+        margin-top: 28px;
+        color: #d7e3dc;
+        font-size: 40px;
+        line-height: 1.42;
         font-weight: 700;
       }
 
-      .hook h1 {
-        max-width: 900px;
-        font-size: 108px;
-        line-height: 1.05;
-        font-weight: 900;
+      .source-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
       }
 
-      .hook .lead {
-        color: #9fb0aa;
-        font-size: 40px;
-        line-height: 1.45;
-      }
-
-      .codex-badge {
-        width: fit-content;
-        max-width: 900px;
-        padding: 14px 22px;
-        color: #07100f;
-        background: #5ce1a5;
-        border-radius: 999px;
-        font-size: 30px;
-        line-height: 1.25;
-        font-weight: 900;
-      }
-
-      .lead-card {
-        margin-top: 28px;
-        padding: 30px 34px;
-        border: 2px solid rgba(247, 244, 232, 0.16);
-        background: rgba(16, 26, 24, 0.86);
+      .source-strip span,
+      .codex-note,
+      .source-chip,
+      .rank-chip {
         border-radius: 8px;
       }
 
-      .lead-card span {
-        display: block;
+      .source-strip span {
+        padding: 12px 16px;
+        border: 2px solid rgba(247, 244, 232, 0.14);
+        background: rgba(16, 26, 24, 0.86);
+        color: #f7f4e8;
+        font-size: 26px;
+        font-weight: 900;
+      }
+
+      .lead-module {
+        display: grid;
+        grid-template-columns: 1fr 222px;
+        gap: 24px;
+        min-height: 316px;
+        padding: 30px;
+        border: 2px solid rgba(247, 244, 232, 0.18);
+        background:
+          linear-gradient(135deg, rgba(16, 26, 24, 0.96), rgba(16, 26, 24, 0.72)),
+          linear-gradient(90deg, rgba(92, 225, 165, 0.18), rgba(255, 204, 51, 0.14));
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+      }
+
+      .lead-label {
         color: #ffcc33;
-        font-size: 36px;
-        font-weight: 700;
+        font-size: 31px;
+        font-weight: 900;
       }
 
-      .lead-card strong {
-        display: block;
-        margin-top: 8px;
-        font-size: 66px;
+      .lead-title {
+        margin-top: 14px;
+        font-size: 68px;
         line-height: 1.08;
-      }
-
-      .rank-line {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      .rank {
-        color: var(--accent);
-        font-size: 94px;
         font-weight: 900;
-      }
-
-      .lang {
-        padding: 14px 22px;
-        color: #07100f;
-        background: var(--accent);
-        border-radius: 999px;
-        font-size: 30px;
-        font-weight: 900;
-        text-align: right;
-      }
-
-      .topic-name {
-        padding-bottom: 28px;
-        border-bottom: 2px solid rgba(247, 244, 232, 0.18);
-      }
-
-      .topic-name span,
-      .metric-label {
-        display: block;
-        color: #9fb0aa;
-        font-size: 32px;
-      }
-
-      .topic-name strong {
-        display: block;
-        margin-top: 10px;
-        font-size: 74px;
-        line-height: 1.04;
         overflow-wrap: anywhere;
       }
 
-      .angle {
-        min-height: 188px;
-        color: #f7f4e8;
+      .lead-title.is-long {
+        font-size: 56px;
+      }
+
+      .lead-title.is-xl {
         font-size: 46px;
-        line-height: 1.32;
+      }
+
+      .lead-meta {
+        margin-top: 20px;
+        color: #9fb0aa;
+        font-size: 30px;
+        line-height: 1.35;
+      }
+
+      .lead-index {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #07100f;
+        background: #5ce1a5;
+        font-family: monospace;
+        font-size: 86px;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .codex-note {
+        width: fit-content;
+        max-width: 900px;
+        padding: 14px 18px;
+        color: #07100f;
+        background: #f7f4e8;
+        font-size: 27px;
+        line-height: 1.3;
+        font-weight: 900;
+      }
+
+      .topic-band {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, var(--accent-soft), rgba(7, 16, 15, 0) 42%),
+          linear-gradient(135deg, rgba(247, 244, 232, 0) 0 55%, var(--accent-soft) 55% 66%, rgba(247, 244, 232, 0) 66%);
+      }
+
+      .topic-watermark {
+        position: absolute;
+        right: -34px;
+        bottom: 46px;
+        color: rgba(247, 244, 232, 0.055);
+        font-family: monospace;
+        font-size: 360px;
+        line-height: 1;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .topic-layout {
+        justify-content: flex-start;
+      }
+
+      .topic-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 74px;
+      }
+
+      .rank-chip {
+        padding: 12px 18px;
+        color: var(--accent-ink);
+        background: var(--accent);
+        font-family: monospace;
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .source-chip {
+        max-width: 650px;
+        padding: 14px 18px;
+        color: #f7f4e8;
+        background: rgba(7, 16, 15, 0.72);
+        border: 2px solid var(--accent);
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 900;
+        text-align: right;
+        overflow-wrap: anywhere;
+      }
+
+      .topic-main {
+        padding: 34px 0 52px;
+        border-top: 2px solid rgba(247, 244, 232, 0.16);
+        border-bottom: 2px solid rgba(247, 244, 232, 0.16);
+      }
+
+      .repo-path {
+        color: #9fb0aa;
+        font-family: monospace;
+        font-size: 28px;
+        line-height: 1.25;
+        overflow-wrap: anywhere;
+      }
+
+      .topic-title {
+        margin-top: 14px;
+        color: #f7f4e8;
+        font-size: 88px;
+        line-height: 1.02;
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .topic-title.is-long {
+        font-size: 74px;
+      }
+
+      .topic-title.is-xl {
+        font-size: 62px;
+      }
+
+      .angle {
+        min-height: 178px;
+        color: #f7f4e8;
+        font-size: 42px;
+        line-height: 1.34;
         font-weight: 800;
       }
 
-      .metric-row {
+      .signal-row {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 22px;
+        gap: 18px;
       }
 
-      .metric-row div {
-        min-height: 150px;
-        padding: 22px;
-        border-radius: 8px;
-        background: rgba(16, 26, 24, 0.92);
-        border: 2px solid rgba(247, 244, 232, 0.12);
+      .signal-box {
+        min-height: 142px;
+        padding: 20px;
+        border: 2px solid rgba(247, 244, 232, 0.13);
+        background:
+          linear-gradient(180deg, rgba(16, 26, 24, 0.95), rgba(7, 16, 15, 0.86)),
+          var(--accent-soft);
       }
 
-      .metric-row strong {
+      .signal-box span {
+        display: block;
+        color: #9fb0aa;
+        font-size: 27px;
+        line-height: 1.22;
+      }
+
+      .signal-box strong {
         display: block;
         margin-top: 10px;
         color: var(--accent);
-        font-size: 52px;
+        font-family: monospace;
+        font-size: 46px;
+        line-height: 1.05;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
         overflow-wrap: anywhere;
       }
 
       .velocity {
-        height: 24px;
+        height: 34px;
+        border: 2px solid rgba(247, 244, 232, 0.15);
+        background: rgba(7, 16, 15, 0.68);
         overflow: hidden;
-        border-radius: 999px;
-        background: rgba(247, 244, 232, 0.1);
       }
 
       .velocity span {
         display: block;
         width: var(--bar);
         height: 100%;
-        background: linear-gradient(90deg, var(--accent), #f7f4e8);
+        background:
+          linear-gradient(90deg, var(--accent), #f7f4e8),
+          repeating-linear-gradient(90deg, rgba(7, 16, 15, 0.3) 0 8px, rgba(7, 16, 15, 0) 8px 18px);
       }
 
       .caption {
         margin-top: auto;
-        padding: 22px 24px;
         min-height: 126px;
+        padding: 22px 24px 22px 30px;
         color: #f7f4e8;
-        background: rgba(7, 16, 15, 0.82);
-        border-left: 6px solid var(--accent);
-        font-size: 31px;
+        background: rgba(7, 16, 15, 0.86);
+        border-left: 8px solid var(--accent);
+        font-size: 32px;
         line-height: 1.35;
+        font-weight: 800;
       }
 
       .recap .scene-content {
         justify-content: flex-start;
-        padding-top: 122px;
+        padding-top: 118px;
       }
 
       .recap h2 {
-        font-size: 84px;
+        margin-top: 16px;
+        max-width: 850px;
+        font-size: 82px;
         line-height: 1.08;
-      }
-
-      .recap ul {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        list-style: none;
-      }
-
-      .recap li {
-        display: grid;
-        grid-template-columns: 78px 1fr 190px;
-        align-items: center;
-        gap: 18px;
-        padding: 22px 24px;
-        border-radius: 8px;
-        background: rgba(16, 26, 24, 0.92);
-        border: 2px solid rgba(247, 244, 232, 0.12);
-      }
-
-      .recap li span {
-        color: #5ce1a5;
-        font-size: 36px;
         font-weight: 900;
       }
 
-      .recap li strong {
-        font-size: 36px;
+      .recap-list {
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        list-style: none;
+      }
+
+      .recap-list li {
+        display: grid;
+        grid-template-columns: 76px 1fr 122px;
+        align-items: center;
+        gap: 16px;
+        min-height: 86px;
+        padding: 14px 18px;
+        border: 2px solid rgba(247, 244, 232, 0.13);
+        background: rgba(16, 26, 24, 0.9);
+      }
+
+      .recap-list li span {
+        color: #5ce1a5;
+        font-family: monospace;
+        font-size: 34px;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .recap-list li strong {
+        font-size: 34px;
+        line-height: 1.16;
+        font-weight: 900;
         overflow-wrap: anywhere;
       }
 
-      .recap li em {
+      .recap-list li em {
         color: #ffcc33;
-        font-size: 28px;
+        font-size: 25px;
+        line-height: 1.1;
         font-style: normal;
+        font-weight: 900;
         text-align: right;
       }
 
       .cta {
         margin-top: auto;
-        padding-top: 30px;
-        color: #9fb0aa;
+        padding-top: 28px;
+        color: #d7e3dc;
         border-top: 2px solid rgba(247, 244, 232, 0.18);
         font-size: 34px;
-        line-height: 1.45;
+        line-height: 1.42;
+        font-weight: 800;
       }
     </style>
   </head>
@@ -479,30 +814,42 @@ function buildHtml(data) {
       data-height="1920"
     >
       <audio id="narration" data-start="0" data-duration="${totalDuration}" data-track-index="2" src="${escapeHtml(audioSrc)}" data-volume="1"></audio>
-      <div class="grid" data-layout-ignore></div>
-      <div class="scan" data-layout-ignore></div>
-      <div class="corner tl" data-layout-ignore></div>
-      <div class="corner br" data-layout-ignore></div>
+      <div class="stage-stripes" data-layout-ignore></div>
+      <div class="stage-rail" data-layout-ignore></div>
+      <div class="top-ruler" data-layout-ignore></div>
+      <div class="transition-wipe" data-layout-ignore></div>
 
       <section id="hook" class="clip scene hook" data-start="${timings.hook.start.toFixed(3)}" data-duration="${timings.hook.duration.toFixed(3)}" data-track-index="1">
         <div class="scene-content">
-          <div class="eyebrow">${escapeHtml(data.dateLabel)} / ${escapeHtml(sourceLine)}</div>
-          <h1>${escapeHtml(hookTitle)}</h1>
-          <p class="lead">${escapeHtml(hookSubtitle)}</p>
-          <div class="codex-badge">${escapeHtml(codexLine)}</div>
-          <div class="lead-card">
-            <span>${escapeHtml(leadLabel)}</span>
-            <strong>${escapeHtml(lead.title)} · ${escapeHtml(lead.source)}</strong>
+          <div class="hero-stack">
+            <div class="kicker">${escapeHtml(data.dateLabel)} · ${escapeHtml(sources || "Developer Radar")}</div>
+            <h1 class="${hookTitleClass}">${escapeHtml(hookTitle)}</h1>
+            <p class="hero-subtitle">${escapeHtml(hookSubtitle)}</p>
+            <div class="source-strip">
+              ${(sources || "GitHub / HN / PH / HF / arXiv").split(" / ").map((source) => `<span>${escapeHtml(source)}</span>`).join("")}
+            </div>
           </div>
+          <div class="lead-module">
+            <div>
+              <p class="lead-label">${escapeHtml(leadLabel)}</p>
+              <h2 class="${leadTitleClass}">${escapeHtml(lead.title)}</h2>
+              <p class="lead-meta">${escapeHtml(lead.subtitle)} · ${escapeHtml(lead.source)}</p>
+            </div>
+            <div class="lead-index">01</div>
+          </div>
+          <div class="codex-note">${escapeHtml(codexLine)}</div>
         </div>
       </section>
 ${topicScenes}
 
       <section id="recap" class="clip scene recap" data-start="${timings.outro.start.toFixed(3)}" data-duration="${timings.outro.duration.toFixed(3)}" data-track-index="1">
         <div class="scene-content">
-          <div class="eyebrow">今日小结</div>
-          <h2>七个方向先按需收藏</h2>
-          <p class="cta">${escapeHtml(data.cta || "今天先到这里，明天继续看开发者热点。")}</p>
+          <div class="kicker">RECAP · ${escapeHtml(data.dateLabel)}</div>
+          <h2>七个方向按需收藏</h2>
+          <ul class="recap-list">
+${recap}
+          </ul>
+          <p class="cta">${escapeHtml(data.cta || "今天先到这里，七个方向按需收藏，明天继续。")}</p>
         </div>
       </section>
     </div>
@@ -510,36 +857,31 @@ ${topicScenes}
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
-      gsap.set(".scene", { opacity: 0 });
-      gsap.set("#hook", { opacity: 1 });
-      tl.from("#hook .eyebrow", { opacity: 0, y: 34, duration: 0.45, ease: "power3.out" }, 0);
-      tl.from("#hook h1", { opacity: 0, y: 56, duration: 0.55, ease: "power3.out" }, 0.18);
-      tl.from("#hook .lead", { opacity: 0, y: 36, duration: 0.45, ease: "power2.out" }, 0.44);
-      tl.from("#hook .codex-badge", { opacity: 0, y: 24, duration: 0.38, ease: "power2.out" }, 0.66);
-      tl.from("#hook .lead-card", { opacity: 0, scale: 0.94, duration: 0.5, ease: "power2.out" }, 0.92);
-      tl.to("#hook", { opacity: 0, y: -36, duration: 0.35, ease: "power2.in" }, ${Math.max(0, timings.hook.start + timings.hook.duration - 0.38).toFixed(3)});
-      tl.set("#hook", { opacity: 0 }, ${(timings.hook.start + timings.hook.duration).toFixed(3)});
+      tl.from("#hook .kicker", { opacity: 0, y: 34, duration: 0.42, ease: "power3.out" }, 0.14);
+      tl.from("#hook h1", { opacity: 0, y: 66, duration: 0.58, ease: "power3.out" }, 0.28);
+      tl.from("#hook .hero-subtitle", { opacity: 0, y: 42, duration: 0.46, ease: "power2.out" }, 0.62);
+      tl.from("#hook .source-strip span", { opacity: 0, y: 22, stagger: 0.045, duration: 0.26, ease: "power2.out" }, 0.86);
+      tl.from("#hook .lead-module", { opacity: 0, y: 42, scale: 0.965, duration: 0.5, ease: "power2.out" }, 1.12);
+      tl.from("#hook .codex-note", { opacity: 0, y: 28, duration: 0.36, ease: "power2.out" }, 1.42);
 
       const sceneTimings = ${JSON.stringify(timings.items.map((item) => ({ start: item.start, duration: item.duration })))};
-      sceneTimings.forEach(({ start, duration }, index) => {
+      sceneTimings.forEach(({ start }, index) => {
         const id = "#topic-" + (index + 1);
-        tl.set(id, { opacity: 1, y: 0 }, start);
-        tl.from(id + " .rank", { opacity: 0, x: -48, duration: 0.36, ease: "power3.out" }, start + 0.04);
-        tl.from(id + " .lang", { opacity: 0, x: 36, duration: 0.36, ease: "power3.out" }, start + 0.1);
-        tl.from(id + " .topic-name", { opacity: 0, y: 46, duration: 0.42, ease: "power2.out" }, start + 0.22);
-        tl.from(id + " .angle", { opacity: 0, y: 40, duration: 0.42, ease: "power2.out" }, start + 0.52);
-        tl.from(id + " .metric-row div", { opacity: 0, y: 32, stagger: 0.08, duration: 0.34, ease: "power2.out" }, start + 0.9);
-        tl.from(id + " .velocity span", { scaleX: 0, transformOrigin: "left center", duration: 0.62, ease: "power2.out" }, start + 1.18);
-        tl.from(id + " .caption", { opacity: 0, y: 30, duration: 0.38, ease: "power2.out" }, start + 1.45);
-        tl.to(id, { opacity: 0, y: -34, duration: 0.3, ease: "power2.in" }, start + Math.max(0, duration - 0.34));
+        tl.from(id + " .rank-chip", { opacity: 0, x: -42, duration: 0.34, ease: "power3.out" }, start + 0.12);
+        tl.from(id + " .source-chip", { opacity: 0, x: 42, duration: 0.34, ease: "power2.out" }, start + 0.18);
+        tl.from(id + " .repo-path", { opacity: 0, y: 28, duration: 0.34, ease: "power2.out" }, start + 0.34);
+        tl.from(id + " .topic-title", { opacity: 0, y: 58, duration: 0.48, ease: "power3.out" }, start + 0.46);
+        tl.from(id + " .angle", { opacity: 0, y: 42, duration: 0.42, ease: "power2.out" }, start + 0.82);
+        tl.from(id + " .signal-box", { opacity: 0, y: 34, stagger: 0.07, duration: 0.32, ease: "power2.out" }, start + 1.12);
+        tl.from(id + " .velocity span", { scaleX: 0, transformOrigin: "left center", duration: 0.58, ease: "power2.out" }, start + 1.38);
+        tl.from(id + " .caption", { opacity: 0, y: 28, duration: 0.36, ease: "power2.out" }, start + 1.62);
       });
 
       const outroStart = ${timings.outro.start.toFixed(3)};
-      tl.set("#recap", { opacity: 1, y: 0 }, outroStart);
-      tl.from("#recap .eyebrow", { opacity: 0, y: 34, duration: 0.34, ease: "power2.out" }, outroStart + 0.05);
-      tl.from("#recap h2", { opacity: 0, y: 52, duration: 0.46, ease: "power3.out" }, outroStart + 0.18);
-      tl.from("#recap .cta", { opacity: 0, y: 30, duration: 0.42, ease: "power2.out" }, outroStart + 1.1);
-      tl.to(".scan", { y: 1920, duration: 4.5, repeat: ${Math.ceil(totalDuration / 4.5)}, ease: "none" }, 0);
+      tl.from("#recap .kicker", { opacity: 0, y: 28, duration: 0.32, ease: "power2.out" }, outroStart + 0.12);
+      tl.from("#recap h2", { opacity: 0, y: 48, duration: 0.44, ease: "power3.out" }, outroStart + 0.25);
+      tl.from("#recap .recap-list li", { opacity: 0, x: -36, stagger: 0.07, duration: 0.28, ease: "power2.out" }, outroStart + 0.66);
+      tl.from("#recap .cta", { opacity: 0, y: 28, duration: 0.36, ease: "power2.out" }, outroStart + 1.72);
       window.__timelines["main"] = tl;
     </script>
   </body>

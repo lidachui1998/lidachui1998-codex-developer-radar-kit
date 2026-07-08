@@ -13,11 +13,39 @@ function Assert-LastExitCode {
   }
 }
 
+function Resolve-Tool {
+  param(
+    [string]$Name,
+    [string]$EnvName
+  )
+  $configured = [Environment]::GetEnvironmentVariable($EnvName)
+  if ($configured) {
+    if (Test-Path $configured) {
+      return $configured
+    }
+    throw "$EnvName points to a missing executable: $configured"
+  }
+  $command = Get-Command $Name -ErrorAction SilentlyContinue
+  if ($command) {
+    return $command.Source
+  }
+  throw "Required executable not found: $Name. Install it or set $EnvName."
+}
+
 $Root = Split-Path -Parent $PSScriptRoot
-$Node = "C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
-$Python = "D:\software_lhj\python\python.exe"
-$NpxCli = "D:\software_lhj\nodejs\node_modules\npm\bin\npx-cli.js"
-$Chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$Node = Resolve-Tool "node" "NODE_EXE"
+$Python = Resolve-Tool "python" "PYTHON_EXE"
+$NpxCli = Resolve-Tool "npx" "NPX_EXE"
+$Chrome = $env:HYPERFRAMES_BROWSER_PATH
+if (!$Chrome) {
+  $ChromeCandidates = @(
+    "C:\Program Files\Google\Chrome\Application\chrome.exe",
+    "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    "C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+    "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+  )
+  $Chrome = $ChromeCandidates | Where-Object { Test-Path $_ } | Select-Object -First 1
+}
 $FfmpegDir = Join-Path $Root "node_modules\@ffmpeg-installer\win32-x64"
 $FfprobeDir = Join-Path $Root "node_modules\@ffprobe-installer\win32-x64"
 $Ffmpeg = Join-Path $FfmpegDir "ffmpeg.exe"
@@ -30,8 +58,10 @@ $Final = Join-Path $Root $Output
 $SiteThumb = Join-Path $Root "renders\site-latest-thumbnail.png"
 
 Set-Location $Root
-$env:PATH = "C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin;$FfmpegDir;$FfprobeDir;$env:PATH"
-$env:HYPERFRAMES_BROWSER_PATH = $Chrome
+$env:PATH = "$FfmpegDir;$FfprobeDir;$env:PATH"
+if ($Chrome) {
+  $env:HYPERFRAMES_BROWSER_PATH = $Chrome
+}
 New-Item -ItemType Directory -Force -Path $NpmCache | Out-Null
 $env:npm_config_cache = $NpmCache
 $env:NPM_CONFIG_CACHE = $NpmCache
@@ -39,9 +69,6 @@ if (Test-Path $LocalPythonPackages) {
   $env:PYTHONPATH = "$LocalPythonPackages;$env:PYTHONPATH"
 }
 
-if (!(Test-Path $Python)) {
-  throw "Required Python not found: $Python"
-}
 & $Node "scripts\topic-history.mjs" check --days 7
 Assert-LastExitCode "Topic history check"
 & $Python -c "import edge_tts; print(edge_tts.__file__)"

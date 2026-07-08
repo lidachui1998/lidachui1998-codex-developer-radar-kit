@@ -2304,6 +2304,62 @@
       "source": "GitHub",
       "url": "https://github.com/steipete/CodexBar",
       "video": "renders/developer-radar-2026-07-07-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "dotnet/skills",
+      "title": "dotnet/skills",
+      "source": "GitHub",
+      "url": "https://github.com/dotnet/skills",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "https://arxiv.org/abs/2607.05456",
+      "title": "Prompt-to-Paper",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.05456",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "https://github.blog/security/application-security/how-github-used-secret-scanning-to-reach-inbox-zero",
+      "title": "Secret Scanning Inbox Zero",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/security/application-security/how-github-used-secret-scanning-to-reach-inbox-zero/",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "https://huggingface.co/papers/2607.05511",
+      "title": "Light-Omni",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.05511",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos",
+      "title": "GitLost",
+      "source": "Hacker News",
+      "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "https://www.producthunt.com/products/agents-cli",
+      "title": "agents-cli",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/agents-cli",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-08",
+      "key": "iofficeai/officecli",
+      "title": "OfficeCLI",
+      "source": "GitHub",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
     }
   ]
 }

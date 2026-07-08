@@ -11,18 +11,29 @@ Turn daily developer and AI trend sources into a 9:16 short video: a fast hook, 
 
 Use HyperFrames as the default renderer. Remotion is acceptable only when the user specifically asks for a React/Remotion implementation.
 
+## Visual Quality Baseline
+
+Starting with the 2026-07-08 daily run, treat viewer feedback that the prior video looked weak as a standing product requirement. Each daily run should preserve the Developer Radar identity but use a visibly more polished editorial-tech layout than the old flat grid/card version.
+
+- Prefer a template-level upgrade in `scripts/build-video.mjs` over one-off edits to `index.html`, so future runs inherit the improved look.
+- Use layered full-frame composition: strong first-frame headline, source/date rail, hero topic module, ranked topic scenes, accent bands, depth, typography contrast, and readable phone-scale hierarchy.
+- Avoid a generic dark dashboard made only of repeated cards, tiny labels, plain grid backgrounds, or a single neon accent. Mix mint, amber, coral, and blue accents with restrained contrast.
+- Keep cards at 8px radius or less, avoid cards inside cards, and keep the whole video from feeling like a web dashboard screenshot.
+- Before publishing, run lint/inspect and do a visual sanity pass from the generated frames or preview. If the video looks visually flat, repetitive, cramped, or text-heavy, revise the generator before rendering the final MP4.
+- Keep all Douyin audit constraints intact: no external-channel guidance, no reply keywords, no links, and no WeChat/public-account prompts in the video, title, or description.
+
 ## Runtime Setup
 
-On this Windows machine, global Node may be too old for HyperFrames. Before running HyperFrames commands, prepend the Codex runtime Node path:
+Use a current Node.js runtime for HyperFrames. If your default `node` is too old, put a newer Node.js `bin` directory at the front of `PATH` before running project commands:
 
 ```powershell
-$env:PATH = 'C:\Users\WANG\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin;' + $env:PATH
+$env:PATH = '<NODE_BIN_DIR>;' + $env:PATH
 ```
 
-If HyperFrames cannot find its cached headless browser, use installed Chrome:
+If HyperFrames cannot find its cached headless browser, point it at a locally installed Chrome or Chromium executable:
 
 ```powershell
-$env:HYPERFRAMES_BROWSER_PATH = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+$env:HYPERFRAMES_BROWSER_PATH = '<CHROME_OR_CHROMIUM_EXE>'
 ```
 
 If system FFmpeg is missing, install project-local binaries:
@@ -107,10 +118,10 @@ Return the Studio URL in this form: `http://localhost:3017/#project/github-daily
 
 ## Local Sample Project
 
-The current sample project lives at:
+Work from the project directory that contains `package.json`, `index.html`, `scripts/`, `site/`, and `wechat/`:
 
 ```text
-E:\codex_chat\github-daily-hot-video
+<YOUR_PROJECT_DIR>
 ```
 
 Use it as the base template when the user asks to "do today's one", "refresh the GitHub video", or "make another daily hot-project video".
@@ -120,7 +131,7 @@ Use it as the base template when the user asks to "do today's one", "refresh the
 For Chinese voiceover on this Windows machine, prefer Edge Neural TTS:
 
 ```powershell
-D:\software_lhj\python\python.exe scripts\generate-aligned-voiceover.py --voice zh-CN-YunxiNeural --rate=-4%
+python scripts\generate-aligned-voiceover.py --voice zh-CN-YunxiNeural --rate=-4%
 ```
 
 Do not use Windows SAPI voices such as `Microsoft Huihui Desktop` for the automated draft. If `zh-CN-YunxiNeural` cannot be generated, fail the run and report the dependency or network problem instead of rendering a video with the wrong voice. If HyperFrames TTS is used instead, `zf_xiaobei` is the Chinese Kokoro voice, but it requires `kokoro-onnx` and `soundfile`; do not switch to it unless the user explicitly asks.
@@ -129,13 +140,13 @@ Do not use Windows SAPI voices such as `Microsoft Huihui Desktop` for the automa
 
 For recurring automations, ask Codex to:
 
-- Open `E:\codex_chat\github-daily-hot-video`.
+- Open `<YOUR_PROJECT_DIR>`.
 - Fetch multi-source candidates from GitHub Trending, Hacker News, Product Hunt, and any configured extra feeds.
 - Select seven topics by default and rewrite `angle`, `voiceover`, and `narration` into concise Chinese Douyin copy.
 - Run the project history check before rendering and avoid any topic recorded in `data/topic-history.json` within the last 7 days.
 - Open with a topic-first hook such as "今日热门项目"; mention Codex generation only as secondary visual copy or later voiceover.
 - Keep the video/title/description free of WeChat, reply-keyword, external-link, and other off-platform guidance; if needed, add one Douyin-native comment after publish with project names only.
-- Run `powershell -ExecutionPolicy Bypass -File scripts\render-with-voiceover.ps1` for voice generation and rendering. This script uses `D:\software_lhj\python\python.exe` and Edge Neural TTS `zh-CN-YunxiNeural` in per-segment chunks, measures segment durations into `data/timings.json`, rebuilds visual scene durations from those timings, renders, and muxes an MP4 with an AAC audio stream. Do not edit the TTS scripts or use SAPI fallback during an automation run.
+- Run `powershell -ExecutionPolicy Bypass -File scripts\render-with-voiceover.ps1` for voice generation and rendering. This script uses Edge Neural TTS `zh-CN-YunxiNeural` in per-segment chunks, measures segment durations into `data/timings.json`, rebuilds visual scene durations from those timings, renders, and muxes an MP4 with an AAC audio stream. Do not edit the TTS scripts or use SAPI fallback during an automation run.
 - After rendering and validation, write Douyin publish metadata to `data/douyin-publish-YYYY-MM-DD.json` as UTF-8 JSON. Include `date`, `video`, `title`, `description`, and `duration`. Validate it with `node scripts/publish-douyin-video.cjs --metadata data/douyin-publish-YYYY-MM-DD.json --validate-only`, then publish with the same `--metadata` file. Never pass Chinese title or description through PowerShell command-line arguments, here-strings, pipes, or copied terminal snippets; abort if validation shows `??`, `????`, replacement characters, or mojibake.
 - After rendering and validation, publish the final MP4 to Douyin automatically when the authenticated Chrome/Douyin Creator Center flow is available; ask the user to complete login or CAPTCHA if needed, then continue. Use concise Chinese title/description copy without external guidance, and choose a few relevant Douyin hot-topic tags when the UI offers them. If a resource note is needed, add one platform-native comment after publish with project names only.
 - After publishing, verify the Creator Center status. If the work is `审核中`, report it as submitted and leave the website button pending until a public URL is visible. If a public Douyin URL is available, record it with `node scripts/set-douyin-link.mjs YYYY-MM-DD <douyin-url>`.
