@@ -22,6 +22,18 @@ Starting with the 2026-07-08 daily run, treat viewer feedback that the prior vid
 - Before publishing, run lint/inspect and do a visual sanity pass from the generated frames or preview. If the video looks visually flat, repetitive, cramped, or text-heavy, revise the generator before rendering the final MP4.
 - Keep all Douyin audit constraints intact: no external-channel guidance, no reply keywords, no links, and no WeChat/public-account prompts in the video, title, or description.
 
+## Audience Attraction Baseline
+
+Starting with the follow-up feedback on 2026-07-08, do not treat "more polished" or "more cool" as sufficient. The video must create a reason to stop scrolling in the first three seconds and a reason to keep watching each topic.
+
+- Write every daily run as benefit/problem-driven short-video copy, not as a project directory. The opening should answer: what can a developer avoid, improve, or decide after watching?
+- Keep the first frame topic-first, but make the main headline a sharper promise when possible, for example "今天这 7 个，帮你少踩 Agent 的坑" instead of only "今日 AI 开发者热点".
+- For each selected topic, add or derive viewer-facing fields such as `problem`, `payoff`, and `audience`. Show the problem/payoff first, then use the project name, source, and metrics as evidence.
+- Prefer scenes that say "why this matters to your workflow/team" before showing stars, source badges, or repo metadata.
+- Group the seven topics into memorable themes when possible, such as productivity, security, research automation, and tooling. Use these as hook chips or recap language.
+- Keep voiceover conversational and tense: one sentence should usually contain a concrete action or risk, not only a neutral description.
+- During visual review, reject any draft that reads like a static briefing page even if it is clean and animated. Revise the hook, information order, and visual hierarchy before rendering final output.
+
 ## Runtime Setup
 
 Use a current Node.js runtime for HyperFrames. If your default `node` is too old, put a newer Node.js `bin` directory at the front of `PATH` before running project commands:

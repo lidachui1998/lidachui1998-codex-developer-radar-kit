@@ -94,12 +94,67 @@ function sourceLine(sources = []) {
   return [...new Set(names)].slice(0, 6).join(" / ");
 }
 
+function isGenericHook(value = "") {
+  return /今日.*(热点|热门|项目)|开发者热点|AI 开发者热点/i.test(String(value));
+}
+
+function defaultHookTitle(items) {
+  const agentCount = items.filter((item) => /agent|代理/i.test(`${item.category} ${item.title} ${item.angle}`)).length;
+  if (agentCount >= Math.ceil(items.length / 2)) {
+    return `今天这 ${items.length} 个，帮你少踩 Agent 的坑`;
+  }
+  return `今天这 ${items.length} 个，先看哪个真有用`;
+}
+
+function defaultHookSubtitle(items) {
+  const categories = [...new Set(items.map((item) => item.category).filter(Boolean))].slice(0, 4);
+  const theme = categories.length ? categories.join("、") : "工具、安全、研究和产品";
+  return `${theme}，每个热点只讲一个真实问题。`;
+}
+
+function field(item, keys, fallback = "") {
+  for (const key of keys) {
+    const value = item?.[key];
+    if (String(value || "").trim()) return value;
+  }
+  return fallback;
+}
+
+function itemProblem(item) {
+  return field(item, ["problem", "question", "viewerHook", "pain"], item.angle || item.description || item.title);
+}
+
+function itemPayoff(item) {
+  return field(item, ["payoff", "change", "whyCare", "takeaway"], item.angle || item.description || item.voiceover);
+}
+
+function itemAudience(item) {
+  return field(item, ["audience", "whoShouldCare", "forWhom"], item.category || "开发者");
+}
+
+function itemEvidence(item) {
+  const source = sourceShort(item.source);
+  return field(item, ["evidence"], `${item.subtitle || item.title} · ${source}`);
+}
+
+function hookChips(data, items) {
+  const explicit = data.themeChips || data.hookChips;
+  if (Array.isArray(explicit) && explicit.length) return explicit.slice(0, 4);
+  const categories = [...new Set(items.map((item) => item.category).filter(Boolean))].slice(0, 4);
+  return categories.length ? categories : ["能提效", "避风险", "看趋势"];
+}
+
 function sceneForItem(item, index, maxMetric, itemTiming) {
   const start = Number(itemTiming.start || 0);
   const duration = Number(itemTiming.duration || 7.5);
   const metric = metricNumber(item.metric);
   const barWidth = Math.max(14, Math.round((metric / maxMetric) * 100));
   const accent = accents[index % accents.length];
+  const problem = itemProblem(item);
+  const payoff = itemPayoff(item);
+  const audience = itemAudience(item);
+  const evidence = itemEvidence(item);
+  const problemClass = `impact-line${lengthClass(problem)}`;
   const titleClass = `topic-title${lengthClass(item.title)}`;
   const source = sourceShort(item.source);
 
@@ -112,11 +167,22 @@ function sceneForItem(item, index, maxMetric, itemTiming) {
             <span class="rank-chip">#${item.rank}</span>
             <span class="source-chip">${escapeHtml(source)} / ${escapeHtml(item.category)}</span>
           </div>
-          <div class="topic-main">
-            <p class="repo-path">${escapeHtml(item.subtitle)}</p>
-            <h2 class="${titleClass}">${escapeHtml(item.title)}</h2>
+          <div class="topic-question">
+            <p class="problem-label">这一条为什么值得停下</p>
+            <h2 class="${problemClass}">${escapeHtml(problem)}</h2>
           </div>
-          <p class="angle">${escapeHtml(item.angle || item.description)}</p>
+          <div class="evidence-panel">
+            <div>
+              <p class="evidence-label">项目 / 信号</p>
+              <h3 class="${titleClass}">${escapeHtml(item.title)}</h3>
+              <p class="repo-path">${escapeHtml(evidence)}</p>
+            </div>
+            <div class="audience-pill">
+              <span>适合谁</span>
+              <strong>${escapeHtml(audience)}</strong>
+            </div>
+          </div>
+          <p class="angle">${escapeHtml(payoff)}</p>
           <div class="signal-row">
             <div class="signal-box">
               <span>${escapeHtml(item.metricLabel)}</span>
@@ -155,13 +221,20 @@ function buildHtml(data) {
   const lead = items[0];
   const totalDuration = Number(timings.totalDuration || 70);
   const audioSrc = timings.audio || "assets/narration.mp3";
-  const hookTitle = data.hookTitle || data.title || "今日 AI 开发者热点";
-  const hookSubtitle = data.hookSubtitle || data.subtitle || "七个值得开发者快速扫一遍的项目、产品和研究方向。";
-  const leadLabel = data.leadLabel || "第一眼看这个";
-  const codexLine = data.codexLine || "Codex 辅助整理多源热度，并完成 7 天去重。";
+  const rawHookTitle = data.viewerHook || data.hookTitle || data.title || "";
+  const hookTitle = rawHookTitle && !isGenericHook(rawHookTitle) ? rawHookTitle : defaultHookTitle(items);
+  const rawHookSubtitle = data.viewerPromise || data.hookSubtitle || data.subtitle || "";
+  const hookSubtitle = rawHookSubtitle && !/快速扫一遍|项目、产品和研究方向/.test(rawHookSubtitle)
+    ? rawHookSubtitle
+    : defaultHookSubtitle(items);
+  const leadLabel = data.leadLabel || "先看最值得点开的一个";
+  const codexLine = data.codexLine || "多源热度整理 · 7 天去重 · 开发者视角";
   const sources = sourceLine(data.sources || []);
+  const chips = hookChips(data, items);
+  const leadProblem = itemProblem(lead);
+  const leadPayoff = itemPayoff(lead);
   const hookTitleClass = `hero-title${lengthClass(hookTitle)}`;
-  const leadTitleClass = `lead-title${lengthClass(lead.title)}`;
+  const leadTitleClass = `lead-title${lengthClass(leadProblem)}`;
 
   return `<!doctype html>
 <html lang="zh-CN">
@@ -464,67 +537,79 @@ function buildHtml(data) {
       }
 
       .hero-stack {
-        padding-top: 138px;
+        padding-top: 116px;
       }
 
       .hero-title {
         max-width: 930px;
         margin-top: 28px;
-        font-size: 96px;
+        font-size: 104px;
         line-height: 1.02;
         font-weight: 900;
       }
 
       .hero-title.is-long {
-        font-size: 88px;
+        font-size: 90px;
       }
 
       .hero-title.is-xl {
-        font-size: 76px;
+        font-size: 78px;
       }
 
       .hero-subtitle {
         max-width: 880px;
         margin-top: 28px;
         color: #d7e3dc;
-        font-size: 40px;
+        font-size: 42px;
         line-height: 1.42;
-        font-weight: 700;
+        font-weight: 800;
       }
 
-      .source-strip {
+      .promise-strip {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
+        gap: 14px;
         margin-top: 34px;
       }
 
-      .source-strip span,
-      .codex-note,
+      .promise-strip span,
+      .source-footnote,
       .source-chip,
-      .rank-chip {
+      .rank-chip,
+      .audience-pill {
         border-radius: 8px;
       }
 
-      .source-strip span {
-        padding: 12px 16px;
-        border: 2px solid rgba(247, 244, 232, 0.14);
-        background: rgba(16, 26, 24, 0.86);
-        color: #f7f4e8;
-        font-size: 26px;
+      .promise-strip span {
+        padding: 14px 18px;
+        color: #07100f;
+        background: #f7f4e8;
+        font-size: 30px;
         font-weight: 900;
+      }
+
+      .promise-strip span:nth-child(2) {
+        background: #ffcc33;
+      }
+
+      .promise-strip span:nth-child(3) {
+        background: #5ce1a5;
+      }
+
+      .promise-strip span:nth-child(4) {
+        background: #ff5c7a;
       }
 
       .lead-module {
         display: grid;
-        grid-template-columns: 1fr 222px;
+        grid-template-columns: 1fr 190px;
         gap: 24px;
-        min-height: 316px;
-        padding: 30px;
-        border: 2px solid rgba(247, 244, 232, 0.18);
+        min-height: 350px;
+        padding: 32px;
+        border: 3px solid rgba(92, 225, 165, 0.52);
         background:
           linear-gradient(135deg, rgba(16, 26, 24, 0.96), rgba(16, 26, 24, 0.72)),
-          linear-gradient(90deg, rgba(92, 225, 165, 0.18), rgba(255, 204, 51, 0.14));
+          linear-gradient(90deg, rgba(92, 225, 165, 0.24), rgba(255, 204, 51, 0.16));
         box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
       }
 
@@ -536,14 +621,14 @@ function buildHtml(data) {
 
       .lead-title {
         margin-top: 14px;
-        font-size: 68px;
+        font-size: 64px;
         line-height: 1.08;
         font-weight: 900;
         overflow-wrap: anywhere;
       }
 
       .lead-title.is-long {
-        font-size: 56px;
+        font-size: 54px;
       }
 
       .lead-title.is-xl {
@@ -552,9 +637,10 @@ function buildHtml(data) {
 
       .lead-meta {
         margin-top: 20px;
-        color: #9fb0aa;
+        color: #d7e3dc;
         font-size: 30px;
         line-height: 1.35;
+        font-weight: 800;
       }
 
       .lead-index {
@@ -569,15 +655,25 @@ function buildHtml(data) {
         font-variant-numeric: tabular-nums;
       }
 
-      .codex-note {
-        width: fit-content;
-        max-width: 900px;
-        padding: 14px 18px;
-        color: #07100f;
-        background: #f7f4e8;
-        font-size: 27px;
+      .source-footnote {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding-top: 20px;
+        border-top: 2px solid rgba(247, 244, 232, 0.18);
+        color: #9fb0aa;
+        font-size: 24px;
         line-height: 1.3;
-        font-weight: 900;
+        font-weight: 800;
+      }
+
+      .source-footnote em {
+        max-width: 450px;
+        color: #f7f4e8;
+        font-style: normal;
+        text-align: right;
+        overflow-wrap: anywhere;
       }
 
       .topic-band {
@@ -602,6 +698,7 @@ function buildHtml(data) {
 
       .topic-layout {
         justify-content: flex-start;
+        gap: 24px;
       }
 
       .topic-topline {
@@ -636,16 +733,60 @@ function buildHtml(data) {
         overflow-wrap: anywhere;
       }
 
-      .topic-main {
-        padding: 34px 0 52px;
+      .topic-question {
+        min-height: 332px;
+        padding: 30px 0 38px;
         border-top: 2px solid rgba(247, 244, 232, 0.16);
         border-bottom: 2px solid rgba(247, 244, 232, 0.16);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .problem-label,
+      .evidence-label {
+        color: var(--accent);
+        font-family: monospace;
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 900;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .impact-line {
+        max-width: 925px;
+        margin-top: 18px;
+        color: #f7f4e8;
+        font-size: 78px;
+        line-height: 1.08;
+        font-weight: 900;
+        overflow-wrap: anywhere;
+      }
+
+      .impact-line.is-long {
+        font-size: 68px;
+      }
+
+      .impact-line.is-xl {
+        font-size: 58px;
+      }
+
+      .evidence-panel {
+        display: grid;
+        grid-template-columns: 1fr 212px;
+        gap: 20px;
+        min-height: 196px;
+        padding: 24px;
+        border: 2px solid rgba(247, 244, 232, 0.14);
+        background:
+          linear-gradient(180deg, rgba(16, 26, 24, 0.95), rgba(7, 16, 15, 0.84)),
+          var(--accent-soft);
       }
 
       .repo-path {
         color: #9fb0aa;
         font-family: monospace;
-        font-size: 28px;
+        font-size: 27px;
         line-height: 1.25;
         overflow-wrap: anywhere;
       }
@@ -653,24 +794,50 @@ function buildHtml(data) {
       .topic-title {
         margin-top: 14px;
         color: #f7f4e8;
-        font-size: 88px;
-        line-height: 1.02;
+        font-size: 52px;
+        line-height: 1.06;
         font-weight: 900;
         overflow-wrap: anywhere;
       }
 
       .topic-title.is-long {
-        font-size: 74px;
+        font-size: 46px;
       }
 
       .topic-title.is-xl {
-        font-size: 62px;
+        font-size: 40px;
+      }
+
+      .audience-pill {
+        min-height: 148px;
+        padding: 20px 14px;
+        color: var(--accent-ink);
+        background: var(--accent);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .audience-pill span {
+        font-size: 23px;
+        line-height: 1.1;
+        font-weight: 900;
+      }
+
+      .audience-pill strong {
+        margin-top: 12px;
+        font-size: 32px;
+        line-height: 1.12;
+        font-weight: 900;
+        overflow-wrap: anywhere;
       }
 
       .angle {
-        min-height: 178px;
+        min-height: 136px;
         color: #f7f4e8;
-        font-size: 42px;
+        font-size: 38px;
         line-height: 1.34;
         font-weight: 800;
       }
@@ -682,7 +849,7 @@ function buildHtml(data) {
       }
 
       .signal-box {
-        min-height: 142px;
+        min-height: 124px;
         padding: 20px;
         border: 2px solid rgba(247, 244, 232, 0.13);
         background:
@@ -702,7 +869,7 @@ function buildHtml(data) {
         margin-top: 10px;
         color: var(--accent);
         font-family: monospace;
-        font-size: 46px;
+        font-size: 42px;
         line-height: 1.05;
         font-weight: 900;
         font-variant-numeric: tabular-nums;
@@ -710,7 +877,7 @@ function buildHtml(data) {
       }
 
       .velocity {
-        height: 34px;
+        height: 28px;
         border: 2px solid rgba(247, 244, 232, 0.15);
         background: rgba(7, 16, 15, 0.68);
         overflow: hidden;
@@ -727,12 +894,12 @@ function buildHtml(data) {
 
       .caption {
         margin-top: auto;
-        min-height: 126px;
+        min-height: 118px;
         padding: 22px 24px 22px 30px;
         color: #f7f4e8;
         background: rgba(7, 16, 15, 0.86);
         border-left: 8px solid var(--accent);
-        font-size: 32px;
+        font-size: 31px;
         line-height: 1.35;
         font-weight: 800;
       }
@@ -822,22 +989,25 @@ function buildHtml(data) {
       <section id="hook" class="clip scene hook" data-start="${timings.hook.start.toFixed(3)}" data-duration="${timings.hook.duration.toFixed(3)}" data-track-index="1">
         <div class="scene-content">
           <div class="hero-stack">
-            <div class="kicker">${escapeHtml(data.dateLabel)} · ${escapeHtml(sources || "Developer Radar")}</div>
+            <div class="kicker">${escapeHtml(data.dateLabel)} · 今日开发者雷达</div>
             <h1 class="${hookTitleClass}">${escapeHtml(hookTitle)}</h1>
             <p class="hero-subtitle">${escapeHtml(hookSubtitle)}</p>
-            <div class="source-strip">
-              ${(sources || "GitHub / HN / PH / HF / arXiv").split(" / ").map((source) => `<span>${escapeHtml(source)}</span>`).join("")}
+            <div class="promise-strip">
+              ${chips.map((chip) => `<span>${escapeHtml(chip)}</span>`).join("")}
             </div>
           </div>
           <div class="lead-module">
             <div>
               <p class="lead-label">${escapeHtml(leadLabel)}</p>
-              <h2 class="${leadTitleClass}">${escapeHtml(lead.title)}</h2>
-              <p class="lead-meta">${escapeHtml(lead.subtitle)} · ${escapeHtml(lead.source)}</p>
+              <h2 class="${leadTitleClass}">${escapeHtml(leadProblem)}</h2>
+              <p class="lead-meta">${escapeHtml(lead.title)} · ${escapeHtml(leadPayoff)}</p>
             </div>
             <div class="lead-index">01</div>
           </div>
-          <div class="codex-note">${escapeHtml(codexLine)}</div>
+          <div class="source-footnote">
+            <span>${escapeHtml(codexLine)}</span>
+            <em>${escapeHtml(sources || "GitHub / HN / PH / HF / arXiv")}</em>
+          </div>
         </div>
       </section>
 ${topicScenes}
@@ -860,21 +1030,22 @@ ${recap}
       tl.from("#hook .kicker", { opacity: 0, y: 34, duration: 0.42, ease: "power3.out" }, 0.14);
       tl.from("#hook h1", { opacity: 0, y: 66, duration: 0.58, ease: "power3.out" }, 0.28);
       tl.from("#hook .hero-subtitle", { opacity: 0, y: 42, duration: 0.46, ease: "power2.out" }, 0.62);
-      tl.from("#hook .source-strip span", { opacity: 0, y: 22, stagger: 0.045, duration: 0.26, ease: "power2.out" }, 0.86);
+      tl.from("#hook .promise-strip span", { opacity: 0, y: 22, stagger: 0.045, duration: 0.26, ease: "power2.out" }, 0.86);
       tl.from("#hook .lead-module", { opacity: 0, y: 42, scale: 0.965, duration: 0.5, ease: "power2.out" }, 1.12);
-      tl.from("#hook .codex-note", { opacity: 0, y: 28, duration: 0.36, ease: "power2.out" }, 1.42);
+      tl.from("#hook .source-footnote", { opacity: 0, y: 28, duration: 0.36, ease: "power2.out" }, 1.42);
 
       const sceneTimings = ${JSON.stringify(timings.items.map((item) => ({ start: item.start, duration: item.duration })))};
       sceneTimings.forEach(({ start }, index) => {
         const id = "#topic-" + (index + 1);
         tl.from(id + " .rank-chip", { opacity: 0, x: -42, duration: 0.34, ease: "power3.out" }, start + 0.12);
         tl.from(id + " .source-chip", { opacity: 0, x: 42, duration: 0.34, ease: "power2.out" }, start + 0.18);
-        tl.from(id + " .repo-path", { opacity: 0, y: 28, duration: 0.34, ease: "power2.out" }, start + 0.34);
-        tl.from(id + " .topic-title", { opacity: 0, y: 58, duration: 0.48, ease: "power3.out" }, start + 0.46);
-        tl.from(id + " .angle", { opacity: 0, y: 42, duration: 0.42, ease: "power2.out" }, start + 0.82);
-        tl.from(id + " .signal-box", { opacity: 0, y: 34, stagger: 0.07, duration: 0.32, ease: "power2.out" }, start + 1.12);
-        tl.from(id + " .velocity span", { scaleX: 0, transformOrigin: "left center", duration: 0.58, ease: "power2.out" }, start + 1.38);
-        tl.from(id + " .caption", { opacity: 0, y: 28, duration: 0.36, ease: "power2.out" }, start + 1.62);
+        tl.from(id + " .problem-label", { opacity: 0, y: 24, duration: 0.3, ease: "power2.out" }, start + 0.32);
+        tl.from(id + " .impact-line", { opacity: 0, y: 58, duration: 0.52, ease: "power3.out" }, start + 0.44);
+        tl.from(id + " .evidence-panel", { opacity: 0, y: 34, scale: 0.975, duration: 0.38, ease: "power2.out" }, start + 0.92);
+        tl.from(id + " .angle", { opacity: 0, y: 38, duration: 0.38, ease: "power2.out" }, start + 1.18);
+        tl.from(id + " .signal-box", { opacity: 0, y: 30, stagger: 0.07, duration: 0.3, ease: "power2.out" }, start + 1.42);
+        tl.from(id + " .velocity span", { scaleX: 0, transformOrigin: "left center", duration: 0.5, ease: "power2.out" }, start + 1.62);
+        tl.from(id + " .caption", { opacity: 0, y: 26, duration: 0.34, ease: "power2.out" }, start + 1.78);
       });
 
       const outroStart = ${timings.outro.start.toFixed(3)};

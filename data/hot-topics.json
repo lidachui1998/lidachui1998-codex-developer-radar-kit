@@ -6,11 +6,17 @@
   "videoItemCount": 7,
   "title": "今日 AI 开发者热点",
   "subtitle": "Office 自动化、Agent 安全、视频理解、研究自动化、CLI、.NET 技能和维护者安全。",
-  "hookTitle": "今日 AI 开发者热点",
-  "hookSubtitle": "七个适合开发者快速扫一遍的项目、产品和研究方向。",
-  "leadLabel": "先看第一个热点",
-  "codexLine": "Codex 辅助整理多源热度，并完成 7 天去重。",
-  "hookVoiceover": "今天七个 AI 开发者热点，先看 Agent 怎么处理 Office 和安全边界。",
+  "hookTitle": "今天这 7 个，帮你少踩 Agent 的坑",
+  "hookSubtitle": "从 Office 自动化到权限泄露，都是团队会遇到的真实落地问题。",
+  "themeChips": [
+    "办公提效",
+    "权限安全",
+    "视频理解",
+    "科研自动化"
+  ],
+  "leadLabel": "先看最容易落地的场景",
+  "codexLine": "多源热度整理 · 7 天去重 · 开发者视角",
+  "hookVoiceover": "今天这七个热点，重点看 Agent 落地哪里能提效，哪里会踩坑。",
   "cta": "今天先到这里，七个方向按需收藏，明天继续。",
   "sources": [
     {
@@ -64,8 +70,11 @@
       "secondaryLabel": "总星标",
       "secondaryMetric": "10,880",
       "description": "Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files.",
+      "problem": "Agent 能直接处理 Office 文件吗？",
+      "payoff": "Word、Excel、PPT 不再只是附件，能进自动化流水线。",
+      "audience": "办公自动化团队",
       "angle": "让 AI Agent 直接读写 Word、Excel 和 PPT，适合做办公自动化和文档流水线。",
-      "voiceover": "OfficeCLI 让 Agent 直接读写 Office 文件。"
+      "voiceover": "OfficeCLI 让 Agent 读写 Office，文档流能自动跑。"
     },
     {
       "rank": 2,
@@ -80,8 +89,11 @@
       "secondaryLabel": "评论",
       "secondaryMetric": "85",
       "description": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos.",
+      "problem": "AI Agent 会不会碰到私有仓库？",
+      "payoff": "GitLost 把权限边界问题讲透，安全团队要复盘。",
+      "audience": "安全负责人",
       "angle": "一篇围绕 GitHub AI Agent 泄露私有仓库的安全复盘，提醒团队重查权限边界。",
-      "voiceover": "GitLost 提醒大家重查 AI Agent 权限边界。"
+      "voiceover": "GitLost 提醒团队先查 Agent 的仓库权限。"
     },
     {
       "rank": 3,
@@ -96,8 +108,11 @@
       "secondaryLabel": "方向",
       "secondaryMetric": "Agent",
       "description": "Reflex over Reasoning in Agentic Video Understanding with Long-Term Memory.",
+      "problem": "视频理解能不能记住上下文？",
+      "payoff": "长期记忆让多模态 Agent 更适合长视频任务。",
+      "audience": "多模态开发者",
       "angle": "把长期记忆放进视频理解代理，适合关注多模态 Agent 的同学跟进。",
-      "voiceover": "Light-Omni 让视频理解代理带上长期记忆。"
+      "voiceover": "Light-Omni 让视频 Agent 带长期记忆看上下文。"
     },
     {
       "rank": 4,
@@ -112,8 +127,11 @@
       "secondaryLabel": "方向",
       "secondaryMetric": "Agent",
       "description": "Agentic AI System for Bioinformatics.",
+      "problem": "科研 Agent 离自动写论文有多近？",
+      "payoff": "它把检索、实验执行和质量评分连成闭环。",
+      "audience": "科研自动化团队",
       "angle": "用检索、实验执行和质量评分串起论文生成，重点看科研 Agent 的落地边界。",
-      "voiceover": "Prompt-to-Paper 试图把论文生成接上真实实验。"
+      "voiceover": "Prompt-to-Paper 把论文生成接上实验流程。"
     },
     {
       "rank": 5,
@@ -128,8 +146,11 @@
       "secondaryLabel": "类型",
       "secondaryMetric": "产品",
       "description": "The CLI your coding agent uses to ship agents.",
+      "problem": "做 Agent 还要自己拼脚手架吗？",
+      "payoff": "agents-cli 把构建、运行和交付放进命令行。",
+      "audience": "Agent 工具开发者",
       "angle": "把 Agent 的构建、运行和交付收进命令行，适合看开发者工具的新形态。",
-      "voiceover": "agents-cli 主打用命令行管理和交付 Agent。"
+      "voiceover": "agents-cli 把 Agent 构建和交付收进命令行。"
     },
     {
       "rank": 6,
@@ -144,8 +165,11 @@
       "secondaryLabel": "总星标",
       "secondaryMetric": "4,396",
       "description": "Repository for skills to assist AI coding agents with .NET and C#.",
+      "problem": ".NET 团队怎么喂好编码代理？",
+      "payoff": "专用技能库让 C# 代理更懂本地工程约定。",
+      "audience": ".NET 团队",
       "angle": "给 .NET 和 C# 编码代理准备专用技能库，说明 Agent 工程正在走向分栈优化。",
-      "voiceover": "dotnet/skills 给 .NET 编码代理补齐工程手册。"
+      "voiceover": "dotnet/skills 让 .NET 编码代理更懂工程约定。"
     },
     {
       "rank": 7,
@@ -160,8 +184,11 @@
       "secondaryLabel": "方向",
       "secondaryMetric": "Security",
       "description": "How GitHub separated signal from noise and remediated 20,000+ secret scanning alerts.",
+      "problem": "两万条密钥告警怎么清零？",
+      "payoff": "GitHub 的流程复盘适合维护者补安全运营课。",
+      "audience": "开源维护者",
       "angle": "GitHub 处理两万多个密钥告警的流程复盘，适合维护者学习安全运营。",
-      "voiceover": "GitHub 的密钥告警治理值得维护者复盘。"
+      "voiceover": "GitHub 的密钥告警治理，维护者值得照着复盘。"
     }
   ]
 }
