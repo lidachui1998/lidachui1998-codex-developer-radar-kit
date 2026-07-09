@@ -95,7 +95,11 @@ function sourceLine(sources = []) {
 }
 
 function isGenericHook(value = "") {
-  return /今日.*(热点|热门|项目)|开发者热点|AI 开发者热点/i.test(String(value));
+  const text = String(value).trim();
+  if (/[：:]/.test(text) || /落地|信号|避坑|少踩|提效|成本|安全|值得投入/.test(text)) {
+    return false;
+  }
+  return /^(今日|今天).*(热点|热门|项目)$|^开发者热点$|^AI 开发者热点$|^今日 AI 开发者热点$/i.test(text);
 }
 
 function defaultHookTitle(items) {

@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-08T11:14:34.853Z",
+  "updatedAt": "2026-07-09T14:43:03.527Z",
   "articles": [
+    {
+      "date": "2026-07-09",
+      "displayDate": "2026.07.09",
+      "title": "2026.07.09 开发者热点：awesome-design-md、AgentLens、Aura",
+      "digest": "今日整理 7 个开发者热点：awesome-design-md、AgentLens、Aura、pentagi。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-09#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-07-09.md",
+        "html": "wechat/articles/2026-07-09.html",
+        "payload": "wechat/articles/2026-07-09.payload.json"
+      },
+      "generatedAt": "2026-07-09T14:43:03.526Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-07-08",
       "displayDate": "2026.07.08",
@@ -16,7 +34,7 @@
         "html": "wechat/articles/2026-07-08.html",
         "payload": "wechat/articles/2026-07-08.payload.json"
       },
-      "generatedAt": "2026-07-08T11:14:34.852Z",
+      "generatedAt": "2026-07-08T11:53:49.047Z",
       "wechatMediaId": "",
       "publishId": ""
     },
