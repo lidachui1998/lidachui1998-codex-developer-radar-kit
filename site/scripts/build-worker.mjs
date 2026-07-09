@@ -16,6 +16,15 @@ const contentTypes = new Map([
   [".svg", "image/svg+xml; charset=utf-8"],
 ]);
 
+let latestThumbnailPath = "";
+try {
+  const days = JSON.parse(await readFile(path.join(publicRoot, "data", "days.json"), "utf8"));
+  const latestThumbnail = days.days?.[0]?.thumbnail || "";
+  latestThumbnailPath = latestThumbnail ? `/${latestThumbnail.replace(/^\/+/, "")}` : "";
+} catch {
+  latestThumbnailPath = "";
+}
+
 async function collectFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
@@ -40,7 +49,7 @@ function contentType(file) {
 
 async function shouldSkipFile(file) {
   const relative = publicPath(file);
-  return relative.startsWith("/assets/thumbnails/");
+  return relative.startsWith("/assets/thumbnails/") && relative !== latestThumbnailPath;
 }
 
 const files = {};
@@ -84,7 +93,8 @@ export default {
   async fetch(request) {
     const url = new URL(request.url);
     const pathname = url.pathname === "/" ? "/index.html" : url.pathname;
-    if (pathname.startsWith("/assets/thumbnails/")) {
+    const file = FILES[pathname] || FILES["/index.html"];
+    if (pathname.startsWith("/assets/thumbnails/") && !FILES[pathname]) {
       return new Response(THUMBNAIL_PLACEHOLDER, {
         headers: {
           "content-type": "image/svg+xml; charset=utf-8",
@@ -92,7 +102,6 @@ export default {
         },
       });
     }
-    const file = FILES[pathname] || FILES["/index.html"];
     return new Response(bytesFromBase64(file.base64), { headers: headersFor(file) });
   },
 };
