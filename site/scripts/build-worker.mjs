@@ -1,4 +1,4 @@
-import { access, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const siteRoot = path.resolve(import.meta.dirname, "..");
@@ -40,15 +40,7 @@ function contentType(file) {
 
 async function shouldSkipFile(file) {
   const relative = publicPath(file);
-  if (!relative.startsWith("/assets/thumbnails/") || path.extname(file).toLowerCase() !== ".png") {
-    return false;
-  }
-  try {
-    await access(file.replace(/\.png$/i, ".jpg"));
-    return true;
-  } catch {
-    return false;
-  }
+  return relative.startsWith("/assets/thumbnails/");
 }
 
 const files = {};
@@ -68,6 +60,8 @@ files["/favicon.ico"] = {
 };
 
 const worker = `const FILES = ${JSON.stringify(files)};
+
+const THUMBNAIL_PLACEHOLDER = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600"><rect width="900" height="1600" fill="#06100f"/><path d="M0 0h900v1600H0z" fill="#06100f"/><path d="M80 180h740" stroke="#5ce1a5" stroke-width="8"/><path d="M80 320h520" stroke="#ffcc33" stroke-width="18"/><path d="M80 390h680" stroke="#f7f4e8" stroke-width="34"/><path d="M80 470h610" stroke="#f7f4e8" stroke-width="34"/><path d="M80 620h740v420H80z" fill="#101a18" stroke="#5ce1a5" stroke-width="5"/><path d="M120 700h460" stroke="#f7f4e8" stroke-width="30"/><path d="M120 780h360" stroke="#9fb0aa" stroke-width="18"/><path d="M120 880h620" stroke="#ffcc33" stroke-width="16"/><text x="120" y="1280" fill="#5ce1a5" font-family="Arial,sans-serif" font-size="72" font-weight="900">Codex</text><text x="120" y="1370" fill="#f7f4e8" font-family="Arial,sans-serif" font-size="72" font-weight="900">Developer Radar</text></svg>';
 
 function bytesFromBase64(value) {
   const binary = atob(value);
@@ -90,6 +84,14 @@ export default {
   async fetch(request) {
     const url = new URL(request.url);
     const pathname = url.pathname === "/" ? "/index.html" : url.pathname;
+    if (pathname.startsWith("/assets/thumbnails/")) {
+      return new Response(THUMBNAIL_PLACEHOLDER, {
+        headers: {
+          "content-type": "image/svg+xml; charset=utf-8",
+          "cache-control": "public, max-age=300",
+        },
+      });
+    }
     const file = FILES[pathname] || FILES["/index.html"];
     return new Response(bytesFromBase64(file.base64), { headers: headersFor(file) });
   },
