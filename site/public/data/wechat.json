@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-07-09T14:43:03.536Z",
+  "updatedAt": "2026-07-10T16:48:22.453Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-07-11",
+      "displayDate": "2026.07.11",
+      "title": "2026.07.11 开发者热点：GPT-5.6、Copilot Code Review、DesktopCommanderMCP",
+      "digest": "今日整理 7 个开发者热点：GPT-5.6、Copilot Code Review、DesktopCommanderMCP、mattpocock/skills。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-11#archive"
+    },
     {
       "date": "2026-07-09",
       "displayDate": "2026.07.09",

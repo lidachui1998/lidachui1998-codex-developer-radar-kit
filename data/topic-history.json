@@ -2360,6 +2360,118 @@
       "source": "GitHub",
       "url": "https://github.com/iOfficeAI/OfficeCLI",
       "video": "renders/developer-radar-2026-07-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "https://arxiv.org/abs/2607.06624",
+      "title": "AgentLens",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.06624",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "https://arxiv.org/abs/2607.06906",
+      "title": "The Harness Effect",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.06906",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows",
+      "title": "GitHub Agentic Workflows",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "https://www.producthunt.com/products/aura-28",
+      "title": "Aura",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/aura-28",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "ronak-create/fablecut",
+      "title": "FableCut",
+      "source": "Hacker News",
+      "url": "https://github.com/ronak-create/FableCut",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "voltagent/awesome-design-md",
+      "title": "awesome-design-md",
+      "source": "GitHub",
+      "url": "https://github.com/VoltAgent/awesome-design-md",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-09",
+      "key": "vxcontrol/pentagi",
+      "title": "pentagi",
+      "source": "GitHub",
+      "url": "https://github.com/vxcontrol/pentagi",
+      "video": "renders/developer-radar-2026-07-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "https://arxiv.org/abs/2607.07721",
+      "title": "Context Graphs",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.07721",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it",
+      "title": "Copilot Code Review",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "https://openai.com/index/gpt-5-6",
+      "title": "GPT-5.6",
+      "source": "Hacker News",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "https://www.producthunt.com/products/plugthis-chrome-extension-generator",
+      "title": "PlugThis",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/plugthis-chrome-extension-generator",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "mattpocock/skills",
+      "title": "mattpocock/skills",
+      "source": "GitHub",
+      "url": "https://github.com/mattpocock/skills",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "oven-sh/bun",
+      "title": "Bun",
+      "source": "GitHub",
+      "url": "https://github.com/oven-sh/bun",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-11",
+      "key": "wonderwhy-er/desktopcommandermcp",
+      "title": "DesktopCommanderMCP",
+      "source": "GitHub",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+      "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
     }
   ]
 }
