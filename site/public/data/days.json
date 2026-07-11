@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T16:44:14.499Z",
+  "updatedAt": "2026-07-11T12:09:20.623Z",
   "title": "Codex Developer Radar",
   "description": "每日开发者热门项目、视频与来源链接",
   "days": [
@@ -10,7 +10,7 @@
       "subtitle": "",
       "source": "Developer Radar",
       "sourceUrl": "https://github.com/trending?since=daily",
-      "douyinUrl": "",
+      "douyinUrl": "https://www.douyin.com/video/7660941936932490523",
       "thumbnail": "assets/thumbnails/2026-07-11.png",
       "topics": [
         {
