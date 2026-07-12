@@ -232,7 +232,10 @@ function buildHtml(data) {
     ? rawHookSubtitle
     : defaultHookSubtitle(items);
   const leadLabel = data.leadLabel || "先看最值得点开的一个";
-  const codexLine = data.codexLine || "多源热度整理 · 7 天去重 · 开发者视角";
+  const rawCodexLine = String(data.codexLine || "").trim();
+  const codexLine = rawCodexLine && !/(自动|默认来源|工作流|后台|去重|topic pool)/i.test(rawCodexLine)
+    ? rawCodexLine
+    : "七个方向 · 开发者视角 · 今日速览";
   const sources = sourceLine(data.sources || []);
   const chips = hookChips(data, items);
   const leadProblem = itemProblem(lead);
