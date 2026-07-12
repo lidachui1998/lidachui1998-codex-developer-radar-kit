@@ -1,9 +1,12 @@
 import { mkdir, writeFile } from "node:fs/promises";
+import { execFile } from "node:child_process";
 import path from "node:path";
+import { promisify } from "node:util";
 
 const root = process.cwd();
 const dataDir = path.join(root, "data");
 const outPath = path.join(dataDir, "hot-topics.raw.json");
+const execFileAsync = promisify(execFile);
 
 function decodeHtml(value = "") {
   return value
@@ -32,16 +35,26 @@ function todayKey(now = new Date()) {
 }
 
 async function fetchText(url, options = {}) {
-  const response = await fetch(url, {
-    headers: { "User-Agent": "codex-developer-radar-video", ...(options.headers || {}) },
-  });
-  const text = await response.text();
-  return { status: response.status, text };
+  const headers = { "User-Agent": "codex-developer-radar-video", ...(options.headers || {}) };
+  try {
+    const response = await fetch(url, { headers });
+    const text = await response.text();
+    return { status: response.status, text, method: "node_fetch" };
+  } catch (error) {
+    const proxy = process.env.HTTPS_PROXY || process.env.HTTP_PROXY;
+    if (!proxy) throw error;
+    const { stdout } = await execFileAsync(
+      process.platform === "win32" ? "curl.exe" : "curl",
+      ["-L", "--fail-with-body", "--max-time", "30", "--proxy", proxy, "--user-agent", headers["User-Agent"], url],
+      { encoding: "utf8", maxBuffer: 8 * 1024 * 1024 },
+    );
+    return { status: 200, text: stdout, method: "curl_proxy_fallback" };
+  }
 }
 
 async function fetchGithubTrending() {
   const sourceUrl = "https://github.com/trending?since=daily";
-  const { status, text: html } = await fetchText(sourceUrl);
+  const { status, text: html, method } = await fetchText(sourceUrl);
   const items = [...html.matchAll(/<article[\s\S]*?<\/article>/g)]
     .map((match, index) => {
       const article = match[0];
@@ -69,7 +82,7 @@ async function fetchGithubTrending() {
     .filter(Boolean)
     .slice(0, 10);
   return {
-    source: { name: "GitHub Trending", url: sourceUrl, status, method: "node_fetch" },
+    source: { name: "GitHub Trending", url: sourceUrl, status, method },
     items,
   };
 }
@@ -109,7 +122,7 @@ async function fetchHackerNews() {
 
 async function fetchProductHunt() {
   const sourceUrl = "https://www.producthunt.com/feed";
-  const { status, text: xml } = await fetchText(sourceUrl);
+  const { status, text: xml, method } = await fetchText(sourceUrl);
   const items = [...xml.matchAll(/<entry>[\s\S]*?<\/entry>/g)]
     .map((match) => {
       const entry = match[0];
@@ -134,14 +147,14 @@ async function fetchProductHunt() {
     .filter(Boolean)
     .slice(0, 8);
   return {
-    source: { name: "Product Hunt", url: sourceUrl, status, method: "rss_feed" },
+    source: { name: "Product Hunt", url: sourceUrl, status, method: method === "node_fetch" ? "rss_feed" : method },
     items,
   };
 }
 
 async function fetchHuggingFacePapers(dateKey) {
   const sourceUrl = "https://huggingface.co/papers";
-  const { status, text: html } = await fetchText(sourceUrl);
+  const { status, text: html, method } = await fetchText(sourceUrl);
   await writeFile(path.join(dataDir, `huggingface-papers-${dateKey}.html`), html, "utf8");
   const seen = new Set();
   const decoded = decodeHtml(html);
@@ -169,14 +182,14 @@ async function fetchHuggingFacePapers(dateKey) {
     .filter(Boolean)
     .slice(0, 8);
   return {
-    source: { name: "Hugging Face Papers", url: sourceUrl, status, method: "html_probe" },
+    source: { name: "Hugging Face Papers", url: sourceUrl, status, method: method === "node_fetch" ? "html_probe" : method },
     items,
   };
 }
 
 async function fetchArxiv(dateKey) {
   const sourceUrl = "https://arxiv.org/list/cs.AI/new";
-  const { status, text: html } = await fetchText(sourceUrl);
+  const { status, text: html, method } = await fetchText(sourceUrl);
   await writeFile(path.join(dataDir, `arxiv-cs-ai-${dateKey}.html`), html, "utf8");
   const chunks = [...html.matchAll(/<dt>[\s\S]*?<a[^>]*href\s*=\s*["']\/abs\/([^"']+)["'][\s\S]*?<\/dt>\s*<dd>([\s\S]*?)<\/dd>/g)];
   const items = chunks
@@ -202,14 +215,14 @@ async function fetchArxiv(dateKey) {
     .filter(Boolean)
     .slice(0, 8);
   return {
-    source: { name: "arXiv cs.AI new", url: sourceUrl, status, method: "html_probe" },
+    source: { name: "arXiv cs.AI new", url: sourceUrl, status, method: method === "node_fetch" ? "html_probe" : method },
     items,
   };
 }
 
 async function fetchGithubBlog(dateKey) {
   const sourceUrl = "https://github.blog/feed/";
-  const { status, text: xml } = await fetchText(sourceUrl);
+  const { status, text: xml, method } = await fetchText(sourceUrl);
   await writeFile(path.join(dataDir, `github-blog-${dateKey}.xml`), xml, "utf8");
   const items = [...xml.matchAll(/<item>[\s\S]*?<\/item>/g)]
     .map((match) => {
@@ -236,7 +249,7 @@ async function fetchGithubBlog(dateKey) {
     .filter((item) => /ai|agent|copilot|code|developer|security|secret|actions|open source|git/i.test(`${item.title} ${item.description}`))
     .slice(0, 6);
   return {
-    source: { name: "GitHub Blog", url: sourceUrl, status, method: "rss_feed" },
+    source: { name: "GitHub Blog", url: sourceUrl, status, method: method === "node_fetch" ? "rss_feed" : method },
     items,
   };
 }

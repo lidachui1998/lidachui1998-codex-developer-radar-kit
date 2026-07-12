@@ -2472,6 +2472,62 @@
       "source": "GitHub",
       "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
       "video": "renders/developer-radar-2026-07-11-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "google-labs-code/stitch-skills",
+      "title": "stitch-skills",
+      "source": "GitHub",
+      "url": "https://github.com/google-labs-code/stitch-skills",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "https://antjs.org",
+      "title": "Ant",
+      "source": "Hacker News",
+      "url": "https://antjs.org",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "https://buf.build/blog/protobuf-py",
+      "title": "Protobuf-py",
+      "source": "Hacker News",
+      "url": "https://buf.build/blog/protobuf-py",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner",
+      "title": "Durable Repository Ownership",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/security/application-security/how-github-gave-every-repository-a-durable-owner/",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "https://huggingface.co/papers/2607.08768",
+      "title": "UniClawBench",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.08768",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "https://www.iroh.computer/blog/mesh-llm",
+      "title": "Mesh LLM",
+      "source": "Hacker News",
+      "url": "https://www.iroh.computer/blog/mesh-llm",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-12",
+      "key": "https://www.producthunt.com/products/fetchsandbox",
+      "title": "FetchSandbox",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/fetchsandbox",
+      "video": "renders/developer-radar-2026-07-12-voiceover-final.mp4"
     }
   ]
 }
