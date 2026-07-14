@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-13T14:18:14.985Z",
+  "updatedAt": "2026-07-14T12:44:52.772Z",
   "articles": [
+    {
+      "date": "2026-07-14",
+      "displayDate": "2026.07.14",
+      "title": "2026.07.14 开发者热点：hallmark、awesome-llm-apps、Codex 子代理可观测性",
+      "digest": "今日整理 7 个开发者热点：hallmark、awesome-llm-apps、Codex 子代理可观测性、CUDA 替代路线。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-14#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-07-14.md",
+        "html": "wechat/articles/2026-07-14.html",
+        "payload": "wechat/articles/2026-07-14.payload.json"
+      },
+      "generatedAt": "2026-07-14T12:44:52.771Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-07-13",
       "displayDate": "2026.07.13",

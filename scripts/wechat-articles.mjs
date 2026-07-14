@@ -103,6 +103,8 @@ function metricText(topic) {
 }
 
 function usefulFor(topic) {
+  const explicit = String(topic.audience || "").trim();
+  if (explicit) return /[。！？.!?]$/.test(explicit) ? explicit : `${explicit}。`;
   const category = topic.category || "";
   const title = topic.title || "这个项目";
   if (/Agent|纠错|观测|协作/.test(category)) return "适合正在引入 AI Agent、改造研发流程，或想把团队经验沉淀成可执行规则的人。";
