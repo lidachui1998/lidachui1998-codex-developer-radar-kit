@@ -3,127 +3,204 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>2026.07.14 开发者热点：hallmark、awesome-llm-apps、Codex 子代理可观测性</title>
+    <title>今天这 7 个项目，帮你少踩 AI 界面、Agent、算力的坑</title>
   </head>
   <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
     
 <section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
   <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
-    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · Developer Radar</p>
-    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">2026.07.14 开发者热点：hallmark、awesome-llm-apps、Codex 子代理可观测性</h1>
-    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">今天这期不是简单堆链接，而是从热点里筛出几个值得先看的方向：hallmark、awesome-llm-apps、Codex 子代理可观测性。适合先收藏，再按自己的工作场景深入研究。</p>
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">李大锤锤 · 2026.07.14 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">今天这 7 个项目，帮你少踩 AI 界面、Agent、算力的坑</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 AI 界面、Agent、算力、提示工程 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。</p>
   </section>
 
   <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
-    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先说结论</p>
-    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">今天的重点方向：界面质量、Agent 实例、Agent 调试、AI 算力。如果你做开发工具、自动化、个人效率或自建服务，这期会比较有参考价值。</p>
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先按你的需求选</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">想马上试用，先看 hallmark、awesome-llm-apps；想补工程风险，重点看 Codex 子代理可观测性、CUDA 替代路线、Format Sensitivity Index。剩下的方向更适合做技术储备，而不是立刻押注。</p>
+    <p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想立刻上手：hallmark、awesome-llm-apps</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想补工程风险：Codex 子代理可观测性、CUDA 替代路线、Format Sensitivity Index</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想做技术储备：Sourclip、Vibe-Trading</p>
   </section>
 
   <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
-    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今日清单</p>
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今天会拆解什么</p>
     <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. hallmark  /  2. awesome-llm-apps  /  3. Codex 子代理可观测性  /  4. CUDA 替代路线  /  5. Format Sensitivity Index  /  6. Sourclip  /  7. Vibe-Trading</p>
-    <p style="margin:12px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">视频回看：发布后补充</p>
+
     <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-07-14#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-07-14#archive</a></p>
   </section>
 
   
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 01</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 01</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜hallmark</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 界面质量</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">5,736</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +1,010 · 总星标 5,736</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>它把反 AI 模板味的设计规则做成编码助手技能，适合生成界面的质量门禁。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 编程与前端团队。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Nutlope/hallmark</p>
-        <p style="margin:14px 0 0;"><a href="https://github.com/Nutlope/hallmark" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它不是又一个 UI 模板库，而是一套给 Claude Code、Cursor 和 Codex 使用的设计质量门禁。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">AI 一写前端就满屏渐变卡片，怎么压住模板味？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把反套路设计规则接入 Claude Code、Cursor 和 Codex，先拦低质默认。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">从零生成页面时，先选择更匹配业务的宏观结构和主题，再做反模板味检查。</li><li style="margin:5px 0;">用 audit 模式扫描现有页面，只输出问题清单，不直接改代码，适合接入代码评审。</li><li style="margin:5px 0;">用 redesign 重做结构，或用 study 从截图、网址中提取设计 DNA，生成可复用的 design.md。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">提供默认构建、audit、redesign、study 四种工作模式，不只是“一键美化”。</li><li style="margin:5px 0;">内置 20 套主题、57 道 slop-test 检查和输出前自检，重点压制大模型常见的渐变、卡片堆叠和同质化结构。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 编程与前端团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>它能提高生成界面的设计下限，但不能替代真实用户研究、品牌规范、无障碍检查和前端性能验收。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Nutlope/hallmark</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/Nutlope/hallmark" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
 
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 02</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 02</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜awesome-llm-apps</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / Agent 实例</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">120,273</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +1,104 · 总星标 120,273</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>这个合集强调可运行实例，适合从真实代码出发比较 Agent 与 RAG 架构。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 应用与原型团队。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Shubhamsaboo/awesome-llm-apps</p>
-        <p style="margin:14px 0 0;"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它最适合“不想从空白开始”的团队：先跑通一个真实 Agent，再决定架构怎么改。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">Agent 和 RAG 方案很多，怎么快速找到能跑的参考？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>一百多个可克隆案例覆盖 Agent、RAG 和语音应用，适合快速验证原型。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">快速克隆单文件 Starter Agent，验证模型、工具调用和交互链路。</li><li style="margin:5px 0;">比较 RAG、单 Agent、多 Agent、语音 Agent 和持续运行 Agent 的代码组织方式。</li><li style="margin:5px 0;">从研究、数据分析、销售、内容、浏览器自动化等案例里挑一个最接近业务的原型。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">收录 100 多个端到端可运行项目，覆盖 Claude、Gemini、GPT、DeepSeek、Llama、Qwen 等模型。</li><li style="margin:5px 0;">既有入门级单文件示例，也有带工具、记忆、多步推理和多代理协作的生产风格案例。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 应用与原型团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>示例能帮你验证思路，但不能直接等同于生产方案。上线前仍要检查密钥管理、数据权限、成本、评测和高风险领域合规。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Shubhamsaboo/awesome-llm-apps</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/Shubhamsaboo/awesome-llm-apps" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
 
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 03</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 03</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜Codex 子代理可观测性</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / Agent 调试</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">62</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 106 points · 评论 62</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>这场讨论的重点不是加密本身，而是多代理系统如何保留可调试与可审计能力。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Codex 与 Agent 平台用户。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：openai/codex#28058</p>
-        <p style="margin:14px 0 0;"><a href="https://github.com/openai/codex/issues/28058" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>这不是一个新功能介绍，而是多代理系统必须面对的治理问题：加密传递不能顺手抹掉本地审计线索。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">子代理提示突然不可读，调试链路还能不能追？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把输入、工具调用和结果审计补齐，避免多代理流程变成难排查的黑盒。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">排查 spawn_agent 到底给子代理下发了什么任务，避免只看到一个无法解释的子线程。</li><li style="margin:5px 0;">回溯 send_message、followup_task 的消息内容，定位代理协作为什么偏航。</li><li style="margin:5px 0;">在事故复盘、合规审计和会话恢复时，保留可读的任务链路。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">问题来自 MultiAgentV2 的加密消息：接收方能拿到密文，但父级历史和追踪记录也只剩密文。</li><li style="margin:5px 0;">提议的修复不是取消加密，而是分离“加密交付内容”和“本地明文审计副本”，兼顾隐私与可调试性。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Codex 与 Agent 平台用户。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>该问题仍处于开放状态，适合作为 Agent 平台设计参考，不能把讨论中的修复方案当成已经发布的 Codex 行为。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：openai/codex#28058</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/openai/codex/issues/28058" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
 
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 04</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 04</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜CUDA 替代路线</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / AI 算力</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">37</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 76 points · 评论 37</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>非英伟达硬件上的 CUDA 兼容尝试，值得关注其性能、生态与迁移成本。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 基础设施与平台团队。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：CUDA 替代路线</p>
-        <p style="margin:14px 0 0;"><a href="https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它代表的是降低 GPU 生态锁定的信号，而不是一套已经成熟、可以无成本替换 CUDA 的答案。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">AI 计算被单一 GPU 生态锁住，迁移成本怎么降？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>关注非英伟达硬件上的 CUDA 兼容路线，给算力采购与部署多一个选项。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">在新一轮 GPU 采购前，用真实模型和内核做非英伟达硬件的兼容性 PoC。</li><li style="margin:5px 0;">为训练与推理平台增加抽象层，减少业务代码与单一厂商工具链的硬绑定。</li><li style="margin:5px 0;">评估迁移时同时比较硬件价格、开发成本、运维能力和长期生态风险。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">所谓 CUDA 兼容不能只看能否编译，还要看算子覆盖、性能损失、调试工具、驱动稳定性和第三方库支持。</li><li style="margin:5px 0;">真正的价值在于给算力采购和部署增加议价空间，而不是追求表面上的 API 一致。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 基础设施与平台团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>这类路线必须用自己的工作负载做基准测试。没有真实吞吐、延迟、显存和维护成本数据时，不要把兼容演示当成可直接迁移。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：CUDA 替代路线</p>
+        <p style="margin:14px 0 0;"><a href="https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
 
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 05</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 05</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜Format Sensitivity Index</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">arXiv / 提示评测</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Robustness</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">arXiv cs.AI new · 方向 Robustness</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>论文提出受控指标，专门测提示包装变化对输出格式与基准结果的影响。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>提示工程与模型评测团队。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Format Sensitivity Index</p>
-        <p style="margin:14px 0 0;"><a href="https://arxiv.org/abs/2607.09665" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它提醒我们：排行榜测到的可能不只是模型能力，还混进了提示包装和格式遵循能力。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">同一提示换个包装，模型格式遵循为何突然失稳？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用受控指标测提示包装和 Schema 合规，提前发现脆弱模板与评测偏差。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">为同一任务准备多种等价 Prompt Wrapper，测模型输出是否因格式变化而大幅波动。</li><li style="margin:5px 0;">在 JSON、Schema 或固定答案格式场景中，把可解析率纳入模型选型与回归测试。</li><li style="margin:5px 0;">给评测报告增加 Wrapper 方差，避免因为一个模板碰巧更适配某模型而得出错误结论。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">论文提出 FSI 衡量准确率随包装变化的范围，PSI 衡量答案可解析率的变化范围。</li><li style="margin:5px 0;">实验覆盖约 14 万次生成、7 个问答任务、5 类包装和 4 个 7B 到 72B 的指令模型，模型间平均 FSI 相差超过 30 倍。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>提示工程与模型评测团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>论文目前是首版研究。落地时应使用自己的模型、Schema 和业务 Prompt 复现，而不是直接照搬论文中的绝对数值。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Format Sensitivity Index</p>
+        <p style="margin:14px 0 0;"><a href="https://arxiv.org/abs/2607.09665" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
 
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 06</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 06</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜Sourclip</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / 研究工作流</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Research</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 定位 Research</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>它试图把 NotebookLM 从单点工具扩展成研究工作流，重点是减少跨工具整理。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>研究、内容与知识管理团队。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Sourclip</p>
-        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/sourclip" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它的吸引力不在于再做一个 NotebookLM，而在于把研究结果继续推向整理、协作和交付。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">NotebookLM 做完研究后，素材和结论还要手工拼流程？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把研究、整理和输出串成完整工作流，减少工具之间的重复搬运。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把多个来源的研究素材、笔记和结论组织成可继续编辑的专题工作区。</li><li style="margin:5px 0;">为内容选题、竞品分析、行业研究或知识库建设减少跨工具复制粘贴。</li><li style="margin:5px 0;">把研究过程沉淀为可复用流程，而不是每次从浏览器标签页重新开始。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">产品定位是把 NotebookLM 从单点问答工具扩展成完整研究工作流。</li><li style="margin:5px 0;">真正值得观察的是它如何连接来源管理、结论整理和最终输出，而不只是生成一段摘要。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>研究、内容与知识管理团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>目前公开信息有限，正式使用前要重点核对支持的数据源、导出能力、协作方式、定价和敏感资料的隐私边界。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Sourclip</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/sourclip" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
 
     <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
       <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
-        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">PROJECT 07</p>
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 07</p>
         <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜Vibe-Trading</h2>
       </section>
       <section style="padding:16px;">
         <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 交易 Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">22,442</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +1,265 · 总星标 22,442</span></p>
-        <p style="margin:0;color:#111827;font-size:16px;line-height:1.8;"><strong>为什么值得看：</strong>它把交易研究与执行组织成 Agent 流程，适合观察多角色协作和风险隔离设计。</p>
-        <p style="margin:12px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>量化研究与 Agent 开发者。</p>
-        <p style="margin:12px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：HKUDS/Vibe-Trading</p>
-        <p style="margin:14px 0 0;"><a href="https://github.com/HKUDS/Vibe-Trading" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">打开项目 / 原文</a></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它不应该被理解成“自动赚钱机器人”，更准确的定位是自然语言驱动的量化研究与回测工作台。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">交易 Agent 很会讲故事，策略风险和执行边界谁来管？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把研究、决策与执行分层验证，先看系统设计，不把演示当收益承诺。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把自然语言交易问题转成数据分析、策略代码、回测指标和可归档报告。</li><li style="margin:5px 0;">上传交易日志，分析持仓、回撤、追涨、过度交易等行为，再生成规则化的 Shadow Account 对照。</li><li style="margin:5px 0;">让投资、量化、加密和风险代理分工研究，并保留过程报告与研究记忆。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">覆盖股票、加密、期货和外汇等多市场数据与回测，并能导出 Pine Script、MT5 等成果。</li><li style="margin:5px 0;">支持多代理研究团队和持久化工作流；真实交易仅在用户主动授权的经纪商边界内执行，并提供停止控制。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>量化研究与 Agent 开发者。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>回测不等于未来收益。使用时必须检查数据质量、前视偏差、手续费、滑点、风控和经纪商权限，不能把演示结果当投资承诺。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：HKUDS/Vibe-Trading</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/HKUDS/Vibe-Trading" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
       </section>
     </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
+    <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
+    <p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想立刻上手：hallmark、awesome-llm-apps</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想补工程风险：Codex 子代理可观测性、CUDA 替代路线、Format Sensitivity Index</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想做技术储备：Sourclip、Vibe-Trading</p>
+    <p style="margin:12px 0 0;color:#164e63;font-size:15px;line-height:1.8;">不要一次装七个项目。选一个最接近当前工作的方向，用真实任务做 30 分钟验证：能否减少返工、输出是否稳定、维护成本是否可接受。答案比 Star 数更重要。</p>
+  </section>
 
   <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
     <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
@@ -131,7 +208,7 @@
     <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-07-14#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-07-14#archive</a></p>
   </section>
 
-  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">真正值得收藏的不是项目名字，而是它能否减少你的返工。先选一个最接近当前工作的方向，做一次小范围验证。</p>
 </section>
   </body>
 </html>
