@@ -194,12 +194,37 @@ async function findPublishedWork(page, title, durationText, date) {
     timeout: 120000,
   });
   await waitForAnyText(page, ["作品管理", "已发布", "审核中", title.slice(0, 8), durationText], 120000);
+
+  const titlePrefix = title.slice(0, 8);
+  const deadline = Date.now() + 120000;
+  let body = "";
+  while (Date.now() < deadline) {
+    body = await page.locator("body").innerText({ timeout: 10000 }).catch(() => body);
+    const loaded = !body.includes("加载中");
+    const matched = body.includes(titlePrefix) || (durationText && body.includes(durationText));
+    if (loaded && matched) break;
+    await sleep(3000);
+  }
+
+  if (!body.includes(titlePrefix)) {
+    await page.getByText("全部作品").first().click().catch(() => {});
+    const search = page.getByPlaceholder("搜索作品").first();
+    if (await search.isVisible().catch(() => false)) {
+      await search.fill(title);
+      await page.keyboard.press("Enter");
+      await sleep(8000);
+    }
+  }
+
   const evidence = await saveEvidence(page, date, "manage-after-publish");
-  const body = evidence.body;
+  body = evidence.body;
+  const matchIndex = body.indexOf(titlePrefix);
+  const matchedRow = matchIndex >= 0 ? body.slice(matchIndex, matchIndex + 600) : body;
   const publicUrlMatch = body.match(/https?:\/\/(?:www\.)?douyin\.com\/video\/\d+/);
   return {
-    published: body.includes(title.slice(0, 8)) || (durationText && body.includes(durationText)),
-    review: body.includes("审核中"),
+    published: matchIndex >= 0 || (durationText && body.includes(durationText)),
+    review: matchedRow.includes("审核中") && !matchedRow.includes("已发布"),
+    status: matchedRow.includes("已发布") ? "已发布" : matchedRow.includes("审核中") ? "审核中" : "未确认",
     publicUrl: publicUrlMatch?.[0] || "",
     evidence,
   };
