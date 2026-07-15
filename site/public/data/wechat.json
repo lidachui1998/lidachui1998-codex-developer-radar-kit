@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-07-14T14:13:17.065Z",
-  "accountName": "李大锤锤",
+  "updatedAt": "2026-07-15T14:18:36.498Z",
+  "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-07-15",
+      "displayDate": "2026.07.15",
+      "title": "今天这 7 个项目，帮你少踩 LLM 可靠性、Agent、低成本编码的坑",
+      "digest": "不只报项目名：拆解 DSLs for Reliable LLMs、Know Before Fix 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-15#archive"
+    },
     {
       "date": "2026-07-14",
       "displayDate": "2026.07.14",

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今天这 7 个项目，帮你少踩 LLM 可靠性、Agent、低成本编码的坑</title>
+  </head>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+    
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · 2026.07.15 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">今天这 7 个项目，帮你少踩 LLM 可靠性、Agent、低成本编码的坑</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 LLM 可靠性、Agent、低成本编码、文档协作 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先按你的需求选</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">想马上试用，先看 openinterpreter、airi。剩下的方向更适合做技术储备，而不是立刻押注。</p>
+    <p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想立刻上手：openinterpreter、airi</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想做技术储备：DSLs for Reliable LLMs、Know Before Fix、Tiptap AI Toolkit</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今天会拆解什么</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. DSLs for Reliable LLMs  /  2. Know Before Fix  /  3. openinterpreter  /  4. Tiptap AI Toolkit  /  5. airi  /  6. maths-cs-ai-compendium  /  7. Agent-Ready Websites</p>
+
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-07-15#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-07-15#archive</a></p>
+  </section>
+
+  
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜DSLs for Reliable LLMs</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / LLM 可靠性</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">34</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 61 points · 评论 34</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>文章强调用 DSL 限定模型表达空间，让 LLM 输出更容易校验、执行和维护。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">大模型一自由发挥，关键业务流程就难验证？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用领域语言收窄输入、输出和工具动作，把生成结果接进可测试流程。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用领域语言收窄输入、输出和工具动作，把生成结果接进可测试流程。</li><li style="margin:5px 0;">由 Agent 平台与后端工程团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">文章强调用 DSL 限定模型表达空间，让 LLM 输出更容易校验、执行和维护。</li><li style="margin:5px 0;">热度来自 Hacker News，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Agent 平台与后端工程团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：DSLs for Reliable LLMs</p>
+        <p style="margin:14px 0 0;"><a href="https://martinfowler.com/articles/llm-and-dsls.html" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜Know Before Fix</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / 代码 Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Repo QA</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF Daily rank 3 · 方向 Repo QA</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>论文把仓库知识获取放在修复之前，用问答驱动 Agent 先理解再动手。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">Agent 修 Issue 前没摸清仓库，最容易盲改代码。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>先用问答建立仓库知识，再进入修复环节，降低定位错误和无效改动。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">先用问答建立仓库知识，再进入修复环节，降低定位错误和无效改动。</li><li style="margin:5px 0;">由 代码 Agent 与研发效能团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">论文把仓库知识获取放在修复之前，用问答驱动 Agent 先理解再动手。</li><li style="margin:5px 0;">热度来自 Hugging Face，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>代码 Agent 与研发效能团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Know Before Fix</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2607.11111" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜openinterpreter</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 低成本编码</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">65,192</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +607 · 总星标 65,192</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>项目把重点转向低成本模型上的编码 Agent，值得观察轻量工具链与效果边界。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">编码 Agent 依赖昂贵模型，团队很难持续跑。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>围绕低成本模型优化编码与工具调用，让日常任务更容易控制推理预算。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">围绕低成本模型优化编码与工具调用，让日常任务更容易控制推理预算。</li><li style="margin:5px 0;">由 AI 编程工具与成本敏感团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">项目把重点转向低成本模型上的编码 Agent，值得观察轻量工具链与效果边界。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 编程工具与成本敏感团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：openinterpreter/openinterpreter</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/openinterpreter/openinterpreter" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜Tiptap AI Toolkit</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / 文档协作</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">AI Editing</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 定位 AI Editing</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>它把 AI 操作直接放进富文本编辑器，重点是实时修改而不是复制粘贴。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">AI 生成完内容，还要人工在聊天框和文档间搬运。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>让 AI 在编辑器内直接修改文档，把生成、审阅和协作放进同一工作区。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">让 AI 在编辑器内直接修改文档，把生成、审阅和协作放进同一工作区。</li><li style="margin:5px 0;">由 文档产品与协同办公团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">它把 AI 操作直接放进富文本编辑器，重点是实时修改而不是复制粘贴。</li><li style="margin:5px 0;">热度来自 Product Hunt，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>文档产品与协同办公团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Tiptap AI Toolkit</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/tiptap" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜airi</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 数字伙伴</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">42,341</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +537 · 总星标 42,341</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>AIRI 把实时语音、角色呈现和游戏控制组合成可自托管的数字伙伴。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">实时 AI 伙伴很有趣，但数据和运行环境谁来掌控？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>自托管实时语音与游戏交互，把角色、记忆和设备控制留在自己的环境。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">自托管实时语音与游戏交互，把角色、记忆和设备控制留在自己的环境。</li><li style="margin:5px 0;">由 实时语音、游戏与 AI 角色开发者 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">AIRI 把实时语音、角色呈现和游戏控制组合成可自托管的数字伙伴。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>实时语音、游戏与 AI 角色开发者。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：moeru-ai/airi</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/moeru-ai/airi" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜maths-cs-ai-compendium</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 学习路线</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">5,673</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +729 · 总星标 5,673</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>这个合集把数学、计算机科学和 AI 研究基础组织成可持续学习的路线。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">想做 AI 研究工程，却总在数学、算法和论文之间跳。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用一份结构化路线串起数学、计算机和机器学习基础，方便系统查漏补缺。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用一份结构化路线串起数学、计算机和机器学习基础，方便系统查漏补缺。</li><li style="margin:5px 0;">由 AI 学习者与研究工程师 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">这个合集把数学、计算机科学和 AI 研究基础组织成可持续学习的路线。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 学习者与研究工程师。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：HenryNdubuaku/maths-cs-ai-compendium</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/HenryNdubuaku/maths-cs-ai-compendium" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜Agent-Ready Websites</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">arXiv / Web Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Web Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">arXiv cs.AI new · 方向 Web Agent</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>论文把网站对 Agent 的可读性、可操作性和决策可靠性整理成设计框架。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">网页只为人设计，Agent 经常读不准也点不对。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把机器可读、可操作和决策可靠性纳入网站设计，让 Web Agent 更稳定。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把机器可读、可操作和决策可靠性纳入网站设计，让 Web Agent 更稳定。</li><li style="margin:5px 0;">由 Web 平台、自动化与 Agent 团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">论文把网站对 Agent 的可读性、可操作性和决策可靠性整理成设计框架。</li><li style="margin:5px 0;">热度来自 arXiv，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Web 平台、自动化与 Agent 团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Agent-Ready Websites</p>
+        <p style="margin:14px 0 0;"><a href="https://arxiv.org/abs/2607.12056" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
+    <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
+    <p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想立刻上手：openinterpreter、airi</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想做技术储备：DSLs for Reliable LLMs、Know Before Fix、Tiptap AI Toolkit</p>
+    <p style="margin:12px 0 0;color:#164e63;font-size:15px;line-height:1.8;">不要一次装七个项目。选一个最接近当前工作的方向，用真实任务做 30 分钟验证：能否减少返工、输出是否稳定、维护成本是否可接受。答案比 Star 数更重要。</p>
+  </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「Codex」获取项目链接、脚本、提示词和自动化流程。</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-07-15#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-07-15#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
+  </body>
+</html>
