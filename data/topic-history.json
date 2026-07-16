@@ -2586,12 +2586,68 @@
       "video": "renders/developer-radar-2026-07-13-voiceover-final.mp4"
     },
     {
+      "date": "2026-07-14",
+      "key": "hkuds/vibe-trading",
+      "title": "Vibe-Trading",
+      "source": "GitHub",
+      "url": "https://github.com/HKUDS/Vibe-Trading",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-14",
+      "key": "https://arxiv.org/abs/2607.09665",
+      "title": "Format Sensitivity Index",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.09665",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-14",
+      "key": "https://github.com/openai/codex/issues/28058",
+      "title": "Codex 子代理可观测性",
+      "source": "Hacker News",
+      "url": "https://github.com/openai/codex/issues/28058",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-14",
+      "key": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed",
+      "title": "CUDA 替代路线",
+      "source": "Hacker News",
+      "url": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed/",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-14",
+      "key": "https://www.producthunt.com/products/sourclip",
+      "title": "Sourclip",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/sourclip",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-14",
+      "key": "nutlope/hallmark",
+      "title": "hallmark",
+      "source": "GitHub",
+      "url": "https://github.com/Nutlope/hallmark",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-14",
+      "key": "shubhamsaboo/awesome-llm-apps",
+      "title": "awesome-llm-apps",
+      "source": "GitHub",
+      "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+      "video": "renders/developer-radar-2026-07-14-voiceover-final.mp4"
+    },
+    {
       "date": "2026-07-15",
       "key": "henryndubuaku/maths-cs-ai-compendium",
       "title": "maths-cs-ai-compendium",
       "source": "GitHub",
       "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
     },
     {
       "date": "2026-07-15",
@@ -2599,7 +2655,7 @@
       "title": "Agent-Ready Websites",
       "source": "arXiv",
       "url": "https://arxiv.org/abs/2607.12056",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
     },
     {
       "date": "2026-07-15",
@@ -2607,7 +2663,7 @@
       "title": "Know Before Fix",
       "source": "Hugging Face",
       "url": "https://huggingface.co/papers/2607.11111",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
     },
     {
       "date": "2026-07-15",
@@ -2615,7 +2671,7 @@
       "title": "DSLs for Reliable LLMs",
       "source": "Hacker News",
       "url": "https://martinfowler.com/articles/llm-and-dsls.html",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
     },
     {
       "date": "2026-07-15",
@@ -2623,7 +2679,7 @@
       "title": "Tiptap AI Toolkit",
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/tiptap",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
     },
     {
       "date": "2026-07-15",
@@ -2631,7 +2687,7 @@
       "title": "airi",
       "source": "GitHub",
       "url": "https://github.com/moeru-ai/airi",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
     },
     {
       "date": "2026-07-15",
@@ -2639,7 +2695,63 @@
       "title": "openinterpreter",
       "source": "GitHub",
       "url": "https://github.com/openinterpreter/openinterpreter",
-      "video": "D:\\codex_chat\\github-daily-hot-video\\renders\\developer-radar-2026-07-15-voiceover-final.mp4"
+      "video": "renders/developer-radar-2026-07-15-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "https://arxiv.org/abs/2607.13037",
+      "title": "OriginBlame",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.13037",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "https://huggingface.co/papers/2607.12625",
+      "title": "KnowAct-GUIClaw",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.12625",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "https://huggingface.co/papers/2607.13285",
+      "title": "Harness Handbook",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.13285",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "https://thinkingmachines.ai/news/introducing-inkling",
+      "title": "Inkling",
+      "source": "Hacker News",
+      "url": "https://thinkingmachines.ai/news/introducing-inkling/",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "https://www.producthunt.com/products/manta-ai",
+      "title": "Manta AI",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/manta-ai",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "https://www.producthunt.com/products/resonantgenesis",
+      "title": "DevSwat",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/resonantgenesis",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-16",
+      "key": "lobehub/lobehub",
+      "title": "lobehub",
+      "source": "GitHub",
+      "url": "https://github.com/lobehub/lobehub",
+      "video": "renders/developer-radar-2026-07-16-voiceover-final.mp4"
     }
   ]
 }

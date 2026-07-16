@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今天这 7 个项目，帮你少踩 提示工程、Agent、代码理解的坑</title>
+  </head>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · 2026.07.16 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">今天这 7 个项目，帮你少踩 提示工程、Agent、代码理解的坑</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 提示工程、Agent、代码理解、自动测试 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先按你的需求选</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">想马上试用，先看 lobehub。剩下的方向更适合做技术储备，而不是立刻押注。</p>
+    <p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想立刻上手：lobehub</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想做技术储备：Inkling、DevSwat、Manta AI</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今天会拆解什么</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. Inkling  /  2. lobehub  /  3. DevSwat  /  4. Manta AI  /  5. Harness Handbook  /  6. KnowAct-GUIClaw  /  7. OriginBlame</p>
+
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-07-16#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-07-16#archive</a></p>
+  </section>
+
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜Inkling</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / 开放模型</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">260</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 1048 points · 评论 260</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>Inkling 以开放权重进入模型竞争，重点看透明评估与团队适配空间。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">闭源模型能力难审计，团队选型只能看外部评分？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>开放权重让能力、限制和适配空间更透明，模型评估多一个可检查的候选。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">开放权重让能力、限制和适配空间更透明，模型评估多一个可检查的候选。</li><li style="margin:5px 0;">由 模型平台、AI 应用与研究团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">Inkling 以开放权重进入模型竞争，重点看透明评估与团队适配空间。</li><li style="margin:5px 0;">热度来自 Hacker News，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>模型平台、AI 应用与研究团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Inkling</p>
+        <p style="margin:14px 0 0;"><a href="https://thinkingmachines.ai/news/introducing-inkling/" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜lobehub</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / Agent 运营</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">79,942</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +51 · 总星标 79,942</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>LobeHub 把多个 Agent 组织成持续运行的团队，重点从聊天转向运营与调度。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">Agent 数量一多，谁在执行、何时失败、结果怎么汇总？</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把招聘、排班、值守和汇报集中到运营台，降低多 Agent 协作的管理成本。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把招聘、排班、值守和汇报集中到运营台，降低多 Agent 协作的管理成本。</li><li style="margin:5px 0;">由 Agent 平台与自动化团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">LobeHub 把多个 Agent 组织成持续运行的团队，重点从聊天转向运营与调度。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Agent 平台与自动化团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：lobehub/lobehub</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/lobehub/lobehub" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜DevSwat</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / 代码理解</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Code Maps</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 定位 Code Maps</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>DevSwat 用地图和关系图降低陌生代码库的理解成本，并补充治理视角。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">接手陌生仓库时，依赖关系、风险区域和负责人都藏在代码里。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用可交互地图呈现结构与治理信息，先建立全局认知再开始修改。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用可交互地图呈现结构与治理信息，先建立全局认知再开始修改。</li><li style="margin:5px 0;">由 架构师、代码审查与大型仓库团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">DevSwat 用地图和关系图降低陌生代码库的理解成本，并补充治理视角。</li><li style="margin:5px 0;">热度来自 Product Hunt，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>架构师、代码审查与大型仓库团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：DevSwat</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/resonantgenesis" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜Manta AI</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / 自动测试</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Web Testing</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 定位 Web Testing</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>Manta AI 把 Web 页面和交互回归交给 Agent 自动执行，瞄准重复测试成本。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">页面一改就要重复跑回归，人工测试既慢又容易漏。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>让 Agent 自动执行页面与交互测试，把人力留给异常判断和质量策略。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">让 Agent 自动执行页面与交互测试，把人力留给异常判断和质量策略。</li><li style="margin:5px 0;">由 前端、测试与持续交付团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">Manta AI 把 Web 页面和交互回归交给 Agent 自动执行，瞄准重复测试成本。</li><li style="margin:5px 0;">热度来自 Product Hunt，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>前端、测试与持续交付团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Manta AI</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/manta-ai" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜Harness Handbook</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / Agent 工程</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Agent Harness</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF Daily rank 1 · 方向 Agent Harness</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>论文关注 Agent Harness 的工程可维护性，而不是只比较单次任务得分。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">Agent Harness 迭代太快，配置、工具和执行逻辑越来越难维护。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把可读、可导航、可编辑当成基础能力，让工具链演化不再积累黑盒。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把可读、可导航、可编辑当成基础能力，让工具链演化不再积累黑盒。</li><li style="margin:5px 0;">由 Agent 框架与研发平台团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">论文关注 Agent Harness 的工程可维护性，而不是只比较单次任务得分。</li><li style="margin:5px 0;">热度来自 Hugging Face，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Agent 框架与研发平台团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Harness Handbook</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2607.13285" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜KnowAct-GUIClaw</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / GUI Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">GUI Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF Daily rank 5 · 方向 GUI Agent</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>KnowAct-GUIClaw 把持续记忆和技能演化用于个人 GUI 操作，关注长期使用。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">GUI 助手换个页面或过几天就忘步骤，重复任务仍不稳定。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>让记忆和技能随操作持续演化，提升个人工作流中的长期复用与稳定性。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">让记忆和技能随操作持续演化，提升个人工作流中的长期复用与稳定性。</li><li style="margin:5px 0;">由 桌面自动化与个人 Agent 团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">KnowAct-GUIClaw 把持续记忆和技能演化用于个人 GUI 操作，关注长期使用。</li><li style="margin:5px 0;">热度来自 Hugging Face，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>桌面自动化与个人 Agent 团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：KnowAct-GUIClaw</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2607.12625" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜OriginBlame</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">arXiv / 数据溯源</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Provenance</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">arXiv cs.AI new · 方向 Provenance</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>OriginBlame 把训练数据溯源推进到记录和 Token 粒度，服务审计与定位。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">模型输出出现版权、质量或偏差问题时，很难追到具体训练来源。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把数据来源细化到记录和 Token，为清洗、审计和问题定位提供证据链。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把数据来源细化到记录和 Token，为清洗、审计和问题定位提供证据链。</li><li style="margin:5px 0;">由 数据治理、模型训练与合规团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">OriginBlame 把训练数据溯源推进到记录和 Token 粒度，服务审计与定位。</li><li style="margin:5px 0;">热度来自 arXiv，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>数据治理、模型训练与合规团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：OriginBlame</p>
+        <p style="margin:14px 0 0;"><a href="https://arxiv.org/abs/2607.13037" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
+    <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
+    <p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想立刻上手：lobehub</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想做技术储备：Inkling、DevSwat、Manta AI</p>
+    <p style="margin:12px 0 0;color:#164e63;font-size:15px;line-height:1.8;">不要一次装七个项目。选一个最接近当前工作的方向，用真实任务做 30 分钟验证：能否减少返工、输出是否稳定、维护成本是否可接受。答案比 Star 数更重要。</p>
+  </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「Codex」获取项目链接、脚本、提示词和自动化流程。</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-07-16#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-07-16#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
+  </body>
+</html>

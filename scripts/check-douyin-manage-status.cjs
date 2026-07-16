@@ -11,7 +11,6 @@ function argValue(name, fallback = "") {
 function requirePlaywright() {
   const candidates = [
     process.env.PLAYWRIGHT_MODULE,
-    "D:/software_lhj/nodejs/node_cache/_npx/9f5b418b1954b0a5/node_modules/playwright",
     "playwright",
   ].filter(Boolean);
   for (const candidate of candidates) {
@@ -26,9 +25,16 @@ async function sleep(ms) {
   await new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function findWorkRow(body, titleText) {
+  return String(body || "")
+    .split(/(?=^\d{2}:\d{2}\r?$)/m)
+    .find((row) => row.includes(titleText)) || "";
+}
+
 (async () => {
   const metadataPath = path.resolve(root, argValue("--metadata", "data/douyin-publish-2026-07-15.json"));
   const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
+  const date = metadata.date || path.basename(metadataPath).match(/\d{4}-\d{2}-\d{2}/)?.[0] || "latest";
   const title = metadata.title;
   const duration = metadata.duration || "";
   const profile = path.resolve(root, metadata.profile || ".playwright-douyin-profile");
@@ -65,23 +71,31 @@ async function sleep(ms) {
   }
 
   body = await page.locator("body").innerText().catch(() => body);
-  const titlePrefix = title.slice(0, 10);
-  const titleFound = body.includes(titlePrefix);
-  const durationFound = duration ? body.includes(duration) : false;
-  const publicUrl = body.match(/https?:\/\/(?:www\.)?douyin\.com\/video\/\d+/)?.[0] || "";
+  const matchedRow = findWorkRow(body, title);
+  const titleFound = Boolean(matchedRow);
+  const durationFound = duration ? matchedRow.includes(duration) : false;
+  const publicUrl = matchedRow.match(/https?:\/\/(?:www\.)?douyin\.com\/video\/\d+/)?.[0] || "";
+  const status = matchedRow.includes("已发布")
+    ? "已发布"
+    : matchedRow.includes("审核中")
+      ? "审核中"
+      : matchedRow.includes("未通过")
+        ? "未通过"
+        : "未确认";
   const result = {
     title,
     duration,
     titleFound,
     durationFound,
-    reviewVisible: body.includes("审核中"),
-    publishedVisible: body.includes("已发布"),
-    rejectedVisible: body.includes("未通过"),
+    status,
+    reviewVisible: status === "审核中",
+    publishedVisible: status === "已发布",
+    rejectedVisible: status === "未通过",
     publicUrl,
-    bodyPreview: body.slice(0, 2200),
+    matchedRow,
   };
-  fs.writeFileSync(path.join(root, "data", "douyin-manage-recheck-2026-07-15-body.txt"), body, "utf8");
-  await page.screenshot({ path: path.join(root, "data", "douyin-manage-recheck-2026-07-15-screen.png"), fullPage: true });
+  fs.writeFileSync(path.join(root, "data", `douyin-manage-recheck-${date}-body.txt`), body, "utf8");
+  await page.screenshot({ path: path.join(root, "data", `douyin-manage-recheck-${date}-screen.png`), fullPage: true });
   console.log(JSON.stringify(result, null, 2));
   await context.close();
 })().catch((error) => {

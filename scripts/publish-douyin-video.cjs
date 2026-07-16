@@ -83,9 +83,6 @@ function sleep(ms) {
 function requirePlaywright() {
   const candidates = [
     process.env.PLAYWRIGHT_MODULE,
-    "D:/software_lhj/nodejs/node_cache/_npx/9f5b418b1954b0a5/node_modules/playwright",
-    "D:/software_lhj/nodejs/node_cache/_npx/e41f203b7505f1fb/node_modules/playwright",
-    "D:/software_lhj/nodejs/node_cache/_npx/31e32ef8478fbf80/node_modules/playwright",
     "playwright",
   ].filter(Boolean);
   for (const candidate of candidates) {
@@ -188,6 +185,12 @@ async function saveEvidence(page, date, suffix) {
   return { body, bodyPath, screenPath };
 }
 
+function findWorkRow(body, titleText) {
+  return String(body || "")
+    .split(/(?=^\d{2}:\d{2}\r?$)/m)
+    .find((row) => row.includes(titleText)) || "";
+}
+
 async function findPublishedWork(page, title, durationText, date) {
   await page.goto("https://creator.douyin.com/creator-micro/content/manage?enter_from=publish", {
     waitUntil: "domcontentloaded",
@@ -218,13 +221,18 @@ async function findPublishedWork(page, title, durationText, date) {
 
   const evidence = await saveEvidence(page, date, "manage-after-publish");
   body = evidence.body;
-  const matchIndex = body.indexOf(titlePrefix);
-  const matchedRow = matchIndex >= 0 ? body.slice(matchIndex, matchIndex + 600) : body;
-  const publicUrlMatch = body.match(/https?:\/\/(?:www\.)?douyin\.com\/video\/\d+/);
+  const matchedRow = findWorkRow(body, title);
+  const publicUrlMatch = matchedRow.match(/https?:\/\/(?:www\.)?douyin\.com\/video\/\d+/);
   return {
-    published: matchIndex >= 0 || (durationText && body.includes(durationText)),
+    published: Boolean(matchedRow),
     review: matchedRow.includes("审核中") && !matchedRow.includes("已发布"),
-    status: matchedRow.includes("已发布") ? "已发布" : matchedRow.includes("审核中") ? "审核中" : "未确认",
+    status: matchedRow.includes("已发布")
+      ? "已发布"
+      : matchedRow.includes("审核中")
+        ? "审核中"
+        : matchedRow.includes("未通过")
+          ? "未通过"
+          : "未确认",
     publicUrl: publicUrlMatch?.[0] || "",
     evidence,
   };
