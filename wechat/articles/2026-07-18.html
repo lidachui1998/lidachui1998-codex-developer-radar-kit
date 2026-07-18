@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今天这 7 个项目，帮你少踩 提示工程、产品自驱观测、AI 界面的坑</title>
+  </head>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · 2026.07.18 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">今天这 7 个项目，帮你少踩 提示工程、产品自驱观测、AI 界面的坑</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 提示工程、产品自驱观测、AI 界面、低显存推理 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先按你的需求选</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">想马上试用，先看 lingbot-map、PostHog。剩下的方向更适合做技术储备，而不是立刻押注。</p>
+    <p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想立刻上手：lingbot-map、PostHog</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想做技术储备：ui-skills、AirLLM、OpenMarkdown</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今天会拆解什么</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. lingbot-map  /  2. PostHog  /  3. ui-skills  /  4. AirLLM  /  5. OpenMarkdown  /  6. SearchOS-V1  /  7. The cost of saying yes</p>
+
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-07-18#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-07-18#archive</a></p>
+  </section>
+
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜lingbot-map</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 三维基础模型</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">12,427</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +827 · 总星标 12,427</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>lingbot-map 的看点是把三维重建推向流式处理，让连续输入更快形成可用场景。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">传统三维重建常依赖离线批处理，流式输入下很难及时得到完整场景。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把连续画面直接转成三维场景，为机器人、空间计算和实时地图缩短处理链路。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把连续画面直接转成三维场景，为机器人、空间计算和实时地图缩短处理链路。</li><li style="margin:5px 0;">由 机器人、计算机视觉、三维重建与空间智能团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">lingbot-map 的看点是把三维重建推向流式处理，让连续输入更快形成可用场景。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>机器人、计算机视觉、三维重建与空间智能团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Robbyant/lingbot-map</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/Robbyant/lingbot-map" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜PostHog</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 产品自驱观测</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">36,357</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +438 · 总星标 36,357</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>PostHog 的新叙事是让产品数据成为 Agent 可直接使用的上下文，而不只是给人看的报表。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">用户行为、错误和日志分散在不同工具里，Agent 很难拿到完整诊断上下文。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把问题证据和产品信号集中起来，让团队更快定位机会、诊断故障并验证修复。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把问题证据和产品信号集中起来，让团队更快定位机会、诊断故障并验证修复。</li><li style="margin:5px 0;">由 产品工程、增长、可观测性与 AI Agent 平台团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">PostHog 的新叙事是让产品数据成为 Agent 可直接使用的上下文，而不只是给人看的报表。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>产品工程、增长、可观测性与 AI Agent 平台团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：PostHog/posthog</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/PostHog/posthog" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜ui-skills</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 设计工程技能</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">4,685</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +529 · 总星标 4,685</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>ui-skills 体现了一个趋势：设计经验正在从提示词升级为可版本化、可复用的技能资产。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">AI 生成界面常能跑却不够好用，团队经验也容易散落在个人习惯里。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把设计工程规范变成可复用技能，让人和 Agent 更稳定地复用交互细节。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把设计工程规范变成可复用技能，让人和 Agent 更稳定地复用交互细节。</li><li style="margin:5px 0;">由 前端、设计工程、设计系统与 AI 编程工具用户 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">ui-skills 体现了一个趋势：设计经验正在从提示词升级为可版本化、可复用的技能资产。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>前端、设计工程、设计系统与 AI 编程工具用户。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：ibelick/ui-skills</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/ibelick/ui-skills" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜AirLLM</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 低显存推理</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">23,136</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +242 · 总星标 23,136</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>AirLLM 的价值不是追求最快，而是把七百亿模型的可运行门槛压到消费级设备。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">大模型本地推理通常先被显存门槛卡住，开发者难以在普通设备上做实验。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用更低的显存换取可运行性，让大参数模型的本地验证和教学实验更容易开始。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用更低的显存换取可运行性，让大参数模型的本地验证和教学实验更容易开始。</li><li style="margin:5px 0;">由 本地模型、边缘推理、低成本实验与 AI 教学用户 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">AirLLM 的价值不是追求最快，而是把七百亿模型的可运行门槛压到消费级设备。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>本地模型、边缘推理、低成本实验与 AI 教学用户。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：lyogavin/airllm</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/lyogavin/airllm" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜OpenMarkdown</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / Agent 共编文档</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Co-editing</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 定位 Co-editing</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>OpenMarkdown 把 Agent 从文档外的问答框移到共同编辑现场，重点是共享同一份上下文。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">写文档时频繁在编辑器和聊天窗口之间搬运内容，容易丢上下文和版本。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把 Agent 直接放进 Markdown 编辑过程，减少搬运并保留共同修改的文档状态。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把 Agent 直接放进 Markdown 编辑过程，减少搬运并保留共同修改的文档状态。</li><li style="margin:5px 0;">由 技术写作、文档工程、知识库与 Agent 工作流用户 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">OpenMarkdown 把 Agent 从文档外的问答框移到共同编辑现场，重点是共享同一份上下文。</li><li style="margin:5px 0;">热度来自 Product Hunt，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>技术写作、文档工程、知识库与 Agent 工作流用户。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：OpenMarkdown</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/openmarkdown" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜SearchOS-V1</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / 多 Agent 搜索</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Agent Search</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF Daily rank 4 · 方向 Agent Search</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>SearchOS-V1 关注的不是多开几个 Agent，而是如何让协作搜索面对开放问题时更稳。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">开放问题搜索链路长、来源杂，单个 Agent 容易漏证据或过早得出结论。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>通过协作分工提升信息寻找的覆盖度和稳健性，为研究型 Agent 提供新路线。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">通过协作分工提升信息寻找的覆盖度和稳健性，为研究型 Agent 提供新路线。</li><li style="margin:5px 0;">由 搜索 Agent、深度研究、RAG 与多智能体研究团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">SearchOS-V1 关注的不是多开几个 Agent，而是如何让协作搜索面对开放问题时更稳。</li><li style="margin:5px 0;">热度来自 Hugging Face，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>搜索 Agent、深度研究、RAG 与多智能体研究团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：SearchOS-V1</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2607.15257" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜The cost of saying yes</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub Blog / 代码所有权</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Developer</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">GitHub Blog latest · 方向 Developer</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>这篇文章提醒团队：AI 改变的是写代码价格，不是长期拥有代码的责任。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">生成代码越来越便宜，团队却可能低估新增系统带来的维护、审查和责任边界。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用所有权和长期维护重新评估需求，避免把快速生成误判成真正低成本。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用所有权和长期维护重新评估需求，避免把快速生成误判成真正低成本。</li><li style="margin:5px 0;">由 技术负责人、架构师、平台工程与使用 AI 编程的团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">这篇文章提醒团队：AI 改变的是写代码价格，不是长期拥有代码的责任。</li><li style="margin:5px 0;">热度来自 GitHub Blog，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>技术负责人、架构师、平台工程与使用 AI 编程的团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：The cost of saying yes</p>
+        <p style="margin:14px 0 0;"><a href="https://github.blog/engineering/the-cost-of-saying-yes-has-changed/" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
+    <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
+    <p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想立刻上手：lingbot-map、PostHog</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想做技术储备：ui-skills、AirLLM、OpenMarkdown</p>
+    <p style="margin:12px 0 0;color:#164e63;font-size:15px;line-height:1.8;">不要一次装七个项目。选一个最接近当前工作的方向，用真实任务做 30 分钟验证：能否减少返工、输出是否稳定、维护成本是否可接受。答案比 Star 数更重要。</p>
+  </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「Codex」获取项目链接、脚本、提示词和自动化流程。</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-07-18#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-07-18#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
+  </body>
+</html>

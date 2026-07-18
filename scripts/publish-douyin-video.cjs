@@ -83,6 +83,9 @@ function sleep(ms) {
 function requirePlaywright() {
   const candidates = [
     process.env.PLAYWRIGHT_MODULE,
+    "D:/software_lhj/nodejs/node_cache/_npx/9f5b418b1954b0a5/node_modules/playwright",
+    "D:/software_lhj/nodejs/node_cache/_npx/e41f203b7505f1fb/node_modules/playwright",
+    "D:/software_lhj/nodejs/node_cache/_npx/31e32ef8478fbf80/node_modules/playwright",
     "playwright",
   ].filter(Boolean);
   for (const candidate of candidates) {

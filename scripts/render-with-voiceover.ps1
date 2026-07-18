@@ -79,7 +79,7 @@ $NarrationForMux = $Narration
 
 & $Node "scripts\build-video.mjs"
 Assert-LastExitCode "HyperFrames composition build"
-& $Node $NpxCli --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+& $NpxCli --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
 Assert-LastExitCode "HyperFrames render"
 
 $Duration = 70

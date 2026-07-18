@@ -11,6 +11,7 @@ function argValue(name, fallback = "") {
 function requirePlaywright() {
   const candidates = [
     process.env.PLAYWRIGHT_MODULE,
+    "D:/software_lhj/nodejs/node_cache/_npx/9f5b418b1954b0a5/node_modules/playwright",
     "playwright",
   ].filter(Boolean);
   for (const candidate of candidates) {
