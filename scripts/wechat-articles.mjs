@@ -72,10 +72,11 @@ function topicNames(day, count = 3) {
 function themeNames(day, count = 3) {
   const themes = (day.topics || []).map((topic) => {
     const category = topic.category || topic.source || "开发工具";
+    if (/三维|视觉|空间/.test(category)) return "三维与视觉";
     if (/界面|前端|设计/.test(category)) return "AI 界面";
-    if (/Agent|代理/.test(category)) return "Agent";
-    if (/算力|GPU|基础设施/.test(category)) return "算力";
-    if (/提示|评测|模型/.test(category)) return "提示工程";
+    if (/Agent|智能体|代理/.test(category)) return "Agent";
+    if (/低显存|推理|算力|GPU|基础设施/.test(category)) return "低显存推理";
+    if (/提示|评测|模型/.test(category)) return "模型工程";
     if (/研究/.test(category)) return "研究工作流";
     if (/交易|量化/.test(category)) return "交易 Agent";
     return category;
@@ -84,11 +85,10 @@ function themeNames(day, count = 3) {
 }
 
 function articleTitle(day) {
-  const themes = themeNames(day, 3);
   const topicCount = day.topics?.length || 0;
-  if (!themes.length) return `今天这 ${topicCount} 个项目，哪些值得开发者真正上手？`;
-  const themeText = themes.join("、");
-  return `今天这 ${topicCount} 个项目，帮你少踩 ${themeText}的坑`;
+  const names = topicNames(day, 2);
+  if (!names.length) return `今天这 ${topicCount} 个项目，哪些值得开发者真正上手？`;
+  return `今天这 ${topicCount} 个项目，${names.join("、")} 为什么值得看？`;
 }
 
 function articleDigest(day) {
@@ -393,7 +393,7 @@ ${douyinUrl ? `    <p style="margin:12px 0 0;color:#4b5563;font-size:14px;line-h
     <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="${escapeHtml(siteUrl)}" style="color:#047857;">${escapeHtml(siteUrl)}</a></p>
   </section>
 
-  ${(day.topics || []).map(topicHtml).join("\n")}
+${(day.topics || []).map(topicHtml).join("\n")}
 
   <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
     <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
@@ -420,7 +420,7 @@ function renderHtml(day, config) {
     <title>${escapeHtml(articleTitle(day))}</title>
   </head>
   <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
-    ${renderArticleBodyHtml(day, config)}
+${renderArticleBodyHtml(day, config).trimStart()}
   </body>
 </html>
 `;

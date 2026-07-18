@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T12:18:27.714Z",
+  "updatedAt": "2026-07-18T12:30:26.072Z",
   "articles": [
     {
       "date": "2026-07-18",
       "displayDate": "2026.07.18",
-      "title": "今天这 7 个项目，帮你少踩 提示工程、产品自驱观测、AI 界面的坑",
+      "title": "今天这 7 个项目，lingbot-map、PostHog 为什么值得看？",
       "digest": "不只报项目名：拆解 lingbot-map、PostHog 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
       "status": "draft",
       "articleUrl": "",
@@ -16,7 +16,7 @@
         "html": "wechat/articles/2026-07-18.html",
         "payload": "wechat/articles/2026-07-18.payload.json"
       },
-      "generatedAt": "2026-07-18T12:18:27.714Z",
+      "generatedAt": "2026-07-18T12:30:26.071Z",
       "wechatMediaId": "",
       "publishId": ""
     },
