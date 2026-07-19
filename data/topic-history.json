@@ -2808,6 +2808,62 @@
       "source": "GitHub",
       "url": "https://github.com/Robbyant/lingbot-map",
       "video": "renders/developer-radar-2026-07-18-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "github/copilot-sdk",
+      "title": "copilot-sdk",
+      "source": "GitHub",
+      "url": "https://github.com/github/copilot-sdk",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "https://huggingface.co/papers/2607.14952",
+      "title": "LongStraw",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.14952",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "https://workshop.cjpais.com/projects/transcribe-cpp",
+      "title": "Transcribe.cpp",
+      "source": "Hacker News",
+      "url": "https://workshop.cjpais.com/projects/transcribe-cpp",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "https://www.producthunt.com/products/basert",
+      "title": "BaseRT",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/basert",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "jamiepine/voicebox",
+      "title": "voicebox",
+      "source": "GitHub",
+      "url": "https://github.com/jamiepine/voicebox",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "knockoutez/wigolo",
+      "title": "wigolo",
+      "source": "GitHub",
+      "url": "https://github.com/KnockOutEZ/wigolo",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-19",
+      "key": "tirth8205/code-review-graph",
+      "title": "code-review-graph",
+      "source": "GitHub",
+      "url": "https://github.com/tirth8205/code-review-graph",
+      "video": "renders/developer-radar-2026-07-19-voiceover-final.mp4"
     }
   ]
 }

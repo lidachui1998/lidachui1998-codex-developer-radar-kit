@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今天这 7 个项目，code-review-graph、wigolo 为什么值得看？</title>
+  </head>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · 2026.07.19 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">今天这 7 个项目，code-review-graph、wigolo 为什么值得看？</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 代码上下文图谱、研究工作流、开源语音工作室、Agent 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先按你的需求选</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">想马上试用，先看 code-review-graph、wigolo。剩下的方向更适合做技术储备，而不是立刻押注。</p>
+    <p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想立刻上手：code-review-graph、wigolo</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想做技术储备：voicebox、copilot-sdk、Transcribe.cpp</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今天会拆解什么</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. code-review-graph  /  2. wigolo  /  3. voicebox  /  4. copilot-sdk  /  5. Transcribe.cpp  /  6. BaseRT  /  7. LongStraw</p>
+
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-07-19#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-07-19#archive</a></p>
+  </section>
+
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜code-review-graph</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 代码上下文图谱</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">20,663</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +551 · 总星标 20,663</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>code-review-graph 的价值不是再做一次全文索引，而是先告诉 Agent 这次真正该读哪些代码。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">大型仓库里，AI 代码评审常把大量无关文件塞进上下文，既贵又容易漏掉关键关联。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用持久代码图谱缩小阅读范围，降低上下文消耗，并让评审证据更集中。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用持久代码图谱缩小阅读范围，降低上下文消耗，并让评审证据更集中。</li><li style="margin:5px 0;">由 AI 编程工具、代码评审、MCP 与大型仓库平台团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">code-review-graph 的价值不是再做一次全文索引，而是先告诉 Agent 这次真正该读哪些代码。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 编程工具、代码评审、MCP 与大型仓库平台团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：tirth8205/code-review-graph</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/tirth8205/code-review-graph" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜wigolo</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 本地网页研究</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">1,597</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +605 · 总星标 1,597</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>wigolo 抓住的是 Agent 工具成本：搜索、抓取和爬取不一定都要绑定云端 API。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">Agent 做网页研究经常依赖多个云 API，密钥、费用和数据边界都增加了接入成本。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把搜索与抓取能力放回本地，以零查询费用的方式补齐 Agent 的外部研究链路。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把搜索与抓取能力放回本地，以零查询费用的方式补齐 Agent 的外部研究链路。</li><li style="margin:5px 0;">由 AI 编程 Agent、MCP 工具链、本地优先和自动化研究用户 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">wigolo 抓住的是 Agent 工具成本：搜索、抓取和爬取不一定都要绑定云端 API。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 编程 Agent、MCP 工具链、本地优先和自动化研究用户。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：KnockOutEZ/wigolo</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/KnockOutEZ/wigolo" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜voicebox</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 开源语音工作室</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">43,066</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +629 · 总星标 43,066</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>voicebox 的热度说明开发者仍然需要可控、可改造的开源语音制作入口。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">语音克隆和制作常被拆在不同在线服务里，素材迁移和平台依赖都很重。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>把常用 AI 语音能力集中到开源桌面端，方便自托管、实验和二次开发。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">把常用 AI 语音能力集中到开源桌面端，方便自托管、实验和二次开发。</li><li style="margin:5px 0;">由 语音 AI、内容工具、桌面应用和开源创作工作流开发者 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">voicebox 的热度说明开发者仍然需要可控、可改造的开源语音制作入口。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>语音 AI、内容工具、桌面应用和开源创作工作流开发者。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：jamiepine/voicebox</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/jamiepine/voicebox" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜copilot-sdk</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / Copilot Agent SDK</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">9,902</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +111 · 总星标 9,902</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>copilot-sdk 的信号很明确：Copilot 正从独立工具变成可嵌入的 Agent 能力层。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">团队想在自己的产品里加入编码 Agent，往往要从模型调用、工具协议和会话管理重新搭一遍。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用官方 SDK 复用 Copilot Agent 能力，缩短从实验到产品集成的路径。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用官方 SDK 复用 Copilot Agent 能力，缩短从实验到产品集成的路径。</li><li style="margin:5px 0;">由 开发者工具、企业平台、IDE 扩展和 Agent 产品团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">copilot-sdk 的信号很明确：Copilot 正从独立工具变成可嵌入的 Agent 能力层。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>开发者工具、企业平台、IDE 扩展和 Agent 产品团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：github/copilot-sdk</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/github/copilot-sdk" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜Transcribe.cpp</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / 本地语音转写</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">130</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 611 points · 评论 130</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>Transcribe.cpp 在 HN 的高热度，反映了本地、轻量语音转写仍是强需求。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">本地转写经常在隐私、安装体积和运行速度之间做艰难取舍。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>用 C++ 路线降低运行负担，为离线会议、字幕和桌面转写提供更轻的选择。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">用 C++ 路线降低运行负担，为离线会议、字幕和桌面转写提供更轻的选择。</li><li style="margin:5px 0;">由 本地 AI、语音识别、桌面工具和隐私敏感型应用开发者 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">Transcribe.cpp 在 HN 的高热度，反映了本地、轻量语音转写仍是强需求。</li><li style="margin:5px 0;">热度来自 Hacker News，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>本地 AI、语音识别、桌面工具和隐私敏感型应用开发者。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Transcribe.cpp</p>
+        <p style="margin:14px 0 0;"><a href="https://workshop.cjpais.com/projects/transcribe-cpp" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜BaseRT</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / 本地推理运行时</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">6.4x llama.cpp</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 性能宣称 6.4x llama.cpp</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>BaseRT 值得关注的是运行时层的新竞争，但所有倍数都应在自己的硬件上验证。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">本地模型能否真正进入产品，常常取决于推理延迟和资源利用，而不只是模型大小。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>新的运行时竞争可能继续压低本地推理成本，但真实性能仍需按模型和硬件复测。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">新的运行时竞争可能继续压低本地推理成本，但真实性能仍需按模型和硬件复测。</li><li style="margin:5px 0;">由 本地模型、端侧推理、性能工程和 AI 应用基础设施团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">BaseRT 值得关注的是运行时层的新竞争，但所有倍数都应在自己的硬件上验证。</li><li style="margin:5px 0;">热度来自 Product Hunt，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>本地模型、端侧推理、性能工程和 AI 应用基础设施团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：BaseRT</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/basert" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜LongStraw</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / 超长上下文强化学习</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">2M+ Tokens</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF Daily rank 1 · 上下文 2M+ Tokens</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>LongStraw 的核心不是单纯堆上下文，而是在固定 GPU 预算里继续扩展训练长度。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">超长上下文训练很容易被显存和算力预算卡住，长度提升往往伴随不可承受的成本。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>在固定硬件预算下探索更长的 Agent 轨迹和文档推理，为长任务训练提供新路线。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">在固定硬件预算下探索更长的 Agent 轨迹和文档推理，为长任务训练提供新路线。</li><li style="margin:5px 0;">由 强化学习、长上下文、Agent 训练和大模型系统研究团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">LongStraw 的核心不是单纯堆上下文，而是在固定 GPU 预算里继续扩展训练长度。</li><li style="margin:5px 0;">热度来自 Hugging Face，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>强化学习、长上下文、Agent 训练和大模型系统研究团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：LongStraw</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2607.14952" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
+    <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
+    <p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想立刻上手：code-review-graph、wigolo</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想做技术储备：voicebox、copilot-sdk、Transcribe.cpp</p>
+    <p style="margin:12px 0 0;color:#164e63;font-size:15px;line-height:1.8;">不要一次装七个项目。选一个最接近当前工作的方向，用真实任务做 30 分钟验证：能否减少返工、输出是否稳定、维护成本是否可接受。答案比 Star 数更重要。</p>
+  </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「Codex」获取项目链接、脚本、提示词和自动化流程。</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="https://radar.bjca.xyz/?date=2026-07-19#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-07-19#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
+  </body>
+</html>

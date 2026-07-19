@@ -36,6 +36,15 @@ $Root = Split-Path -Parent $PSScriptRoot
 $Node = Resolve-Tool "node" "NODE_EXE"
 $Python = Resolve-Tool "python" "PYTHON_EXE"
 $NpxCli = Resolve-Tool "npx" "NPX_EXE"
+$NodeDir = Split-Path -Parent $Node
+$env:PATH = "$NodeDir;$env:PATH"
+$NpxJs = $null
+if ([IO.Path]::GetExtension($NpxCli) -ieq ".cmd") {
+  $NpxCandidate = Join-Path (Split-Path -Parent $NpxCli) "node_modules\npm\bin\npx-cli.js"
+  if (Test-Path $NpxCandidate) {
+    $NpxJs = $NpxCandidate
+  }
+}
 $Chrome = $env:HYPERFRAMES_BROWSER_PATH
 if (!$Chrome) {
   $ChromeCandidates = @(
@@ -79,7 +88,11 @@ $NarrationForMux = $Narration
 
 & $Node "scripts\build-video.mjs"
 Assert-LastExitCode "HyperFrames composition build"
-& $NpxCli --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+if ($NpxJs) {
+  & $Node $NpxJs --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+} else {
+  & $NpxCli --yes "hyperframes@0.6.34" render --quality $Quality --output $VideoOnly
+}
 Assert-LastExitCode "HyperFrames render"
 
 $Duration = 70
