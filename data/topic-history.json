@@ -2920,6 +2920,62 @@
       "source": "GitHub",
       "url": "https://github.com/topoteretes/cognee",
       "video": "renders/developer-radar-2026-07-20-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "bojieli/ai-agent-book",
+      "title": "ai-agent-book",
+      "source": "GitHub",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "earthtojake/text-to-cad",
+      "title": "text-to-cad",
+      "source": "GitHub",
+      "url": "https://github.com/earthtojake/text-to-cad",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it",
+      "title": "Copilot 代码审查复盘",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/ai-and-ml/github-copilot/better-tools-made-copilot-code-review-worse-heres-how-we-actually-improved-it/",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "https://huggingface.co/papers/2607.18213",
+      "title": "SWE-Pruner Pro",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.18213",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "https://jelly-ui.com",
+      "title": "Jelly UI",
+      "source": "Hacker News",
+      "url": "https://jelly-ui.com/",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "koala73/worldmonitor",
+      "title": "worldmonitor",
+      "source": "GitHub",
+      "url": "https://github.com/koala73/worldmonitor",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-21",
+      "key": "oblien/openship",
+      "title": "openship",
+      "source": "GitHub",
+      "url": "https://github.com/oblien/openship",
+      "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
     }
   ]
 }
