@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T12:08:36.034Z",
+  "updatedAt": "2026-07-22T13:38:13.743Z",
   "articles": [
+    {
+      "date": "2026-07-22",
+      "displayDate": "2026.07.22",
+      "title": "今天这 7 个项目，RuView、i-have-adhd 为什么值得看？",
+      "digest": "不只报项目名：拆解 RuView、i-have-adhd 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-22#archive",
+      "paths": {
+        "markdown": "wechat/articles/2026-07-22.md",
+        "html": "wechat/articles/2026-07-22.html",
+        "payload": "wechat/articles/2026-07-22.payload.json"
+      },
+      "generatedAt": "2026-07-22T13:38:13.742Z",
+      "wechatMediaId": "",
+      "publishId": ""
+    },
     {
       "date": "2026-07-21",
       "displayDate": "2026.07.21",

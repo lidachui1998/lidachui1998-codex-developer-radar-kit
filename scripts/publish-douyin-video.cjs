@@ -126,6 +126,14 @@ async function waitThroughLoginGate(page, manualTimeoutMs) {
   const first = await waitForAnyText(page, gateTexts, 120000);
   if (!isLoginGate(first.body)) return first.body;
 
+  // Creator Center can briefly paint the logged-out shell before restoring a
+  // valid persistent session. Give that redirect time to settle so we do not
+  // ask for a QR scan when the uploader is about to become available anyway.
+  const settled = await waitForAnyText(page, readyTexts, 15000).catch(() => null);
+  if (settled) return settled.body;
+  const currentBody = await page.locator("body").innerText({ timeout: 10000 }).catch(() => first.body);
+  if (!isLoginGate(currentBody)) return currentBody;
+
   console.log("[manual] Douyin login is required in the visible browser window.");
   console.log("[manual] Please scan the QR code or finish verification; this script will continue automatically.");
   const afterLogin = await waitForAnyText(page, readyTexts, manualTimeoutMs);

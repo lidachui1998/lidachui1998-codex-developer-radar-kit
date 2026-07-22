@@ -2976,6 +2976,62 @@
       "source": "GitHub",
       "url": "https://github.com/oblien/openship",
       "video": "renders/developer-radar-2026-07-21-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "ayghri/i-have-adhd",
+      "title": "i-have-adhd",
+      "source": "GitHub",
+      "url": "https://github.com/ayghri/i-have-adhd",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "https://huggingface.co/papers/2607.16617",
+      "title": "DataFlow-Harness",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.16617",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "title": "模型评测安全事件",
+      "source": "Hacker News",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "https://www.producthunt.com/products/kastra",
+      "title": "Kastra",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/kastra",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "likec4/likec4",
+      "title": "LikeC4",
+      "source": "GitHub",
+      "url": "https://github.com/likec4/likec4",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "ruvnet/ruview",
+      "title": "RuView",
+      "source": "GitHub",
+      "url": "https://github.com/ruvnet/RuView",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-22",
+      "key": "schollz/croc",
+      "title": "croc",
+      "source": "GitHub",
+      "url": "https://github.com/schollz/croc",
+      "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
     }
   ]
 }
