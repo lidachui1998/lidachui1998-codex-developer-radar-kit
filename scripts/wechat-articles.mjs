@@ -322,8 +322,6 @@ function renderMarkdown(day, config) {
     "",
     `项目链接、生成脚本、提示词和自动化流程会整理到网站：${siteUrl}`,
     "",
-    `公众号可回复「${config.replyKeyword}」获取脚本、提示词和自动化流程。`,
-    "",
     config.articleFooter,
     "",
   );
@@ -403,8 +401,7 @@ ${(day.topics || []).map(topicHtml).join("\n")}
 
   <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
     <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
-    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">公众号回复「${escapeHtml(config.replyKeyword)}」获取项目链接、脚本、提示词和自动化流程。</p>
-    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">完整历史清单：<a href="${escapeHtml(siteUrl)}" style="color:#5eead4;">${escapeHtml(siteUrl)}</a></p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">项目链接、生成脚本、提示词和自动化流程：<a href="${escapeHtml(siteUrl)}" style="color:#5eead4;">${escapeHtml(siteUrl)}</a></p>
   </section>
 
   <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">${escapeHtml(config.articleFooter)}</p>

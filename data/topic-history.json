@@ -3032,6 +3032,62 @@
       "source": "GitHub",
       "url": "https://github.com/schollz/croc",
       "video": "renders/developer-radar-2026-07-22-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "block/buzz",
+      "title": "buzz",
+      "source": "GitHub",
+      "url": "https://github.com/block/buzz",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "citrolabs/ego-lite",
+      "title": "ego-lite",
+      "source": "GitHub",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "https://arxiv.org/abs/2607.19354",
+      "title": "FormulaSPIN",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.19354",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "https://bento.page/slides",
+      "title": "Bento",
+      "source": "Hacker News",
+      "url": "https://bento.page/slides/",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for",
+      "title": "Copilot 与原生 API 成本账",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "https://www.producthunt.com/products/hol-guard",
+      "title": "HOL Guard",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/hol-guard",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-23",
+      "key": "marcelroed/gigatoken",
+      "title": "GigaToken",
+      "source": "Hacker News",
+      "url": "https://github.com/marcelroed/gigatoken/",
+      "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
     }
   ]
 }
