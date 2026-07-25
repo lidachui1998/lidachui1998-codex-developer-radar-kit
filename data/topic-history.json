@@ -3088,6 +3088,118 @@
       "source": "Hacker News",
       "url": "https://github.com/marcelroed/gigatoken/",
       "video": "renders/developer-radar-2026-07-23-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "automattic/harper",
+      "title": "harper",
+      "source": "GitHub",
+      "url": "https://github.com/Automattic/harper",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "composiohq/awesome-claude-skills",
+      "title": "awesome-claude-skills",
+      "source": "GitHub",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "https://bfl.ai/blog/flux-3",
+      "title": "Flux 3",
+      "source": "Hacker News",
+      "url": "https://bfl.ai/blog/flux-3",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "https://www.producthunt.com/products/extract-by-firecrawl",
+      "title": "Firecrawl /search",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/extract-by-firecrawl",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "https://ziggit.dev/t/buz-a-drop-in-replacement-for-bun-using-modern-zig-with-sub-1s-incremental-builds/16891",
+      "title": "Buz",
+      "source": "Hacker News",
+      "url": "https://ziggit.dev/t/buz-a-drop-in-replacement-for-bun-using-modern-zig-with-sub-1s-incremental-builds/16891",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "shiyu-coder/kronos",
+      "title": "Kronos",
+      "source": "GitHub",
+      "url": "https://github.com/shiyu-coder/Kronos",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-24",
+      "key": "yorukot/superfile",
+      "title": "superfile",
+      "source": "GitHub",
+      "url": "https://github.com/yorukot/superfile",
+      "video": "renders/developer-radar-2026-07-24-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "alibaba/open-code-review",
+      "title": "open-code-review",
+      "source": "GitHub",
+      "url": "https://github.com/alibaba/open-code-review",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates",
+      "title": "Dependabot 三天冷却",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "https://huggingface.co/papers/2607.21461",
+      "title": "AREX",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.21461",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "https://www.anthropic.com/news/claude-opus-5",
+      "title": "Claude Opus 5",
+      "source": "Hacker News",
+      "url": "https://www.anthropic.com/news/claude-opus-5",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "https://www.producthunt.com/products/heard-2",
+      "title": "Heard",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/heard-2",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "obra/superpowers",
+      "title": "superpowers",
+      "source": "GitHub",
+      "url": "https://github.com/obra/superpowers",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-25",
+      "key": "permissionlesstech/bitchat",
+      "title": "bitchat",
+      "source": "GitHub",
+      "url": "https://github.com/permissionlesstech/bitchat",
+      "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
     }
   ]
 }

@@ -1,5 +1,6 @@
 const fs = require("node:fs");
 const path = require("node:path");
+const { execFileSync } = require("node:child_process");
 
 const root = path.resolve(__dirname, "..");
 
@@ -8,11 +9,40 @@ function argValue(name, fallback = "") {
   return index >= 0 && index + 1 < process.argv.length ? process.argv[index + 1] : fallback;
 }
 
+function npxPlaywrightCandidates() {
+  const caches = [
+    process.env.npm_config_cache,
+    process.env.NPM_CONFIG_CACHE,
+  ];
+  try {
+    const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
+    caches.push(execFileSync(npmCommand, ["config", "get", "cache"], {
+      encoding: "utf8",
+      windowsHide: true,
+    }).trim());
+  } catch {}
+
+  const candidates = [];
+  for (const cache of new Set(caches.filter(Boolean))) {
+    const npxDir = path.join(cache, "_npx");
+    let entries = [];
+    try {
+      entries = fs.readdirSync(npxDir, { withFileTypes: true });
+    } catch {}
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        candidates.push(path.join(npxDir, entry.name, "node_modules", "playwright"));
+      }
+    }
+  }
+  return candidates;
+}
+
 function requirePlaywright() {
   const candidates = [
     process.env.PLAYWRIGHT_MODULE,
-    "D:/software_lhj/nodejs/node_cache/_npx/9f5b418b1954b0a5/node_modules/playwright",
     "playwright",
+    ...npxPlaywrightCandidates(),
   ].filter(Boolean);
   for (const candidate of candidates) {
     try {

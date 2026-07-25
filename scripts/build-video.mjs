@@ -7,13 +7,13 @@ const timingsPath = path.join(root, "data", "timings.json");
 const outputPath = path.join(root, "index.html");
 
 const accents = [
-  { main: "#5ce1a5", deep: "#102d24", soft: "rgba(92, 225, 165, 0.18)", ink: "#07100f" },
-  { main: "#ffcc33", deep: "#332711", soft: "rgba(255, 204, 51, 0.18)", ink: "#07100f" },
-  { main: "#ff5c7a", deep: "#35141b", soft: "rgba(255, 92, 122, 0.18)", ink: "#07100f" },
-  { main: "#6aa7ff", deep: "#101f37", soft: "rgba(106, 167, 255, 0.18)", ink: "#07100f" },
-  { main: "#d0ff6a", deep: "#243113", soft: "rgba(208, 255, 106, 0.16)", ink: "#07100f" },
-  { main: "#f7f4e8", deep: "#24231d", soft: "rgba(247, 244, 232, 0.14)", ink: "#07100f" },
-  { main: "#7ef2d2", deep: "#12352f", soft: "rgba(126, 242, 210, 0.16)", ink: "#07100f" },
+  { main: "#5ce1a5", deep: "#101a18", soft: "rgba(92, 225, 165, 0.18)", ink: "#07100f" },
+  { main: "#ffcc33", deep: "#101a18", soft: "rgba(255, 204, 51, 0.18)", ink: "#07100f" },
+  { main: "#ff5c7a", deep: "#101a18", soft: "rgba(255, 92, 122, 0.18)", ink: "#07100f" },
+  { main: "#6aa7ff", deep: "#101a18", soft: "rgba(106, 167, 255, 0.18)", ink: "#07100f" },
+  { main: "#d0ff6a", deep: "#101a18", soft: "rgba(208, 255, 106, 0.16)", ink: "#07100f" },
+  { main: "#f7f4e8", deep: "#101a18", soft: "rgba(247, 244, 232, 0.14)", ink: "#07100f" },
+  { main: "#5ce1a5", deep: "#101a18", soft: "rgba(92, 225, 165, 0.16)", ink: "#07100f" },
 ];
 
 function escapeHtml(value = "") {
@@ -445,7 +445,7 @@ function buildHtml(data) {
         overflow: hidden;
         isolation: isolate;
         background:
-          linear-gradient(128deg, #07100f 0%, #07100f 38%, #0d1917 38%, #0d1917 56%, #111018 56%, #111018 100%);
+          linear-gradient(128deg, #07100f 0%, #07100f 38%, #101a18 38%, #101a18 56%, #07100f 56%, #07100f 100%);
       }
 
       .stage-stripes {
@@ -566,7 +566,7 @@ function buildHtml(data) {
       .hero-subtitle {
         max-width: 880px;
         margin-top: 28px;
-        color: #d7e3dc;
+        color: #9fb0aa;
         font-size: 42px;
         line-height: 1.42;
         font-weight: 800;
@@ -644,7 +644,7 @@ function buildHtml(data) {
 
       .lead-meta {
         margin-top: 20px;
-        color: #d7e3dc;
+        color: #9fb0aa;
         font-size: 30px;
         line-height: 1.35;
         font-weight: 800;
@@ -970,7 +970,7 @@ function buildHtml(data) {
       .cta {
         margin-top: auto;
         padding-top: 28px;
-        color: #d7e3dc;
+        color: #9fb0aa;
         border-top: 2px solid rgba(247, 244, 232, 0.18);
         font-size: 34px;
         line-height: 1.42;
