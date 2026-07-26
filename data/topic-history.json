@@ -3200,6 +3200,62 @@
       "source": "GitHub",
       "url": "https://github.com/permissionlesstech/bitchat",
       "video": "renders/developer-radar-2026-07-25-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "corebunch/instatic",
+      "title": "Instatic",
+      "source": "GitHub",
+      "url": "https://github.com/CoreBunch/Instatic",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "https://arxiv.org/abs/2607.20466",
+      "title": "JAXBench",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.20466",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "https://astral.sh/blog/ruff-v0.16.0",
+      "title": "Ruff 0.16",
+      "source": "Hacker News",
+      "url": "https://astral.sh/blog/ruff-v0.16.0",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "title": "Claude 5 上下文新规则",
+      "source": "Hacker News",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "https://huggingface.co/papers/2607.20709",
+      "title": "NVIDIA OO Agents",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.20709",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "https://huggingface.co/papers/2607.21553",
+      "title": "SANA-Video 2.0",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.21553",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-26",
+      "key": "pbakaus/impeccable",
+      "title": "impeccable",
+      "source": "GitHub",
+      "url": "https://github.com/pbakaus/impeccable",
+      "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
     }
   ]
 }

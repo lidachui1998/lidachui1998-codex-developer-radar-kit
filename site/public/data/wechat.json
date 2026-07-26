@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-07-25T14:08:21.891Z",
+  "updatedAt": "2026-07-26T14:09:57.672Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-07-26",
+      "displayDate": "2026.07.26",
+      "title": "今天这 7 个项目，Instatic、impeccable 为什么值得看？",
+      "digest": "不只报项目名：拆解 Instatic、impeccable 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-26#archive"
+    },
     {
       "date": "2026-07-25",
       "displayDate": "2026.07.25",
