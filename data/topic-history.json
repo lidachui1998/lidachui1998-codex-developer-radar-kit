@@ -3256,6 +3256,62 @@
       "source": "GitHub",
       "url": "https://github.com/pbakaus/impeccable",
       "video": "renders/developer-radar-2026-07-26-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "bradautomates/claude-video",
+      "title": "claude-video",
+      "source": "GitHub",
+      "url": "https://github.com/bradautomates/claude-video",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "https://huggingface.co/papers/2607.21503",
+      "title": "Agentic Context Management",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.21503",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "https://huggingface.co/papers/2607.22529",
+      "title": "Skill Self-Play",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.22529",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "https://nikolays.github.io/pgsimcity",
+      "title": "PGSimCity",
+      "source": "Hacker News",
+      "url": "https://nikolays.github.io/PGSimCity/",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "https://www.producthunt.com/products/webhound",
+      "title": "Webhound",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/webhound",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "moonshotai/kimi-k3",
+      "title": "Kimi-K3",
+      "source": "Hacker News",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-27",
+      "key": "vercel-labs/scriptc",
+      "title": "Scriptc",
+      "source": "Hacker News",
+      "url": "https://github.com/vercel-labs/scriptc",
+      "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
     }
   ]
 }
