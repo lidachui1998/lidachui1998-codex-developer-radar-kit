@@ -69,7 +69,9 @@ function findWorkRow(body, titleText) {
   const title = metadata.title;
   const duration = metadata.duration || "";
   const profile = path.resolve(root, metadata.profile || ".playwright-douyin-profile");
-  const proxy = metadata.proxy || process.env.DOUYIN_PROXY || "";
+  const proxy = process.argv.includes("--no-proxy")
+    ? ""
+    : metadata.proxy || process.env.DOUYIN_PROXY || "";
   const { chromium } = requirePlaywright();
   const context = await chromium.launchPersistentContext(profile, {
     headless: false,
