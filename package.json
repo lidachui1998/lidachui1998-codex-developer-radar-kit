@@ -25,10 +25,10 @@
     "douyin:comments:dry-run": "node scripts/douyin-comment-agent.mjs run --dry-run",
     "douyin:comments:direct": "node scripts/douyin-comment-agent.mjs run --auto-safe --execute --limit-videos 12 --since-hours 48 --proxy http://127.0.0.1:17890",
     "render:voiceover": "powershell -ExecutionPolicy Bypass -File scripts/render-with-voiceover.ps1",
-    "dev": "npx --yes hyperframes@0.7.72 preview",
-    "check": "npx --yes hyperframes@0.7.72 check",
-    "render": "npx --yes hyperframes@0.7.72 render",
-    "publish": "npx --yes hyperframes@0.7.72 publish"
+    "dev": "npx --yes hyperframes@0.7.77 preview",
+    "check": "npx --yes hyperframes@0.7.77 check",
+    "render": "npx --yes hyperframes@0.7.77 render",
+    "publish": "npx --yes hyperframes@0.7.77 publish"
   },
   "devDependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",

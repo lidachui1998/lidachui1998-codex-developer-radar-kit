@@ -3312,6 +3312,62 @@
       "source": "Hacker News",
       "url": "https://github.com/vercel-labs/scriptc",
       "video": "renders/developer-radar-2026-07-27-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "affaan-m/ecc",
+      "title": "ECC",
+      "source": "GitHub",
+      "url": "https://github.com/affaan-m/ECC",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "https://fermisense.com/when-machines-take-the-wheel",
+      "title": "五百美元 RL 微调",
+      "source": "Hacker News",
+      "url": "https://fermisense.com/when-machines-take-the-wheel/",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "https://huggingface.co/papers/2607.22798",
+      "title": "StateAct",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.22798",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "https://www.anthropic.com/news/position-open-weights-models",
+      "title": "Anthropic 开放权重立场",
+      "source": "Hacker News",
+      "url": "https://www.anthropic.com/news/position-open-weights-models",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "https://www.producthunt.com/products/mcp-billing",
+      "title": "MCP-Billing",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/mcp-billing",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "moeru-ai/airi",
+      "title": "airi",
+      "source": "GitHub",
+      "url": "https://github.com/moeru-ai/airi",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-28",
+      "key": "opengeos/geolibre",
+      "title": "GeoLibre",
+      "source": "GitHub",
+      "url": "https://github.com/opengeos/GeoLibre",
+      "video": "renders/developer-radar-2026-07-28-voiceover-final.mp4"
     }
   ]
 }

@@ -96,13 +96,20 @@ function findWorkRow(body, titleText) {
   await page.getByText("全部作品").first().click().catch(() => {});
   const search = page.getByPlaceholder("搜索作品").first();
   if (await search.isVisible().catch(() => false)) {
-    await search.fill(title);
+    await search.fill("");
     await page.keyboard.press("Enter");
     await sleep(8000);
   }
 
   body = await page.locator("body").innerText().catch(() => body);
-  const matchedRow = findWorkRow(body, title);
+  let matchedRow = findWorkRow(body, title);
+  if (!matchedRow && await search.isVisible().catch(() => false)) {
+    await search.fill(title.slice(0, 8));
+    await page.keyboard.press("Enter");
+    await sleep(8000);
+    body = await page.locator("body").innerText().catch(() => body);
+    matchedRow = findWorkRow(body, title);
+  }
   const titleFound = Boolean(matchedRow);
   const durationFound = duration ? matchedRow.includes(duration) : false;
   const publicUrl = matchedRow.match(/https?:\/\/(?:www\.)?douyin\.com\/video\/\d+/)?.[0] || "";

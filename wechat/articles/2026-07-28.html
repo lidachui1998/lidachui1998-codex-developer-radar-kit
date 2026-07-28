@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今天这 7 个项目，Anthropic 开放权重立场、airi 为什么值得看？</title>
+  </head>
+  <body style="margin:0;background:#f3f4f6;padding:18px;color:#111827;">
+<section style="max-width:720px;margin:0 auto;padding:8px 0 32px;color:#111827;font-family:Arial,'Microsoft YaHei',sans-serif;">
+  <section style="margin:0 0 18px;padding:20px 18px;border-radius:14px;background:#111827;">
+    <p style="margin:0 0 10px;color:#5eead4;font-size:13px;font-weight:800;">待填写公众号名称 · 2026.07.28 · Developer Radar</p>
+    <h1 style="margin:0;color:#ffffff;font-size:28px;line-height:1.35;">今天这 7 个项目，Anthropic 开放权重立场、airi 为什么值得看？</h1>
+    <p style="margin:14px 0 0;color:#d1d5db;font-size:16px;line-height:1.8;">真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 开放权重、本地 AI 助手、Agent、云原生 GIS 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-left:5px solid #10b981;border-radius:10px;background:#ecfdf5;">
+    <p style="margin:0 0 8px;color:#065f46;font-size:15px;font-weight:800;">先按你的需求选</p>
+    <p style="margin:0;color:#064e3b;font-size:15px;line-height:1.8;">想马上试用，先看 airi、ECC。剩下的方向更适合做技术储备，而不是立刻押注。</p>
+    <p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想立刻上手：airi、ECC</p><p style="margin:8px 0 0;color:#065f46;font-size:14px;line-height:1.7;">• 想做技术储备：Anthropic 开放权重立场、GeoLibre、五百美元 RL 微调</p>
+  </section>
+
+  <section style="margin:18px 0;padding:16px;border-radius:12px;background:#f8fafc;border:1px solid #e5e7eb;">
+    <p style="margin:0 0 10px;color:#111827;font-size:15px;font-weight:800;">今天会拆解什么</p>
+    <p style="margin:0;color:#4b5563;font-size:14px;line-height:1.9;">1. Anthropic 开放权重立场  /  2. airi  /  3. ECC  /  4. GeoLibre  /  5. 五百美元 RL 微调  /  6. MCP-Billing  /  7. StateAct</p>
+
+    <p style="margin:6px 0 0;color:#4b5563;font-size:14px;line-height:1.8;">完整归档：<a href="https://radar.bjca.xyz/?date=2026-07-28#archive" style="color:#047857;">https://radar.bjca.xyz/?date=2026-07-28#archive</a></p>
+  </section>
+
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 01</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">01｜Anthropic 开放权重立场</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / 开放权重</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">1399</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 971 points · 评论 1399</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>开放权重的价值不只在可部署，更在团队能否承担安全、许可与治理责任。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">开放权重更易部署，也把许可、安全和治理判断交给团队。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>先看供应商立场与边界，再决定哪些模型能进企业生产链路。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">先看供应商立场与边界，再决定哪些模型能进企业生产链路。</li><li style="margin:5px 0;">由 AI 平台、模型治理与安全团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">开放权重的价值不只在可部署，更在团队能否承担安全、许可与治理责任。</li><li style="margin:5px 0;">热度来自 Hacker News，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>AI 平台、模型治理与安全团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：Anthropic 开放权重立场</p>
+        <p style="margin:14px 0 0;"><a href="https://www.anthropic.com/news/position-open-weights-models" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 02</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">02｜airi</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 本地 AI 助手</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">44,475</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +572 · 总星标 44,475</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>本地助手的竞争点正从聊天窗口转向实时语音、多端状态和可操作环境。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">本地 AI 助手常只会聊天，跨语音、桌面和游戏的协作仍然很碎。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>Airi 把实时语音、多端运行与游戏交互收进一个自托管入口。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">Airi 把实时语音、多端运行与游戏交互收进一个自托管入口。</li><li style="margin:5px 0;">由 本地 AI、语音交互、桌面应用与游戏开发者 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">本地助手的竞争点正从聊天窗口转向实时语音、多端状态和可操作环境。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>本地 AI、语音交互、桌面应用与游戏开发者。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：moeru-ai/airi</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/moeru-ai/airi" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 03</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">03｜ECC</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / Agent 工具链</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">234,425</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +458 · 总星标 234,425</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>Agent 性能越来越取决于外层工程系统，而不只是底层模型。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">Agent 用得越多，技能、记忆、安全规则和研究方法越容易分散。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>ECC 把跨工具的能力沉淀成一套可复用、可约束的工程系统。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">ECC 把跨工具的能力沉淀成一套可复用、可约束的工程系统。</li><li style="margin:5px 0;">由 Agent 平台、研发效能、AI 编程与安全团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">Agent 性能越来越取决于外层工程系统，而不只是底层模型。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Agent 平台、研发效能、AI 编程与安全团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：affaan-m/ECC</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/affaan-m/ECC" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 04</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">04｜GeoLibre</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">GitHub / 云原生 GIS</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">3,042</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">今日新增 Star +420 · 总星标 3,042</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>地理数据平台正在从单机专业软件走向云原生、多端与笔记本协作。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">传统 GIS 工具偏重，地理数据很难无缝进入 Web 与数据科学工作流。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>GeoLibre 用同一套平台覆盖可视化、探索和分析，并兼顾多端使用。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">GeoLibre 用同一套平台覆盖可视化、探索和分析，并兼顾多端使用。</li><li style="margin:5px 0;">由 GIS、数据工程、遥感、Web 与 Jupyter 用户 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">地理数据平台正在从单机专业软件走向云原生、多端与笔记本协作。</li><li style="margin:5px 0;">热度来自 GitHub，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>GIS、数据工程、遥感、Web 与 Jupyter 用户。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：opengeos/GeoLibre</p>
+        <p style="margin:14px 0 0;"><a href="https://github.com/opengeos/GeoLibre" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 05</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">05｜五百美元 RL 微调</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hacker News / 低成本微调</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">64</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HN 热度 219 points · 评论 64</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>这不是通用能力逆袭，而是任务对齐把小模型的单位成本价值放大。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">团队常把模型规模当成上限，却忽略任务数据和奖励设计的杠杆。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>在边界明确的业务任务上，低成本微调可能比盲目升级大模型更有效。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">在边界明确的业务任务上，低成本微调可能比盲目升级大模型更有效。</li><li style="margin:5px 0;">由 模型训练、数据、评测与垂直 AI 应用团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">这不是通用能力逆袭，而是任务对齐把小模型的单位成本价值放大。</li><li style="margin:5px 0;">热度来自 Hacker News，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>模型训练、数据、评测与垂直 AI 应用团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：五百美元 RL 微调</p>
+        <p style="margin:14px 0 0;"><a href="https://fermisense.com/when-machines-take-the-wheel/" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 06</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">06｜MCP-Billing</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Product Hunt / MCP 商业化</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">OAuth 2.1</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">来源 Product Hunt · 能力 OAuth 2.1</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>MCP 从实验走向产品，认证、用量和结算会成为基础设施。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">MCP 服务能调用工具，却常缺少标准认证、用量统计和收费链路。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>MCP-Billing 把访问控制与按量计费接到一套可落地的服务流程。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">MCP-Billing 把访问控制与按量计费接到一套可落地的服务流程。</li><li style="margin:5px 0;">由 MCP 服务、Agent 产品、平台工程与 SaaS 团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">MCP 从实验走向产品，认证、用量和结算会成为基础设施。</li><li style="margin:5px 0;">热度来自 Product Hunt，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>MCP 服务、Agent 产品、平台工程与 SaaS 团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：MCP-Billing</p>
+        <p style="margin:14px 0 0;"><a href="https://www.producthunt.com/products/mcp-billing" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+    <section style="margin:22px 0;padding:0;border:1px solid #e5e7eb;border-radius:12px;background:#ffffff;overflow:hidden;">
+      <section style="padding:14px 16px;background:#f8fafc;border-bottom:1px solid #e5e7eb;">
+        <p style="margin:0;color:#0f766e;font-size:13px;font-weight:800;letter-spacing:.4px;">今日项目 07</p>
+        <h2 style="margin:6px 0 0;color:#111827;font-size:22px;line-height:1.35;">07｜StateAct</h2>
+      </section>
+      <section style="padding:16px;">
+        <p style="margin:0 0 12px;"><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#ccfbf1;color:#0f766e;font-size:12px;font-weight:700;">Hugging Face / 电脑操作 Agent</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#fef3c7;color:#92400e;font-size:12px;font-weight:700;">Computer Use</span><span style="display:inline-block;margin:0 6px 6px 0;padding:4px 8px;border-radius:999px;background:#dbeafe;color:#1d4ed8;font-size:12px;font-weight:700;">HF Daily rank 5 · 方向 Computer Use</span></p>
+        <p style="margin:0;color:#111827;font-size:17px;line-height:1.8;"><strong>一句话判断：</strong>GUI Agent 的可靠性可能来自更结构化的状态，而不是更密集地截图。</p>
+        <section style="margin:14px 0 0;padding:13px 14px;border-left:4px solid #f59e0b;background:#fffbeb;">
+          <p style="margin:0;color:#92400e;font-size:14px;font-weight:800;">它在解决什么？</p>
+          <p style="margin:7px 0 0;color:#78350f;font-size:15px;line-height:1.8;">电脑操作 Agent 只看截图时，容易被视觉噪声和界面变化带偏。</p>
+        </section>
+        <p style="margin:14px 0 0;color:#111827;font-size:15px;line-height:1.8;"><strong>核心作用：</strong>StateAct 先读取程序状态，再用像素补充观察，提升长任务决策依据。</p>
+        <p style="margin:16px 0 7px;color:#0f766e;font-size:15px;font-weight:800;">你可以怎么用</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">StateAct 先读取程序状态，再用像素补充观察，提升长任务决策依据。</li><li style="margin:5px 0;">由 Computer Use、GUI Agent、自动化与评测团队 先做低成本试用，再决定是否进入正式工作流。</li></ul>
+        <p style="margin:16px 0 7px;color:#1d4ed8;font-size:15px;font-weight:800;">值得关注的细节</p>
+        <ul style="margin:0;padding-left:22px;color:#374151;font-size:15px;line-height:1.85;"><li style="margin:5px 0;">GUI Agent 的可靠性可能来自更结构化的状态，而不是更密集地截图。</li><li style="margin:5px 0;">热度来自 Hugging Face，更适合作为筛选信号，而不是采用结论。</li></ul>
+        <p style="margin:14px 0 0;color:#374151;font-size:15px;line-height:1.8;"><strong>适合谁：</strong>Computer Use、GUI Agent、自动化与评测团队。</p>
+        <p style="margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fef2f2;color:#991b1b;font-size:14px;line-height:1.8;"><strong>上手建议与边界：</strong>先做最小可行验证，并同时检查数据权限、维护成本、依赖稳定性和实际产出质量。</p>
+        <p style="margin:14px 0 0;color:#6b7280;font-size:14px;line-height:1.7;">仓库/项目：StateAct</p>
+        <p style="margin:14px 0 0;"><a href="https://huggingface.co/papers/2607.22798" style="display:inline-block;padding:9px 13px;border-radius:8px;background:#111827;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">查看项目与原始资料</a></p>
+      </section>
+    </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#ecfeff;border:1px solid #a5f3fc;">
+    <p style="margin:0;color:#155e75;font-size:18px;font-weight:800;">最后怎么选？</p>
+    <p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想立刻上手：airi、ECC</p><p style="margin:10px 0 0;color:#164e63;font-size:15px;line-height:1.75;">• 想做技术储备：Anthropic 开放权重立场、GeoLibre、五百美元 RL 微调</p>
+    <p style="margin:12px 0 0;color:#164e63;font-size:15px;line-height:1.8;">不要一次装七个项目。选一个最接近当前工作的方向，用真实任务做 30 分钟验证：能否减少返工、输出是否稳定、维护成本是否可接受。答案比 Star 数更重要。</p>
+  </section>
+
+  <section style="margin:24px 0 0;padding:18px;border-radius:12px;background:#0f172a;">
+    <p style="margin:0;color:#ffffff;font-size:18px;font-weight:800;">资料怎么拿？</p>
+    <p style="margin:10px 0 0;color:#d1d5db;font-size:15px;line-height:1.8;">项目链接、生成脚本、提示词和自动化流程：<a href="https://radar.bjca.xyz/?date=2026-07-28#archive" style="color:#5eead4;">https://radar.bjca.xyz/?date=2026-07-28#archive</a></p>
+  </section>
+
+  <p style="margin:18px 0 0;color:#6b7280;font-size:13px;line-height:1.8;">资料会持续沉淀到网站。公众号后台发布后，把文章链接录入管理工具，网站就能形成闭环。</p>
+</section>
+  </body>
+</html>
