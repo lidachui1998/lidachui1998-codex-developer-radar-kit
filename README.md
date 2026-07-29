@@ -48,6 +48,16 @@ npm run site:deploy
 
 The Codex automation should publish the validated final MP4 through the authenticated Douyin Creator Center flow when available, fill title/description copy, and choose relevant hot-topic tags if the UI offers them. If login, CAPTCHA, or account selection is required, let the user complete it and then continue from that browser session.
 
+For normal and catch-up publishing, use the direct batch publisher. It starts one persistent browser, defaults to a direct connection, skips titles already returned by Creator Center, and can process multiple UTF-8 metadata files without exporting cookies:
+
+```powershell
+npm run douyin:publish -- --metadata data/douyin-publish-YYYY-MM-DD.json --validate-only
+npm run douyin:publish -- --metadata data/douyin-publish-YYYY-MM-DD.json
+npm run douyin:publish -- --metadata data/douyin-publish-YYYY-MM-DD.json --metadata data/douyin-publish-NEXT-DATE.json
+```
+
+The script uses the official upload page for media transfer and the authenticated `work_list` GET endpoint for duplicate/status checks. It never prints or saves browser cookies. A proxy is used only when explicitly passed with `--proxy` or `--use-metadata-proxy`.
+
 When a public Douyin URL is visible, record the real video URL and redeploy. If the work is still under review, leave the site button pending instead of inventing a URL:
 
 ```powershell
