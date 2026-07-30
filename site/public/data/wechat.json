@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-07-29T15:30:23.494Z",
+  "updatedAt": "2026-07-30T14:32:54.564Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-07-30",
+      "displayDate": "2026.07.30",
+      "title": "今天这 7 个项目，openwork、TurboVLA 为什么值得看？",
+      "digest": "不只报项目名：拆解 openwork、TurboVLA 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-07-30#archive"
+    },
     {
       "date": "2026-07-29",
       "displayDate": "2026.07.29",
