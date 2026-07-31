@@ -3480,6 +3480,62 @@
       "source": "GitHub",
       "url": "https://github.com/mvanhorn/last30days-skill",
       "video": "renders/developer-radar-2026-07-30-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "agavra/tuicr",
+      "title": "tuicr",
+      "source": "GitHub",
+      "url": "https://github.com/agavra/tuicr",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "https://api-docs.deepseek.com/updates",
+      "title": "DeepSeek V4 Flash",
+      "source": "Hacker News",
+      "url": "https://api-docs.deepseek.com/updates/",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "https://arxiv.org/abs/2607.27360",
+      "title": "SkillMentor",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.27360",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview",
+      "title": "Stacked PRs",
+      "source": "Hacker News",
+      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview/",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "https://www.producthunt.com/products/witr",
+      "title": "witr",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/witr",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "openjdk/jdk",
+      "title": "JEP 401 Value Objects",
+      "source": "Hacker News",
+      "url": "https://github.com/openjdk/jdk/pull/31120",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-07-31",
+      "key": "zhaoxuya520/reverse-skill",
+      "title": "reverse-skill",
+      "source": "GitHub",
+      "url": "https://github.com/zhaoxuya520/reverse-skill",
+      "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
     }
   ]
 }

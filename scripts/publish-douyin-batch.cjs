@@ -139,7 +139,8 @@ function isLoginGate(body = "") {
 
 async function ensureAuthenticated(page, manualTimeoutMs) {
   await page.goto(UPLOAD_URL, { waitUntil: "commit", timeout: 60000 });
-  const fastDeadline = Date.now() + 45000;
+  const attachTimeoutMs = Number(process.env.DOUYIN_UPLOAD_ATTACH_TIMEOUT_MS || 120000);
+  const fastDeadline = Date.now() + (Number.isFinite(attachTimeoutMs) && attachTimeoutMs > 0 ? attachTimeoutMs : 120000);
   let body = "";
   while (Date.now() < fastDeadline) {
     const input = page.locator('input[type="file"]').first();
