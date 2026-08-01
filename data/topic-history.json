@@ -3536,6 +3536,62 @@
       "source": "GitHub",
       "url": "https://github.com/zhaoxuya520/reverse-skill",
       "video": "renders/developer-radar-2026-07-31-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "https://arxiv.org/abs/2607.27231",
+      "title": "KernelGenBench",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.27231",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed",
+      "title": "GitHub 代码搜索大小写折叠",
+      "source": "GitHub Blog",
+      "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "https://huggingface.co/papers/2607.28227",
+      "title": "Qwen-UI-Agent",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.28227",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "https://www.producthunt.com/products/port22",
+      "title": "Port22",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/port22",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "microsoft.github.io/flint-chart",
+      "title": "Flint",
+      "source": "Hacker News",
+      "url": "https://microsoft.github.io/flint-chart/",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "usekaneo/kaneo",
+      "title": "kaneo",
+      "source": "GitHub",
+      "url": "https://github.com/usekaneo/kaneo",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-01",
+      "key": "yc-software/qm",
+      "title": "qm",
+      "source": "Hacker News",
+      "url": "https://github.com/yc-software/qm",
+      "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
     }
   ]
 }

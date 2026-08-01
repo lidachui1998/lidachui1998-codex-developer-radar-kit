@@ -27,10 +27,10 @@
     "douyin:publish": "node scripts/publish-douyin-batch.cjs",
     "douyin:publish:test": "node scripts/publish-douyin-batch.test.cjs",
     "render:voiceover": "powershell -ExecutionPolicy Bypass -File scripts/render-with-voiceover.ps1",
-    "dev": "npx --yes hyperframes@0.7.84 preview",
-    "check": "npx --yes hyperframes@0.7.84 check",
-    "render": "npx --yes hyperframes@0.7.84 render",
-    "publish": "npx --yes hyperframes@0.7.84 publish"
+    "dev": "npx --yes hyperframes@0.7.87 preview",
+    "check": "npx --yes hyperframes@0.7.87 check",
+    "render": "npx --yes hyperframes@0.7.87 render",
+    "publish": "npx --yes hyperframes@0.7.87 publish"
   },
   "devDependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
