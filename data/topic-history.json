@@ -3592,6 +3592,62 @@
       "source": "Hacker News",
       "url": "https://github.com/yc-software/qm",
       "video": "renders/developer-radar-2026-08-01-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "https://huggingface.co/papers/2607.26760",
+      "title": "Metis",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2607.26760",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "title": "Seedance 2.5",
+      "source": "Hacker News",
+      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "https://victoriametrics.com/blog/go-1-27/index.html",
+      "title": "Go 1.27 Interactive Tour",
+      "source": "Hacker News",
+      "url": "https://victoriametrics.com/blog/go-1-27/index.html",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "https://www.producthunt.com/products/capptivo",
+      "title": "Capptivo",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/capptivo",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "panniantong/agent-reach",
+      "title": "Agent-Reach",
+      "source": "GitHub",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "syncular/syncular",
+      "title": "Syncular",
+      "source": "Hacker News",
+      "url": "https://github.com/syncular/syncular",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-02",
+      "key": "tencentcloud/tencentdb-agent-memory",
+      "title": "TencentDB-Agent-Memory",
+      "source": "GitHub",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
     }
   ]
 }

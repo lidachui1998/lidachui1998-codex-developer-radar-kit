@@ -361,6 +361,24 @@ function buildHtml(data) {
 
         function createTimeline() {
           const tweens = [];
+          let playbackRate = 1;
+          let currentTime = 0;
+          let isPaused = true;
+
+          function timelineDuration() {
+            return tweens.reduce((maximum, tween) => {
+              const targetCount = Math.max(1, elements(tween.target).length);
+              const staggerTail = Math.max(0, targetCount - 1) * tween.stagger;
+              const repeats = Math.max(0, tween.repeat) + 1;
+              return Math.max(maximum, tween.start + staggerTail + tween.duration * repeats);
+            }, 0);
+          }
+
+          function seekTo(time) {
+            currentTime = Math.max(0, Number(time) || 0);
+            renderTimeline(currentTime, tweens);
+          }
+
           return {
             from(target, vars = {}, position = 0) {
               tweens.push({
@@ -399,13 +417,49 @@ function buildHtml(data) {
               return this;
             },
             seek(time) {
-              renderTimeline(Number(time) || 0, tweens);
+              seekTo(time);
               return this;
             },
-            pause() {
+            totalTime(time) {
+              if (arguments.length === 0) return currentTime;
+              seekTo(time);
               return this;
             },
-            play() {
+            time(time) {
+              if (arguments.length === 0) return currentTime;
+              seekTo(time);
+              return this;
+            },
+            duration(value) {
+              if (arguments.length === 0) return timelineDuration();
+              return this;
+            },
+            totalDuration(value) {
+              if (arguments.length === 0) return timelineDuration();
+              return this;
+            },
+            getChildren() {
+              return [];
+            },
+            paused(value) {
+              if (arguments.length === 0) return isPaused;
+              isPaused = Boolean(value);
+              return this;
+            },
+            timeScale(value) {
+              if (arguments.length === 0) return playbackRate;
+              const nextRate = Number(value);
+              playbackRate = Number.isFinite(nextRate) ? nextRate : 1;
+              return this;
+            },
+            pause(position) {
+              if (Number.isFinite(Number(position))) seekTo(position);
+              isPaused = true;
+              return this;
+            },
+            play(position) {
+              if (Number.isFinite(Number(position))) seekTo(position);
+              isPaused = false;
               return this;
             },
             kill() {

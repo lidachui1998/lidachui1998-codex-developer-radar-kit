@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-08-01T13:51:15.385Z",
+  "updatedAt": "2026-08-02T13:53:43.325Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-08-02",
+      "displayDate": "2026.08.02",
+      "title": "今天这 7 个项目，Seedance 2.5、Agent-Reach 为什么值得看？",
+      "digest": "不只报项目名：拆解 Seedance 2.5、Agent-Reach 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "https://www.iesdouyin.com/share/video/7669429968773877030/",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-08-02#archive"
+    },
     {
       "date": "2026-08-01",
       "displayDate": "2026.08.01",
