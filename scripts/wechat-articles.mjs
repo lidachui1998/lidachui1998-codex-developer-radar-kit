@@ -73,7 +73,8 @@ function themeNames(day, count = 3) {
   const themes = (day.topics || []).map((topic) => {
     const category = topic.category || topic.source || "开发工具";
     if (/三维|视觉|空间/.test(category)) return "三维与视觉";
-    if (/界面|前端|设计/.test(category)) return "AI 界面";
+    if (/前端|编译/.test(category)) return "前端工程";
+    if (/界面|设计/.test(category)) return "AI 界面";
     if (/Agent|智能体|代理/.test(category)) return "Agent";
     if (/低显存|推理|算力|GPU|基础设施/.test(category)) return "低显存推理";
     if (/提示|评测|模型/.test(category)) return "模型工程";
@@ -102,15 +103,28 @@ function introText(day) {
   return `真正浪费时间的，不是没看到新项目，而是收藏了一堆，却不知道哪个值得用。今天这期围绕 ${themes.join("、")} 这几个方向展开，不只列链接，直接讲清楚每个项目解决什么问题、能怎么用，以及落地前要注意什么。`;
 }
 
+function decisionGroups(day) {
+  const topics = day.topics || [];
+  const ready = topics
+    .filter((topic) => topic.source === "GitHub" || topic.source === "Product Hunt" || /^https:\/\/github\.com\//i.test(topic.url || ""))
+    .filter((topic) => !/交易/.test(topic.category || ""))
+    .slice(0, 2);
+  const risk = topics
+    .filter((topic) => !ready.includes(topic) && /安全|调试|评测|算力/.test(topic.category || ""))
+    .slice(0, 3);
+  const explore = topics.filter((topic) => !ready.includes(topic) && !risk.includes(topic)).slice(0, 3);
+  return { ready, risk, explore };
+}
+
 function takeawayText(day) {
   const topics = day.topics || [];
   if (!topics.length) return "先判断它是否解决你眼前的问题，再决定要不要投入时间。";
-  const practical = topics.filter((topic) => topic.source === "GitHub" && !/交易/.test(topic.category || "")).slice(0, 2);
-  const engineering = topics.filter((topic) => /调试|评测|算力/.test(topic.category || "")).slice(0, 3);
+  const { ready, risk, explore } = decisionGroups(day);
   const parts = [];
-  if (practical.length) parts.push(`想马上试用，先看 ${practical.map((topic) => topic.title).join("、")}`);
-  if (engineering.length) parts.push(`想补工程风险，重点看 ${engineering.map((topic) => topic.title).join("、")}`);
-  return `${parts.join("；")}。剩下的方向更适合做技术储备，而不是立刻押注。`;
+  if (ready.length) parts.push(`想马上试用，先看 ${ready.map((topic) => topic.title).join("、")}`);
+  if (risk.length) parts.push(`想补工程风险，重点看 ${risk.map((topic) => topic.title).join("、")}`);
+  if (explore.length) parts.push(`想做技术储备，可以跟进 ${explore.map((topic) => topic.title).join("、")}`);
+  return `${parts.join("；")}。`;
 }
 
 function metricText(topic) {
@@ -236,7 +250,7 @@ function editorialFor(topic) {
     value: topic.payoff || topic.angle || `帮助 ${audience} 更快判断方案是否值得投入。`,
     useCases: detail.useCases || [
       topic.payoff || `把 ${topic.title} 放进一个真实的小场景，验证它能否减少重复工作。`,
-      `由 ${audience} 先做低成本试用，再决定是否进入正式工作流。`,
+      `建议先让${audience}做低成本试用，再决定是否进入正式工作流。`,
     ],
     highlights: detail.highlights || [
       topic.angle || `${topic.title} 的核心价值需要结合真实流程判断。`,
@@ -247,10 +261,7 @@ function editorialFor(topic) {
 }
 
 function decisionGuide(day) {
-  const topics = day.topics || [];
-  const ready = topics.filter((topic) => topic.source === "GitHub" && !/交易/.test(topic.category || "")).slice(0, 2);
-  const risk = topics.filter((topic) => /调试|评测|算力/.test(topic.category || "")).slice(0, 3);
-  const explore = topics.filter((topic) => !ready.includes(topic) && !risk.includes(topic)).slice(0, 3);
+  const { ready, risk, explore } = decisionGroups(day);
   return [
     ready.length ? `想立刻上手：${ready.map((topic) => topic.title).join("、")}` : "",
     risk.length ? `想补工程风险：${risk.map((topic) => topic.title).join("、")}` : "",

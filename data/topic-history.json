@@ -3648,6 +3648,62 @@
       "source": "GitHub",
       "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
       "video": "renders/developer-radar-2026-08-02-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "garagehq/nightcrawler",
+      "title": "Nightcrawler",
+      "source": "Hacker News",
+      "url": "https://github.com/garagehq/nightcrawler/",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "https://arxiv.org/abs/2607.28642",
+      "title": "ThinkReset",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2607.28642",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "https://gruhn.me/blog/2026-08-03",
+      "title": "Don't be a meat proxy",
+      "source": "Hacker News",
+      "url": "https://gruhn.me/blog/2026-08-03/",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "https://octanejs.dev",
+      "title": "Octane",
+      "source": "Hacker News",
+      "url": "https://octanejs.dev",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "https://qwen.ai/blog",
+      "title": "Qwen3.8-Max",
+      "source": "Hacker News",
+      "url": "https://qwen.ai/blog?id=qwen3.8",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops",
+      "title": "SQLite AI 垃圾 CVE",
+      "source": "Hacker News",
+      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-03",
+      "key": "https://www.producthunt.com/products/mpai",
+      "title": "mpai",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/mpai",
+      "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
     }
   ]
 }
