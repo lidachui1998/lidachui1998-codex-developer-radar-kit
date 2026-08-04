@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-08-03T13:41:25.754Z",
+  "updatedAt": "2026-08-04T12:54:17.529Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-08-04",
+      "displayDate": "2026.08.04",
+      "title": "今天这 7 个项目，LLMs reward expertise、pdf-inspector 为什么值得看？",
+      "digest": "不只报项目名：拆解 LLMs reward expertise、pdf-inspector 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-08-04#archive"
+    },
     {
       "date": "2026-08-03",
       "displayDate": "2026.08.03",

@@ -3704,6 +3704,62 @@
       "source": "Product Hunt",
       "url": "https://www.producthunt.com/products/mpai",
       "video": "renders\\developer-radar-2026-08-03-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "firecrawl/pdf-inspector",
+      "title": "pdf-inspector",
+      "source": "GitHub",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "github.com/ffmpeg",
+      "title": "FFmpeg 9.0",
+      "source": "Hacker News",
+      "url": "https://github.com/FFmpeg/FFmpeg/blob/n9.0/RELEASE_NOTES",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "https://arxiv.org/abs/2608.00017",
+      "title": "Memory Reward Inflation",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2608.00017",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "https://www.producthunt.com/products/finyuus",
+      "title": "Finyuus",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/finyuus",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "https://www.seangoedecke.com/llms-reward-expertise",
+      "title": "LLMs reward expertise",
+      "source": "Hacker News",
+      "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "leonickson1/swiftlet",
+      "title": "Swiftlet",
+      "source": "Hacker News",
+      "url": "https://github.com/leonickson1/Swiftlet",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-04",
+      "key": "uber/adr",
+      "title": "ADR",
+      "source": "GitHub",
+      "url": "https://github.com/uber/ADR",
+      "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
     }
   ]
 }
