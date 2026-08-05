@@ -3760,6 +3760,62 @@
       "source": "GitHub",
       "url": "https://github.com/uber/ADR",
       "video": "renders/developer-radar-2026-08-04-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "cloudflare/computer",
+      "title": "Cloudflare Computer",
+      "source": "GitHub",
+      "url": "https://github.com/cloudflare/computer",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "donnemartin/system-design-primer",
+      "title": "system-design-primer",
+      "source": "GitHub",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "esengine/deepseek-reasonix",
+      "title": "DeepSeek-Reasonix",
+      "source": "GitHub",
+      "url": "https://github.com/esengine/DeepSeek-Reasonix",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "https://arxiv.org/abs/2608.02650",
+      "title": "HyperAgent",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2608.02650",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "https://mistral.ai/news/shieldstral",
+      "title": "Shieldstral",
+      "source": "Hacker News",
+      "url": "https://mistral.ai/news/shieldstral/",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "https://simonwillison.net/2026/jul/31/stateless-mcp",
+      "title": "Stateless MCP",
+      "source": "Hacker News",
+      "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-05",
+      "key": "huangruiteng/loopx",
+      "title": "LoopX",
+      "source": "GitHub",
+      "url": "https://github.com/huangruiteng/loopx",
+      "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
     }
   ]
 }
