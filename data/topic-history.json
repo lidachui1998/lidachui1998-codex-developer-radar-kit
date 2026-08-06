@@ -3816,6 +3816,62 @@
       "source": "GitHub",
       "url": "https://github.com/huangruiteng/loopx",
       "video": "renders/developer-radar-2026-08-05-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "addyosmani/agent-skills",
+      "title": "agent-skills",
+      "source": "GitHub",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "goauthentik/authentik",
+      "title": "authentik",
+      "source": "GitHub",
+      "url": "https://github.com/goauthentik/authentik",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "https://arxiv.org/abs/2608.04066",
+      "title": "The LLM Proposes",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2608.04066",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
+      "title": "Xibalba64",
+      "source": "Hacker News",
+      "url": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "https://scalex.dev/blog/ai-agent-permissions-stats",
+      "title": "Agent 命令审批风险",
+      "source": "Hacker News",
+      "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "https://www.producthunt.com/products/meta",
+      "title": "Muse Code",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/meta",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-06",
+      "key": "https://zed.dev/deltadb",
+      "title": "Zed DeltaDB",
+      "source": "Hacker News",
+      "url": "https://zed.dev/deltadb",
+      "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
     }
   ]
 }

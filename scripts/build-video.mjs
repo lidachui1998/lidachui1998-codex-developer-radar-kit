@@ -872,8 +872,9 @@ function buildHtml(data) {
       .audience-pill {
         min-height: 148px;
         padding: 20px 14px;
-        color: var(--accent-ink);
-        background: var(--accent);
+        color: #f7f4e8;
+        border: 2px solid var(--accent);
+        background: linear-gradient(145deg, rgba(16, 26, 24, 0.98), rgba(7, 16, 15, 0.94));
         display: flex;
         flex-direction: column;
         align-items: center;
