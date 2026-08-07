@@ -3872,6 +3872,62 @@
       "source": "Hacker News",
       "url": "https://zed.dev/deltadb",
       "video": "renders\\developer-radar-2026-08-06-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "https://blog.cloudflare.com/kitesurf",
+      "title": "Kitesurf",
+      "source": "Hacker News",
+      "url": "https://blog.cloudflare.com/kitesurf/",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "https://huggingface.co/papers/2608.05987",
+      "title": "AgentOPSD",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/papers/2608.05987",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine",
+      "title": "Postgres 分析性能优化",
+      "source": "Hacker News",
+      "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "https://www.producthunt.com/products/progress-ai-observability",
+      "title": "Progress AI Observability",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/progress-ai-observability",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "jdx/mise",
+      "title": "mise",
+      "source": "GitHub",
+      "url": "https://github.com/jdx/mise",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "primeintellect-ai/prime-agent",
+      "title": "prime-agent",
+      "source": "GitHub",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-08",
+      "key": "semantica-agi/semantica",
+      "title": "semantica",
+      "source": "GitHub",
+      "url": "https://github.com/semantica-agi/semantica",
+      "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
     }
   ]
 }
