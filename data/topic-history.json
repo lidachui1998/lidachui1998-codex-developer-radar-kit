@@ -3928,6 +3928,62 @@
       "source": "GitHub",
       "url": "https://github.com/semantica-agi/semantica",
       "video": "renders/developer-radar-2026-08-08-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "comfy-org/comfyui",
+      "title": "ComfyUI",
+      "source": "GitHub",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "https://arxiv.org/abs/2608.05204",
+      "title": "SkillTrace",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2608.05204",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "https://shopify.engineering/scaling-inventory-reservations",
+      "title": "Shopify 的库存预占改造",
+      "source": "Hacker News",
+      "url": "https://shopify.engineering/scaling-inventory-reservations",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "https://www.producthunt.com/products/soup-cli",
+      "title": "Soup CLI",
+      "source": "Product Hunt",
+      "url": "https://www.producthunt.com/products/soup-cli",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "msitarzewski/agency-agents",
+      "title": "agency-agents",
+      "source": "GitHub",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "pranshuparmar/witr",
+      "title": "witr",
+      "source": "GitHub",
+      "url": "https://github.com/pranshuparmar/witr",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
+    },
+    {
+      "date": "2026-08-09",
+      "key": "vitali87/code-graph-rag",
+      "title": "code-graph-rag",
+      "source": "GitHub",
+      "url": "https://github.com/vitali87/code-graph-rag",
+      "video": "renders\\developer-radar-2026-08-09-voiceover-final.mp4"
     }
   ]
 }

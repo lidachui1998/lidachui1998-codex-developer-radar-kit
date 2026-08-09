@@ -1,9 +1,19 @@
 {
-  "updatedAt": "2026-08-07T17:47:24.276Z",
+  "updatedAt": "2026-08-09T13:44:57.496Z",
   "accountName": "待填写公众号名称",
   "replyKeyword": "Codex",
   "siteUrl": "https://radar.bjca.xyz/",
   "articles": [
+    {
+      "date": "2026-08-09",
+      "displayDate": "2026.08.09",
+      "title": "今天这 7 个项目，code-graph-rag、agency-agents 为什么值得看？",
+      "digest": "不只报项目名：拆解 code-graph-rag、agency-agents 等 7 个热点到底解决什么、怎么用，以及哪些边界最容易踩坑。",
+      "status": "draft",
+      "articleUrl": "",
+      "douyinUrl": "",
+      "siteUrl": "https://radar.bjca.xyz/?date=2026-08-09#archive"
+    },
     {
       "date": "2026-08-08",
       "displayDate": "2026.08.08",
